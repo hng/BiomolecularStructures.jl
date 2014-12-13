@@ -38,9 +38,11 @@ function blast_get_results(rid)
   
   if hits != 0
       for hit in hits
-        println(name(hit))
+        
         hit_id = find_element(hit, "Hit_id")
-        # hit_id_content = content(hit_id) # not working :(
+        #hit_id = find_element(hit_id, "Hit_id")
+        #hit_id_content = content(hit_id) # not working :(
+        hit_id = content(hit_id)
         println(hit_id)
      end
   end
@@ -50,7 +52,8 @@ function blast_put(query, database="nr", program="blastp", hitlist_size=500)
   query = encodeURI(query)
   println(query)
   xml_doc = get("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
-  println(xml_doc.headers)
+  println("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
+  println(xml_doc)
   #println(string(xml_doc))
 end
 
