@@ -11,9 +11,31 @@ function blast_get_results(rid)
   url = "$( base_url )?CMD=Get&RID=$( rid )&FORMAT_TYPE=XML"
   println(url)
   content = get(url).data
-  println(content)
   xml_doc = parse_string(content)
-  println(string(xml_doc))
+
+  xroot = root(xml_doc)
+  c_nodes = child_nodes(xroot)
+  hits = 0
+
+  for c in child_nodes(xroot)
+    if is_elementnode(c)
+       e1 = XMLElement(c)
+       if name(e1) == "BlastOutput_iterations"
+          e2 = find_element(e1, "Iteration")
+          e3 = find_element(e2, "Iteration_hits")
+          hits = get_elements_by_tagname(e3, "Hit")
+       end
+    end
+  end
+  
+  if hits != 0
+      for hit in hits
+        println(name(hit))
+        hit_id = find_element(hit, "Hit_id")
+        # hit_id_content = content(hit_id) # not working :(
+        println(hit_id)
+     end
+  end
 end
 
 function blast_put(query, database="nr", program="blastp", hitlist_size=500)
