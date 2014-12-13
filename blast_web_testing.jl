@@ -32,7 +32,7 @@ function blast_get_results(rid)
       for hit in hits
         println(name(hit))
         hit_id = find_element(hit, "Hit_id")
-        hit_id_content = collect(child_nodes(hit_id))[1] 
+        hit_id_content = first(child_nodes(hit_id)) 
         println(hit_id_content)
      end
   end
