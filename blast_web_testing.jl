@@ -56,8 +56,9 @@ function blast_put(query, database="nr", program="blastp", hitlist_size=500)
   response = get("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
 
   m = match(r"RID = (.*)\n", response.data)
+  rtoe = match(r"RTOE = (.*)\n", response.data)
 
-  return m.captures[1]
+  return (m.captures[1],rtoe.captures[1])
 end
 
 #blast_get_results("8NYCJ5XX014") 
