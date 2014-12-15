@@ -48,7 +48,7 @@ function blast_search_info(rid)
     end
 
     if ismatch(r"Status=READY", response)
-      return response.data
+      return true
     end
 
 
