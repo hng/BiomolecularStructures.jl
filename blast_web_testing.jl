@@ -9,8 +9,7 @@ using LightXML
 using FastaIO
 
 function main()
-  println(ARGS[1])
-  blast_put(ARGS[1])
+  println(blast_put(ARGS[1]))
 end
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
@@ -44,17 +43,21 @@ function blast_get_results(rid)
         #hit_id_content = content(hit_id) # not working :(
         hit_id = content(hit_id)
         println(hit_id)
+
+        hit_id_content = collect(child_nodes(hit_id))[1] 
+        println(hit_id_content)
      end
   end
 end
 
+# returns the RID of the query
 function blast_put(query, database="nr", program="blastp", hitlist_size=500)
   query = encodeURI(query)
-  println(query)
-  xml_doc = get("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
-  println("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
-  println(xml_doc)
-  #println(string(xml_doc))
+  response = get("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
+
+  m = match(r"RID = (.*)\n", response.data)
+
+  return m.captures[1]
 end
 
 #blast_get_results("8NYCJ5XX014") 
