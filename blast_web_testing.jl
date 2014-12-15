@@ -9,10 +9,53 @@ using LightXML
 using FastaIO
 
 function main()
-  println(blast_put(ARGS[1]))
+  rid, rtoe = blast_put(ARGS[1])
+  println("RID: $(rid)")
+  if blast_search_info(rid)
+    blast_get_results(rid)
+  end
 end
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
+function blast_search_info(rid)
+  url = "$( base_url )?CMD=Get&FORMAT_OBJECT=SearchInfo&RID=$( rid )"
+
+  searching = false
+
+  while true
+    sleep(5)
+    response = get(url).data
+    # check status codes
+    if ismatch(r"Status=WAITING", response)
+      
+      if searching
+        print(".")
+      else 
+        print("Searching...")
+        searching = true
+      end
+      continue
+    end
+
+    if ismatch(r"Status=FAILED", response)
+      println("Search $( rid ) failed; please report to blast-help\@ncbi.nlm.nih.gov.\n")
+      return false
+    end
+
+    if ismatch(r"Status=UNKNOWN", response)
+      println("Search $( rid ) expired.\n")
+      return false
+    end
+
+    if ismatch(r"Status=READY", response)
+      return response.data
+    end
+
+
+    println("Something went wrong...\n")
+    return false
+  end
+end
 
 function blast_get_results(rid)
   url = "$( base_url )?CMD=Get&RID=$( rid )&FORMAT_TYPE=XML"
