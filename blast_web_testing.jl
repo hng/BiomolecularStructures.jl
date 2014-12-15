@@ -8,6 +8,9 @@ using Requests
 using LightXML
 using FastaIO
 
+# BLAST API base url
+base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
+
 function main()
   rid, rtoe = blast_put(ARGS[1])
   println("RID: $(rid)")
@@ -15,7 +18,6 @@ function main()
     blast_get_results(rid)
   end
 end
-base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
 function blast_search_info(rid)
   url = "$( base_url )?CMD=Get&FORMAT_OBJECT=SearchInfo&RID=$( rid )"
@@ -48,7 +50,7 @@ function blast_search_info(rid)
     end
 
     if ismatch(r"Status=READY", response)
-      return response.data
+      return true
     end
 
 
@@ -80,14 +82,8 @@ function blast_get_results(rid)
   
   if hits != 0
       for hit in hits
-        
         hit_id = find_element(hit, "Hit_id")
-        #hit_id = find_element(hit_id, "Hit_id")
-        #hit_id_content = content(hit_id) # not working :(
-        hit_id = content(hit_id)
-        println(hit_id)
-
-        hit_id_content = collect(child_nodes(hit_id))[1] 
+        hit_id_content = first(collect(child_nodes(hit_id))) 
         println(hit_id_content)
      end
   end
@@ -103,7 +99,5 @@ function blast_put(query, database="nr", program="blastp", hitlist_size=500)
 
   return (m.captures[1],rtoe.captures[1])
 end
-
-#blast_get_results("8NYCJ5XX014") 
 
 main()
