@@ -1,7 +1,8 @@
 # Base URL: http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=<command>{SPMamp;<name>=<value>}
 # Web API Documentation: http://www.ncbi.nlm.nih.gov/blast/Doc/urlapi.html
-#require("ArgParse")
+require("ArgParse")
 
+using ArgParse
 
 using HttpCommon
 using Requests
@@ -11,9 +12,37 @@ using FastaIO
 # BLAST API base url
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
+function parse_commandline()
+    s = ArgParseSettings(description = "Web Blast julia interface")
+
+    @add_arg_table s begin
+        "fasta"
+            help = "Sequences in FASTA format"
+        "sequence"
+            help = "sequence number"
+            arg_type = Int
+      end
+  
+  return parse_args(s)
+end
+
 function main()
-  rid, rtoe = blast_put(ARGS[1])
-  println("RID: $(rid)")
+  args = parse_commandline()
+  fasta = FastaReader(args["fasta"])
+  
+  name = ""
+  seq = ""
+  try
+    for i in range(1,int(args["sequence"]))
+      name, seq = readentry(fasta)
+    end
+    info("Searching for sequence: $(seq)")
+  catch 
+    error("Error parsing arguments. Check 'em!")
+  end
+
+  rid, rtoe = blast_put(seq)
+  info("rid: $(rid)")
   if blast_search_info(rid)
     blast_get_results(rid)
   end
