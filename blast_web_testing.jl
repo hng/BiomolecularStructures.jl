@@ -16,32 +16,54 @@ function parse_commandline()
     s = ArgParseSettings(description = "Web Blast julia interface")
 
     @add_arg_table s begin
-        "fasta"
-            help = "Sequences in FASTA format"
-        "sequence"
-            help = "sequence number"
-            arg_type = Int
+        "--fasta", "-f"
+            nargs = 2
+            help = "Sequences in FASTA format" *
+                    "Sequence #"
+        "--sequence", "-s"
+            help = "Sequence as string"
+            arg_type = String
       end
   
   return parse_args(s)
 end
 
-function main()
-  args = parse_commandline()
-  fasta = FastaReader(args["fasta"])
-  
-  name = ""
-  seq = ""
-  try
-    for i in range(1,int(args["sequence"]))
-      name, seq = readentry(fasta)
+function read_sequence(args) 
+  if length(args["fasta"]) == 2
+
+    try
+      fasta = FastaReader(args["fasta"][1])
+      name = ""
+      seq = ""
+      try
+        for i in range(1,int(args["fasta"][2]))
+          name, seq = readentry(fasta)
+        end
+        
+      catch 
+        error("Error parsing arguments. Check 'em!")
+      end
+      return seq
+    catch GZError
+      error("File not found")
     end
-    info("Searching for sequence: $(seq)")
-  catch 
-    error("Error parsing arguments. Check 'em!")
+
   end
 
+  if args["sequence"] != ""
+    return args["sequence"]
+  end
+
+end
+
+function main()
+  args = parse_commandline()
+  seq = read_sequence(args)
+
+  info("Searching for sequence: $(seq)")
+
   rid, rtoe = blast_put(seq)
+
   info("rid: $(rid)")
   if blast_search_info(rid)
     blast_get_results(rid)
