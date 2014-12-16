@@ -19,8 +19,7 @@ module BioInfTesting
       @add_arg_table s begin
           "--fasta", "-f"
               nargs = 2
-              help = "Sequences in FASTA format" *
-                      "Sequence #"
+              help = "Sequences in FASTA format, Sequence #"
           "--sequence", "-s"
               help = "Sequence as string"
               arg_type = String
@@ -128,13 +127,19 @@ module BioInfTesting
          if name(e1) == "BlastOutput_iterations"
             e2 = find_element(e1, "Iteration")
             e3 = find_element(e2, "Iteration_hits")
+
             hits = get_elements_by_tagname(e3, "Hit")
+
          end
       end
     end
     
     if hits != 0
         for hit in hits
+          
+          hitdict = attributes_dict(hit)
+          println(hitdict)
+
           hit_id = find_element(hit, "Hit_id")
           hit_id_content = first(collect(child_nodes(hit_id))) 
           
