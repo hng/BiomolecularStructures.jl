@@ -9,9 +9,9 @@ Pkg.add("FastaIO")
 Usage:
 
 ```
-usage: blast_web_testing.jl [-f FASTA FASTA] [-s SEQUENCE] [-h]
+usage: WebBLAST [-f FASTA FASTA] [-s SEQUENCE] [-h]
 
-Web Blast julia interface
+WebBLAST
 
 optional arguments:
   -f, --fasta FASTA FASTA
@@ -24,8 +24,8 @@ optional arguments:
 <h2>Examples</h2>
 
 Sequence:
-```julia blast_web_testing.jl -s MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY```
+```julia WebBLAST.jl -s MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY```
 
 FASTA:
 
-```julia blast_web_testing.jl -f fasta.txt 4```
+```julia WebBLAST.jl -f fasta.txt 4```
