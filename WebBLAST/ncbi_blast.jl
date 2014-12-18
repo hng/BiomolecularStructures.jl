@@ -7,6 +7,27 @@ using FastaIO
 # BLAST API base url
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
+# generic web api call
+function call_api(;args...)
+    query_string = ""
+    for (k, v) in args
+        if typeof(v) == ASCIIString
+            v = encodeURI(v)
+        end
+        k = uppercase(string(k))
+        if query_string != ""
+            query_string = "$(query_string)&$(k)=$(v)"
+        else
+            query_string = "?$(k)=$(v)"
+        end
+    end
+    
+    query_string = "$(base_url)$(query_string)"
+
+    return get(query_string)
+
+end
+
 function read_sequence(args) 
   if length(args["fasta"]) == 2
 
@@ -36,13 +57,12 @@ function read_sequence(args)
 end
 
 function ncbi_blast_search_info(rid)
-  url = "$( base_url )?CMD=Get&FORMAT_OBJECT=SearchInfo&RID=$( rid )"
 
   searching = false
 
   while true
     sleep(5)
-    response = get(url).data
+    response = call_api(cmd="Get", format_object="SearchInfo", rid=rid).data
     # check status codes
     if ismatch(r"Status=WAITING", response)
       
@@ -76,9 +96,7 @@ function ncbi_blast_search_info(rid)
 end
 
 function ncbi_blast_get_results(rid)
-  url = "$( base_url )?CMD=Get&RID=$( rid )&FORMAT_TYPE=XML"
-  println(url)
-  content = get(url).data
+  content = call_api(cmd="Get", rid=rid, format_type="XML").data
   xml_doc = parse_string(content)
 
   xroot = root(xml_doc)
@@ -115,8 +133,7 @@ end
 
 # returns the RID of the query
 function ncbi_blast_put(query, database="nr", program="blastp", hitlist_size=500)
-  query = encodeURI(query)
-  response = get("$( base_url )?CMD=Put&QUERY=$( query )&DATABASE=$( database )&program=$( program )&HITLIST_SZE=$( hitlist_size )")
+  response = call_api(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size)
 
   m = match(r"RID = (.*)\n", response.data)
   rtoe = match(r"RTOE = (.*)\n", response.data)
