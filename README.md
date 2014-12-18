@@ -2,19 +2,17 @@
 
 
 ## Dependencies
+
 ```julia
 Pkg.add("Requests")
-
 Pkg.add("LightXML")
-
 Pkg.add("FastaIO")
-
 Pkg.add("ArgParse")
 ```
 
 ## WebBLAST
 
-An Julia API to call the BLAST Web API of NCBI and EBI.
+An API for Julia to call the BLAST Web API of NCBI and EBI.
 ### Usage
 
 ```
