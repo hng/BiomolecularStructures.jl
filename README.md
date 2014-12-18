@@ -1,12 +1,21 @@
-# Dependencies
-```
+# JuliaPDB
+
+
+## Dependencies
+```julia
 Pkg.add("Requests")
 
 Pkg.add("LightXML")
 
 Pkg.add("FastaIO")
+
+Pkg.add("ArgParse")
 ```
-Usage:
+
+## WebBLAST
+
+An Julia API to call the BLAST Web API of NCBI and EBI.
+### Usage
 
 ```
 usage: WebBLAST [-f FASTA FASTA] [-s SEQUENCE] [-h]
@@ -21,7 +30,7 @@ optional arguments:
   -h, --help            show this help message and exit
 
 ```
-<h2>Examples</h2>
+### Examples
 
 Sequence:
 ```julia WebBLAST.jl -s MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY```
