@@ -119,14 +119,29 @@ function ncbi_blast_get_results(rid)
   if hits != 0
       for hit in hits
         
+        hit_para = Dict{ASCIIString, Any}
+
         hitdict = attributes_dict(hit)
         println(hitdict)
 
+        hit_num = find_element(hit, "Hit_num")
+        hit_num_content = first(collect(child_nodes(hit_num))) 
+
         hit_id = find_element(hit, "Hit_id")
         hit_id_content = first(collect(child_nodes(hit_id))) 
-        
+
+        hit_def = find_element(hit, "Hit_def")
+        hit_def_content = first(collect(child_nodes(hit_def))) 
+
+        hit_accession = find_element(hit, "Hit_accession")
+        hit_accession_content = first(collect(child_nodes(hit_accession))) 
+
+        hit_len = find_element(hit, "Hit_len")
+        hit_len_content = first(collect(child_nodes(hit_len))) 
+
+        hit_para = ["Hit_id" => hit_id_content, "Hit_num" => hit_num_content, "Hit_def" => hit_def_content, "Hit_accession" => hit_accession_content, "Hit_len" => hit_len_content]
+        println(hit_para)
         #this_hit = Hit("hit_id_content")
-        println(hit_id_content)
      end
   end
 end
