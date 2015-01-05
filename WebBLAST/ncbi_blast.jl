@@ -139,6 +139,26 @@ function ncbi_blast_get_results(rid)
         hit_len = find_element(hit, "Hit_len")
         hit_len_content = first(collect(child_nodes(hit_len))) 
 
+        hit_hsps = find_element(hit, "Hit_hsps")
+        hit_hsps_children = get_elements_by_tagname(hit_hsps, "Hsp")
+        
+        array_hsps = []
+        
+        for hsp in hit_hsps_children
+            hsp_content = Dict{ASCIIString, ASCIIString}
+            for el in child_elements(hsp)
+                name_el = name(el)
+                content_el = string(first(collect(child_nodes(el)))) 
+                tmp = [name_el => content_el]
+                #println(tmp)
+                #merge!(hsp_content, tmp)
+            end
+            println(hsp_content)
+            #push!(array_hsps, hsp_content)
+        end
+
+        println(array_hsps)
+
         hit_para = ["Hit_id" => hit_id_content, "Hit_num" => hit_num_content, "Hit_def" => hit_def_content, "Hit_accession" => hit_accession_content, "Hit_len" => hit_len_content]
         println(hit_para)
         #this_hit = Hit("hit_id_content")
