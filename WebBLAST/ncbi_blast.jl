@@ -125,19 +125,20 @@ function ncbi_blast_get_results(rid)
         hit_hsps_children = get_elements_by_tagname(hit_hsps, "Hsp")
         
         # put hsps into a dict
-        hsps = Dict()
+        hsps = Dict[]
         for hsp in hit_hsps_children
-            hsp_content = Dict{ASCIIString, ASCIIString}
+            hsp_content = Dict()
             for el in child_elements(hsp)
                 name_el = name(el)
                 content_el = string(first(collect(child_nodes(el)))) 
-                hsps[name_el] = content_el
+                hsp_content[name_el] = content_el
             end
+            push!(hsps, hsp_content)
         end
 
         # construct Hsp from dict
-        hsp = construct_hsp(hsps)
-        hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsp)
+        hsps = map(construct_hsp, hsps)
+        hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsps)
 
         push!(results, hit)
      end

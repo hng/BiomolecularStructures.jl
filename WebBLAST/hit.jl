@@ -27,6 +27,6 @@ type Hit
 	accession::String
 	len::Int
 	
-	Hsps::Hsp
+	hsps::Array{Hsp, 1}
 end
 
