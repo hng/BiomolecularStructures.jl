@@ -3,6 +3,7 @@ using HttpCommon
 using Requests
 using LightXML
 using FastaIO
+using BioSeq
 
 # BLAST API base url
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
@@ -28,6 +29,7 @@ function call_api(;args...)
 
 end
 
+# reads a sequence from a FASTA file
 function read_sequence(args) 
   if length(args["fasta"]) == 2
 
@@ -56,6 +58,7 @@ function read_sequence(args)
 
 end
 
+# checks the status of the request to the ncbi server(s)
 function ncbi_blast_search_info(rid)
 
   searching = false
@@ -95,40 +98,52 @@ function ncbi_blast_search_info(rid)
   end
 end
 
+# gets the results of the search and 
 function ncbi_blast_get_results(rid)
   content = call_api(cmd="Get", rid=rid, format_type="XML").data
+
   xml_doc = parse_string(content)
 
   xroot = root(xml_doc)
-  c_nodes = child_nodes(xroot)
-  hits = 0
+  hits = blast_hits(xroot)
 
-  for c in child_nodes(xroot)
-    if is_elementnode(c)
-       e1 = XMLElement(c)
-       if name(e1) == "BlastOutput_iterations"
-          e2 = find_element(e1, "Iteration")
-          e3 = find_element(e2, "Iteration_hits")
+  results = Hit[]
 
-          hits = get_elements_by_tagname(e3, "Hit")
-
-       end
-    end
-  end
-  
   if hits != 0
       for hit in hits
-        
-        hitdict = attributes_dict(hit)
-        println(hitdict)
+        hit_para = Dict{ASCIIString, Any}
 
-        hit_id = find_element(hit, "Hit_id")
-        hit_id_content = first(collect(child_nodes(hit_id))) 
+        hitdict = attributes_dict(hit)
+
+        hit_num_content = xml_value(hit, "Hit_num")
+        hit_id_content = xml_value(hit, "Hit_id")
+        hit_def_content = xml_value(hit, "Hit_def") 
+        hit_accession_content = xml_value(hit, "Hit_accession")
+        hit_len_content = xml_value(hit, "Hit_len")
+
+        hit_hsps = find_element(hit, "Hit_hsps")
+        hit_hsps_children = get_elements_by_tagname(hit_hsps, "Hsp")
         
-        #this_hit = Hit("hit_id_content")
-        println(hit_id_content)
+        # put hsps into a dict
+        hsps = Dict()
+        for hsp in hit_hsps_children
+            hsp_content = Dict{ASCIIString, ASCIIString}
+            for el in child_elements(hsp)
+                name_el = name(el)
+                content_el = string(first(collect(child_nodes(el)))) 
+                hsps[name_el] = content_el
+            end
+        end
+
+        # construct Hsp from dict
+        hsp = construct_hsp(hsps)
+        hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsp)
+
+        push!(results, hit)
      end
   end
+
+  return results
 end
 
 # returns the RID of the query
@@ -139,4 +154,65 @@ function ncbi_blast_put(query, database="nr", program="blastp", hitlist_size=500
   rtoe = match(r"RTOE = (.*)\n", response.data)
 
   return (m.captures[1],rtoe.captures[1])
+end
+
+
+# extracts relevant hits from xml root
+function blast_hits(xroot) 
+  hits = 0
+  for c in child_nodes(xroot)
+      if is_elementnode(c)
+         e1 = XMLElement(c)
+         if name(e1) == "BlastOutput_iterations"
+            e2 = find_element(e1, "Iteration")
+            e3 = find_element(e2, "Iteration_hits")
+
+            hits = get_elements_by_tagname(e3, "Hit")
+
+         end
+      end
+  end
+  return hits
+end
+
+#xml attribute value extraction convenience function
+function xml_value(xml_node, attribute)
+  element = find_element(xml_node, attribute)
+  return string(first(collect(child_nodes(element))))
+end
+
+
+# construct Hsp, i'd like this to be an inner constructor in type Hsp,
+# but i can't get it too work.
+
+function construct_hsp(hsps)
+    hsp_num = int(hsps["Hsp_num"])
+    bitScore = float(hsps["Hsp_bit-score"])
+    evalue = float(hsps["Hsp_evalue"])
+    queryFrom = int(hsps["Hsp_query-from"])
+    queryTo = int(hsps["Hsp_query-to"])
+    queryFrame = int(hsps["Hsp_query-frame"])
+    hitFrame = int(hsps["Hsp_hit-frame"])
+    identity = int(hsps["Hsp_identity"])
+    positive = int(hsps["Hsp_positive"])
+    gaps = int(hsps["Hsp_gaps"])
+    alignLen = int(hsps["Hsp_align-len"])
+    qseq = aminoacid(hsps["Hsp_qseq"])
+    hseq = aminoacid(hsps["Hsp_hseq"])
+    midline = aminoacid(hsps["Hsp_midline"])
+
+    return Hsp(hsp_num,
+               bitScore,
+               evalue,
+               queryFrom,
+               queryTo,
+               queryFrame,
+               hitFrame,
+               identity,
+               positive,
+               gaps,
+               alignLen,
+               qseq,
+               hseq,
+               midline)
 end

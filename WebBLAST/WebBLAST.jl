@@ -4,7 +4,9 @@ module WebBLAST
   using ArgParse
 
   # include types, web interfaces
+  
   include("hit.jl")
+
   include("ncbi_blast.jl")
   include("ebi_blast.jl")
 
@@ -34,7 +36,7 @@ module WebBLAST
 
     info("rid: $(rid)")
     if ncbi_blast_search_info(rid)
-      ncbi_blast_get_results(rid)
+      println(ncbi_blast_get_results(rid))
     end
   end
 

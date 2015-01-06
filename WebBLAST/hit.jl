@@ -1,12 +1,5 @@
 using BioSeq
-
-type Hit
-	id::String
-	def::String
-	accession::String
-	len::Int
-	hit_num::Int
-
+type Hsp
 	hsp_num::Int
 	bitScore::Float64
 	evalue::Float64
@@ -19,7 +12,21 @@ type Hit
 	gaps::Int
 	alignLen::Int
 
-	qseq::AminoAcid
-	hseq::AminoAcid
-	midline::AminoAcid
+	qseq::Array{AminoAcid,1}
+	hseq::Array{AminoAcid,1}
+	midline::Array{AminoAcid,1}
+
+	
+	
 end
+
+type Hit
+	hit_num::Int
+	id::String
+	def::String
+	accession::String
+	len::Int
+	
+	Hsps::Hsp
+end
+
