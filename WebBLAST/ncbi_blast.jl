@@ -96,7 +96,10 @@ function ncbi_blast_search_info(rid)
 end
 
 function ncbi_blast_get_results(rid)
-  content = call_api(cmd="Get", rid=rid, format_type="XML").data
+  #content = call_api(cmd="Get", rid=rid, format_type="XML").data
+  f = open("ncbi.xml", "r")
+  content = readall(f)
+
   xml_doc = parse_string(content)
 
   xroot = root(xml_doc)
@@ -124,20 +127,11 @@ function ncbi_blast_get_results(rid)
         hitdict = attributes_dict(hit)
         println(hitdict)
 
-        hit_num = find_element(hit, "Hit_num")
-        hit_num_content = first(collect(child_nodes(hit_num))) 
-
-        hit_id = find_element(hit, "Hit_id")
-        hit_id_content = first(collect(child_nodes(hit_id))) 
-
-        hit_def = find_element(hit, "Hit_def")
-        hit_def_content = first(collect(child_nodes(hit_def))) 
-
-        hit_accession = find_element(hit, "Hit_accession")
-        hit_accession_content = first(collect(child_nodes(hit_accession))) 
-
-        hit_len = find_element(hit, "Hit_len")
-        hit_len_content = first(collect(child_nodes(hit_len))) 
+        hit_num_content = xml_value(hit, "Hit_num")
+        hit_id_content = xml_value(hit, "Hit_id")
+        hit_def_content = xml_value(hit, "Hit_def") 
+        hit_accession_content = xml_value(hit, "Hit_accession")
+        hit_len_content = xml_value(hit, "Hit_len")
 
         hit_hsps = find_element(hit, "Hit_hsps")
         hit_hsps_children = get_elements_by_tagname(hit_hsps, "Hsp")
@@ -153,15 +147,16 @@ function ncbi_blast_get_results(rid)
                 #println(tmp)
                 #merge!(hsp_content, tmp)
             end
-            println(hsp_content)
+            #println(hsp_content)
             #push!(array_hsps, hsp_content)
         end
 
-        println(array_hsps)
+        #println(array_hsps)
 
         hit_para = ["Hit_id" => hit_id_content, "Hit_num" => hit_num_content, "Hit_def" => hit_def_content, "Hit_accession" => hit_accession_content, "Hit_len" => hit_len_content]
-        println(hit_para)
+        #println(hit_para)
         #this_hit = Hit("hit_id_content")
+        hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content))
      end
   end
 end
@@ -174,4 +169,10 @@ function ncbi_blast_put(query, database="nr", program="blastp", hitlist_size=500
   rtoe = match(r"RTOE = (.*)\n", response.data)
 
   return (m.captures[1],rtoe.captures[1])
+end
+
+#xml attribute value extraction convenience function
+function xml_value(xml_node, attribute)
+  element = find_element(xml_node, attribute)
+  return string(first(collect(child_nodes(element))))
 end

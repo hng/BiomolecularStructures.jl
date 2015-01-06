@@ -5,6 +5,7 @@ module WebBLAST
 
   # include types, web interfaces
   include("hit.jl")
+  include("hsp.jl")
   include("ncbi_blast.jl")
   include("ebi_blast.jl")
 
@@ -30,12 +31,13 @@ module WebBLAST
 
     info("Searching for sequence: $(seq)")
 
-    rid, rtoe = ncbi_blast_put(seq)
+    #rid, rtoe = ncbi_blast_put(seq)
 
+    rid = "TESTING"
     info("rid: $(rid)")
-    if ncbi_blast_search_info(rid)
-      ncbi_blast_get_results(rid)
-    end
+    #ncbi_blast_search_info(rid)
+    ncbi_blast_get_results(rid)
+    #end
   end
 
   main()
