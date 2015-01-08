@@ -1,0 +1,2842 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.2.30+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>nr</BlastOutput_db>
+  <BlastOutput_query-ID>41285</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>62</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>41285</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>62</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|18412314|ref|NP_565204.1|</Hit_id>
+  <Hit_def>uncharacterized protein [Arabidopsis thaliana] &gt;gi|75099080|sp|O64527.1|Y1926_ARATH RecName: Full=UPF0678 fatty acid-binding protein-like protein At1g79260 [Arabidopsis thaliana] &gt;gi|209447558|pdb|3EMM|A Chain A, X-Ray Structure Of Protein From Arabidopsis Thaliana At1g79260 With Bound Heme &gt;gi|3152558|gb|AAC17039.1| Similar to M. tuberculosis gene gb|Z96072 and M. leprae gene gb|400019 [Arabidopsis thaliana] &gt;gi|15081628|gb|AAK82469.1| At1g79260/YUP8H12R_40 [Arabidopsis thaliana] &gt;gi|27363314|gb|AAO11576.1| At1g79260/YUP8H12R_40 [Arabidopsis thaliana] &gt;gi|332198103|gb|AEE36224.1| uncharacterized protein AT1G79260 [Arabidopsis thaliana]</Hit_def>
+  <Hit_accession>NP_565204</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.88</Hsp_bit-score>
+      <Hsp_score>333</Hsp_score>
+      <Hsp_evalue>2.52994e-37</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>62</Hsp_align-len>
+      <Hsp_qseq>MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|73536052|pdb|2A13|A</Hit_id>
+  <Hit_def>Chain A, X-Ray Structure Of Protein From Arabidopsis Thaliana At1g79260 &gt;gi|150261514|pdb|2Q4N|A Chain A, Ensemble Refinement Of The Crystal Structure Of Protein From Arabidopsis Thaliana At1g79260</Hit_def>
+  <Hit_accession>2A13_A</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>2.36179e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|609411912|pdb|3WJB|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/m148l/h158l (nb4) From Arabidopsis Thaliana &gt;gi|609411913|pdb|3WJB|B Chain B, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/m148l/h158l (nb4) From Arabidopsis Thaliana &gt;gi|609411915|pdb|3WJC|A Chain A, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/m148l/h158l Covalently Linked With [rh(cp-mal)(cod)] (nb4-rh) From Arabidopsis Thaliana &gt;gi|609411916|pdb|3WJC|B Chain B, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/m148l/h158l Covalently Linked With [rh(cp-mal)(cod)] (nb4-rh) From Arabidopsis Thaliana</Hit_def>
+  <Hit_accession>3WJB_A</Hit_accession>
+  <Hit_len>174</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.183</Hsp_bit-score>
+      <Hsp_score>326</Hsp_score>
+      <Hsp_evalue>4.03948e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>70</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|605603351|pdb|3WJG|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/m148w/h158l (nb10) From Arabidopsis Thaliana</Hit_def>
+  <Hit_accession>3WJG_A</Hit_accession>
+  <Hit_len>174</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.798</Hsp_bit-score>
+      <Hsp_score>325</Hsp_score>
+      <Hsp_evalue>4.69732e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>70</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|605603342|pdb|3WJE|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Mutant Nitrobindin M75w/h76l/q96c/m148l/h158l (nb6) From Arabidopsis Thaliana &gt;gi|605603343|pdb|3WJE|B Chain B, Crystal Structure Of Mutant Nitrobindin M75w/h76l/q96c/m148l/h158l (nb6) From Arabidopsis Thaliana</Hit_def>
+  <Hit_accession>3WJE_A</Hit_accession>
+  <Hit_len>174</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.798</Hsp_bit-score>
+      <Hsp_score>325</Hsp_score>
+      <Hsp_evalue>4.69732e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>70</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|605603347|pdb|3WJF|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/v128w/m148l/h158l (nb9) From Arabidopsis Thaliana &gt;gi|605603348|pdb|3WJF|B Chain B, Crystal Structure Of Mutant Nitrobindin M75l/h76l/q96c/v128w/m148l/h158l (nb9) From Arabidopsis Thaliana</Hit_def>
+  <Hit_accession>3WJF_A</Hit_accession>
+  <Hit_len>174</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.798</Hsp_bit-score>
+      <Hsp_score>325</Hsp_score>
+      <Hsp_evalue>4.79966e-36</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>70</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|605603341|pdb|3WJD|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of Mutant Nitrobindin F44w/m75l/h76l/q96c/m148l/h158l (nb5) From Arabidopsis Thaliana</Hit_def>
+  <Hit_accession>3WJD_A</Hit_accession>
+  <Hit_len>174</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>127.872</Hsp_bit-score>
+      <Hsp_score>320</Hsp_score>
+      <Hsp_evalue>2.38992e-35</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>70</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSWRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPS+RYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|297839787|ref|XP_002887775.1|</Hit_id>
+  <Hit_def>hypothetical protein ARALYDRAFT_316819 [Arabidopsis lyrata subsp. lyrata] &gt;gi|297333616|gb|EFH64034.1| hypothetical protein ARALYDRAFT_316819 [Arabidopsis lyrata subsp. lyrata]</Hit_def>
+  <Hit_accession>XP_002887775</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>112.079</Hsp_bit-score>
+      <Hsp_score>279</Hsp_score>
+      <Hsp_evalue>2.55403e-29</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>61</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>53</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>62</Hsp_align-len>
+      <Hsp_qseq>MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MNQLQEVENP-RPIPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEELRFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>MNQLQ+++NP    PVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEE+RFSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|567119598|ref|XP_006389905.1|</Hit_id>
+  <Hit_def>hypothetical protein EUTSA_v10019230mg [Eutrema salsugineum] &gt;gi|557086339|gb|ESQ27191.1| hypothetical protein EUTSA_v10019230mg [Eutrema salsugineum]</Hit_def>
+  <Hit_accession>XP_006389905</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>110.923</Hsp_bit-score>
+      <Hsp_score>276</Hsp_score>
+      <Hsp_evalue>8.48594e-29</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>50</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>54</Hsp_align-len>
+      <Hsp_qseq>NPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPAESPPLHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEELRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline> P ESPP+HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEE+RFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|685274701|ref|XP_009128343.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Brassica rapa]</Hit_def>
+  <Hit_accession>XP_009128343</Hit_accession>
+  <Hit_len>158</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>109.383</Hsp_bit-score>
+      <Hsp_score>272</Hsp_score>
+      <Hsp_evalue>2.95759e-28</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>54</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>49</Hsp_identity>
+      <Hsp_positive>51</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>ETPPIHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>E+PP+HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|674860936|emb|CDY69349.1|</Hit_id>
+  <Hit_def>BnaAnng30130D [Brassica napus]</Hit_def>
+  <Hit_accession>CDY69349</Hit_accession>
+  <Hit_len>158</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>107.457</Hsp_bit-score>
+      <Hsp_score>267</Hsp_score>
+      <Hsp_evalue>1.35584e-27</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>54</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>49</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>ETPPVHTFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>E+PPVH FVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|674910863|emb|CDY22266.1|</Hit_id>
+  <Hit_def>BnaC02g25700D [Brassica napus]</Hit_def>
+  <Hit_accession>CDY22266</Hit_accession>
+  <Hit_len>158</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>107.071</Hsp_bit-score>
+      <Hsp_score>266</Hsp_score>
+      <Hsp_evalue>1.93113e-27</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>54</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>48</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>ETPAIHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>E+P +HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|565490599|ref|XP_006302939.1|</Hit_id>
+  <Hit_def>hypothetical protein CARUB_v10021078mg [Capsella rubella] &gt;gi|482571649|gb|EOA35837.1| hypothetical protein CARUB_v10021078mg [Capsella rubella]</Hit_def>
+  <Hit_accession>XP_006302939</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>106.301</Hsp_bit-score>
+      <Hsp_score>264</Hsp_score>
+      <Hsp_evalue>3.76275e-27</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>48</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>54</Hsp_align-len>
+      <Hsp_qseq>NPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NPIQAPPLHPFVAPLSYLLGTWRGQGEGLYPTIPSFRYGEELRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>NP ++PP+HPFVAPLSYLLGTWRGQGEG YPTIPSFRYGEE+RFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|727483416|ref|XP_010417588.1|</Hit_id>
+  <Hit_def>PREDICTED: LOW QUALITY PROTEIN: UPF0678 fatty acid-binding protein-like protein At1g79260 [Camelina sativa]</Hit_def>
+  <Hit_accession>XP_010417588</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>102.834</Hsp_bit-score>
+      <Hsp_score>255</Hsp_score>
+      <Hsp_evalue>8.59816e-26</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>52</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>46</Hsp_identity>
+      <Hsp_positive>49</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>EAPPLHPLVEPLSYLLGTWRGQGEGEYPTIPSFRYGEELRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>E+PP+HP V PLSYLLGTWRGQGEGEYPTIPSFRYGEE+RFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|727599596|ref|XP_010472778.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Camelina sativa]</Hit_def>
+  <Hit_accession>XP_010472778</Hit_accession>
+  <Hit_len>181</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>102.449</Hsp_bit-score>
+      <Hsp_score>254</Hsp_score>
+      <Hsp_evalue>2.00548e-25</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>77</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>46</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>54</Hsp_align-len>
+      <Hsp_qseq>NPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>NQMEAPPLHPLVEPLSYLLGTWRGQGEGEYPTIPSFRFGEELRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>N  E+PP+HP V PLSYLLGTWRGQGEGEYPTIPSFR+GEE+RFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|674249568|gb|KFK42333.1|</Hit_id>
+  <Hit_def>hypothetical protein AALP_AA2G242800 [Arabis alpina]</Hit_def>
+  <Hit_accession>KFK42333</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>95.9005</Hsp_bit-score>
+      <Hsp_score>237</Hsp_score>
+      <Hsp_evalue>4.60841e-23</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>12</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>44</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>53</Hsp_align-len>
+      <Hsp_qseq>PGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PAVSPPLHPSVASLSYLLGTWRGQGEGKYPTIPSFHYGEELCFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>P  SPP+HP VA LSYLLGTWRGQGEG+YPTIPSF YGEE+ FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|720015450|ref|XP_010260842.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 isoform X2 [Nelumbo nucifera]</Hit_def>
+  <Hit_accession>XP_010260842</Hit_accession>
+  <Hit_len>141</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>88.1965</Hsp_bit-score>
+      <Hsp_score>217</Hsp_score>
+      <Hsp_evalue>2.36364e-20</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>17</Hsp_hit-from>
+      <Hsp_hit-to>66</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPPLHPAIAPLSYLLGTWRGEGEGGFPTINSFKYGEELSFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>+PP+HP +APLSYLLGTWRG+GEG +PTI SF+YGEE+ FSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|720015447|ref|XP_010260841.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 isoform X1 [Nelumbo nucifera]</Hit_def>
+  <Hit_accession>XP_010260841</Hit_accession>
+  <Hit_len>170</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>88.5817</Hsp_bit-score>
+      <Hsp_score>218</Hsp_score>
+      <Hsp_evalue>3.01702e-20</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>17</Hsp_hit-from>
+      <Hsp_hit-to>66</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPPLHPAIAPLSYLLGTWRGEGEGGFPTINSFKYGEELSFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>+PP+HP +APLSYLLGTWRG+GEG +PTI SF+YGEE+ FSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|720015459|ref|XP_010260846.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Nelumbo nucifera]</Hit_def>
+  <Hit_accession>XP_010260846</Hit_accession>
+  <Hit_len>129</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>87.0409</Hsp_bit-score>
+      <Hsp_score>214</Hsp_score>
+      <Hsp_evalue>5.91294e-20</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>17</Hsp_hit-from>
+      <Hsp_hit-to>66</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPPLHPAIAPLSYLLGTWRGEGEGGFPTINSFKYGEELSFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>+PP+HP +APLSYLLGTWRG+GEG +PTI SF+YGEE+ FSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|729334460|ref|XP_010537834.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Tarenaya hassleriana]</Hit_def>
+  <Hit_accession>XP_010537834</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>87.4261</Hsp_bit-score>
+      <Hsp_score>215</Hsp_score>
+      <Hsp_evalue>8.51118e-20</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>58</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PPLHPTVAPISYLLGRWRGEGEGQFPTISSFLYGEELQFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>PP+HP VAP+SYLLG WRG+GEG++PTI SF YGEE++FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|595868326|ref|XP_007212000.1|</Hit_id>
+  <Hit_def>hypothetical protein PRUPE_ppa011091mg [Prunus persica] &gt;gi|462407865|gb|EMJ13199.1| hypothetical protein PRUPE_ppa011091mg [Prunus persica]</Hit_def>
+  <Hit_accession>XP_007212000</Hit_accession>
+  <Hit_len>224</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>87.8113</Hsp_bit-score>
+      <Hsp_score>216</Hsp_score>
+      <Hsp_evalue>1.60092e-19</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>63</Hsp_hit-from>
+      <Hsp_hit-to>120</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>58</Hsp_align-len>
+      <Hsp_qseq>QQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>KNMEDTTESPAIHPAIAPLSYLLGTWRGQGEGGFPTINSFSYVEQLHFSHSGKPFIAY</Hsp_hseq>
+      <Hsp_midline>+ +++  ESP +HP +APLSYLLGTWRGQGEG +PTI SF Y E++ FSHSGKP IAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|470115333|ref|XP_004293857.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Fragaria vesca subsp. vesca]</Hit_def>
+  <Hit_accession>XP_004293857</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>86.6557</Hsp_bit-score>
+      <Hsp_score>213</Hsp_score>
+      <Hsp_evalue>1.6025e-19</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>58</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>SPAVHPAIAPLSYLLGSWKGQGEGGFPTINSFSYGEQLHFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>SP VHP +APLSYLLG+W+GQGEG +PTI SF YGE++ FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|728835765|gb|KHG15208.1|</Hit_id>
+  <Hit_def>hypothetical protein F383_00614 [Gossypium arboreum]</Hit_def>
+  <Hit_accession>KHG15208</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.8853</Hsp_bit-score>
+      <Hsp_score>211</Hsp_score>
+      <Hsp_evalue>3.19098e-19</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>8</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>53</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSH--SGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>ESSAIHPAVAPLSYLLGTWKGEGEGGYPTINSFRYGEELHFSHPASGKPVIAY</Hsp_hseq>
+      <Hsp_midline>ES  +HP VAPLSYLLGTW+G+GEG YPTI SFRYGEE+ FSH  SGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|727507353|ref|XP_010429805.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Camelina sativa]</Hit_def>
+  <Hit_accession>XP_010429805</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.5001</Hsp_bit-score>
+      <Hsp_score>210</Hsp_score>
+      <Hsp_evalue>4.52707e-19</Hsp_evalue>
+      <Hsp_query-from>24</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>17</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>39</Hsp_align-len>
+      <Hsp_qseq>SYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>SYLLGTWRGQGEGEYPTIPSFRYGEELRFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>SYLLGTWRGQGEGEYPTIPSFRYGEE+RFSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|168044037|ref|XP_001774489.1|</Hit_id>
+  <Hit_def>predicted protein [Physcomitrella patens] &gt;gi|162674201|gb|EDQ60713.1| predicted protein [Physcomitrella patens]</Hit_def>
+  <Hit_accession>XP_001774489</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.1149</Hsp_bit-score>
+      <Hsp_score>209</Hsp_score>
+      <Hsp_evalue>5.79205e-19</Hsp_evalue>
+      <Hsp_query-from>11</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>52</Hsp_align-len>
+      <Hsp_qseq>GESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>GNPPPLHPVLQPLSFLLGTWRGQGEGGFPTIQSFKYGEEIKLWHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>G  PP+HP + PLS+LLGTWRGQGEG +PTI SF+YGEEI+  HSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|645239081|ref|XP_008225976.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Prunus mume]</Hit_def>
+  <Hit_accession>XP_008225976</Hit_accession>
+  <Hit_len>160</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.1149</Hsp_bit-score>
+      <Hsp_score>209</Hsp_score>
+      <Hsp_evalue>5.87912e-19</Hsp_evalue>
+      <Hsp_query-from>7</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>56</Hsp_align-len>
+      <Hsp_qseq>LQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MEDATESPAIHPAIAPLSYLLGTWRGRGEGGFPTINSFSYVEQLHFSHSGKPFIAY</Hsp_hseq>
+      <Hsp_midline>+++  ESP +HP +APLSYLLGTWRG+GEG +PTI SF Y E++ FSHSGKP IAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|731434477|ref|XP_010645079.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Vitis vinifera] &gt;gi|147857570|emb|CAN83082.1| hypothetical protein VITISV_001330 [Vitis vinifera] &gt;gi|297736088|emb|CBI24126.3| unnamed protein product [Vitis vinifera]</Hit_def>
+  <Hit_accession>XP_010645079</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>83.9593</Hsp_bit-score>
+      <Hsp_score>206</Hsp_score>
+      <Hsp_evalue>1.48401e-18</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>14</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VHPAIQPLSYLLGTWRGQGEGGFPTINSFSYGEELLFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>VHP + PLSYLLGTWRGQGEG +PTI SF YGEE+ FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|356557086|ref|XP_003546849.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Glycine max]</Hit_def>
+  <Hit_accession>XP_003546849</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>81.2629</Hsp_bit-score>
+      <Hsp_score>199</Hsp_score>
+      <Hsp_evalue>2.15435e-17</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>43</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>64</Hsp_align-len>
+      <Hsp_qseq>MNQLQQLQNPGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MDAKTNSSAPETSPPVIHPAVAPLSYLLGTWRGQGEGGFPTINSFSYGEELHFSHSPSKPVIGY</Hsp_hseq>
+      <Hsp_midline>M+       P  SPPV HP VAPLSYLLGTWRGQGEG +PTI SF YGEE+ FSHS  KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|449444310|ref|XP_004139918.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like isoform 1 [Cucumis sativus] &gt;gi|449444312|ref|XP_004139919.1| PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like isoform 2 [Cucumis sativus] &gt;gi|449525114|ref|XP_004169564.1| PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like isoform 1 [Cucumis sativus] &gt;gi|449525116|ref|XP_004169565.1| PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like isoform 2 [Cucumis sativus] &gt;gi|700191576|gb|KGN46780.1| hypothetical protein Csa_6G134380 [Cucumis sativus]</Hit_def>
+  <Hit_accession>XP_004139918</Hit_accession>
+  <Hit_len>170</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>81.2629</Hsp_bit-score>
+      <Hsp_score>199</Hsp_score>
+      <Hsp_evalue>2.32059e-17</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>66</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>IHPAVTPLSFLLGTWRGKGEGGFPTINSFSYGEELHFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>+HP V PLS+LLGTWRG+GEG +PTI SF YGEE+ FSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|567859274|ref|XP_006422320.1|</Hit_id>
+  <Hit_def>hypothetical protein CICLE_v10006094mg [Citrus clementina] &gt;gi|568881775|ref|XP_006493727.1| PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Citrus sinensis] &gt;gi|557524193|gb|ESR35560.1| hypothetical protein CICLE_v10006094mg [Citrus clementina] &gt;gi|641842603|gb|KDO61507.1| hypothetical protein CISIN_1g045829mg [Citrus sinensis]</Hit_def>
+  <Hit_accession>XP_006422320</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>80.4925</Hsp_bit-score>
+      <Hsp_score>197</Hsp_score>
+      <Hsp_evalue>3.6226e-17</Hsp_evalue>
+      <Hsp_query-from>11</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>53</Hsp_align-len>
+      <Hsp_qseq>GESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>GGGVPVHPAIAPISYLLGTWRGQGSGGYPTINAFDYGEELNFTHSGGKPVIAY</Hsp_hseq>
+      <Hsp_midline>G   PVHP +AP+SYLLGTWRGQG G YPTI +F YGEE+ F+HS GKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|659112544|ref|XP_008456272.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Cucumis melo]</Hit_def>
+  <Hit_accession>XP_008456272</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>80.1073</Hsp_bit-score>
+      <Hsp_score>196</Hsp_score>
+      <Hsp_evalue>4.3261e-17</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>IHPAVTPLSFLLGTWRGKGDGGFPTINSFSYGEELHFSHSGKPVISY</Hsp_hseq>
+      <Hsp_midline>+HP V PLS+LLGTWRG+G+G +PTI SF YGEE+ FSHSGKPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|697129706|ref|XP_009618916.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Nicotiana tomentosiformis]</Hit_def>
+  <Hit_accession>XP_009618916</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>79.7221</Hsp_bit-score>
+      <Hsp_score>195</Hsp_score>
+      <Hsp_evalue>7.24914e-17</Hsp_evalue>
+      <Hsp_query-from>7</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>57</Hsp_align-len>
+      <Hsp_qseq>LQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VSNQSETLPVHPVVKPFSFLLGTWRGEGEGFFPTISSFNYSEELQFSHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>+ N  E+ PVHP V P S+LLGTWRG+GEG +PTI SF Y EE++FSHS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|657402304|gb|KEH41202.1|</Hit_id>
+  <Hit_def>UPF0678 fatty acid-binding protein-like protein [Medicago truncatula]</Hit_def>
+  <Hit_accession>KEH41202</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>79.7221</Hsp_bit-score>
+      <Hsp_score>195</Hsp_score>
+      <Hsp_evalue>8.43182e-17</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>PGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSH-SGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PGSSPPVCHPAVAPLSYLLGTWRGQGEGGYPTINSFSYGEELHFYHPPNKPVIGY</Hsp_hseq>
+      <Hsp_midline>PG SPPV HP VAPLSYLLGTWRGQGEG YPTI SF YGEE+ F H   KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|302756661|ref|XP_002961754.1|</Hit_id>
+  <Hit_def>hypothetical protein SELMODRAFT_165176 [Selaginella moellendorffii] &gt;gi|300170413|gb|EFJ37014.1| hypothetical protein SELMODRAFT_165176 [Selaginella moellendorffii]</Hit_def>
+  <Hit_accession>XP_002961754</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>79.337</Hsp_bit-score>
+      <Hsp_score>194</Hsp_score>
+      <Hsp_evalue>8.78559e-17</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>58</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PPIHPALAPLGFLLGSWRGAGEGGFPTIKSFGYGEEIRLWHTGKPVMAY</Hsp_hseq>
+      <Hsp_midline>PP+HP +APL +LLG+WRG GEG +PTI SF YGEEIR  H+GKPV+AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|302762805|ref|XP_002964824.1|</Hit_id>
+  <Hit_def>hypothetical protein SELMODRAFT_83678 [Selaginella moellendorffii] &gt;gi|300167057|gb|EFJ33662.1| hypothetical protein SELMODRAFT_83678 [Selaginella moellendorffii]</Hit_def>
+  <Hit_accession>XP_002964824</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>79.337</Hsp_bit-score>
+      <Hsp_score>194</Hsp_score>
+      <Hsp_evalue>9.44968e-17</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>58</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PPIHPALAPLGFLLGSWRGAGEGGFPTIKSFGYGEEIRLWHTGKPVMAY</Hsp_hseq>
+      <Hsp_midline>PP+HP +APL +LLG+WRG GEG +PTI SF YGEEIR  H+GKPV+AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|657402303|gb|KEH41201.1|</Hit_id>
+  <Hit_def>UPF0678 fatty acid-binding protein-like protein [Medicago truncatula]</Hit_def>
+  <Hit_accession>KEH41201</Hit_accession>
+  <Hit_len>131</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.5666</Hsp_bit-score>
+      <Hsp_score>192</Hsp_score>
+      <Hsp_evalue>9.64447e-17</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>PGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSH-SGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PGSSPPVCHPAVAPLSYLLGTWRGQGEGGYPTINSFSYGEELHFYHPPNKPVIGY</Hsp_hseq>
+      <Hsp_midline>PG SPPV HP VAPLSYLLGTWRGQGEG YPTI SF YGEE+ F H   KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|643715889|gb|KDP27734.1|</Hit_id>
+  <Hit_def>hypothetical protein JCGZ_19711 [Jatropha curcas]</Hit_def>
+  <Hit_accession>KDP27734</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.9518</Hsp_bit-score>
+      <Hsp_score>193</Hsp_score>
+      <Hsp_evalue>1.54869e-16</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>61</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>37</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>52</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSH-SGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>EAAAVHPAIAPLSYLLGTWKGHGEGGFPTISSFSYGEELQFSSISGKPVIAY</Hsp_hseq>
+      <Hsp_midline>E+  VHP +APLSYLLGTW+G GEG +PTI SF YGEE++FS  SGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|224112357|ref|XP_002316162.1|</Hit_id>
+  <Hit_def>hypothetical protein POPTR_0010s18310g [Populus trichocarpa] &gt;gi|222865202|gb|EEF02333.1| hypothetical protein POPTR_0010s18310g [Populus trichocarpa]</Hit_def>
+  <Hit_accession>XP_002316162</Hit_accession>
+  <Hit_len>163</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.5666</Hsp_bit-score>
+      <Hsp_score>192</Hsp_score>
+      <Hsp_evalue>1.66468e-16</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>59</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>42</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>NPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPPSAAAVHPVIVPLSYLLGTWRGQGEGGYPTINSFSYGEELHFSSNPGKPVIAY</Hsp_hseq>
+      <Hsp_midline> P  +  VHP + PLSYLLGTWRGQGEG YPTI SF YGEE+ FS + GKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|586660174|ref|XP_006830057.1|</Hit_id>
+  <Hit_def>hypothetical protein AMTR_s00125p00025030 [Amborella trichopoda] &gt;gi|548835866|gb|ERM97473.1| hypothetical protein AMTR_s00125p00025030 [Amborella trichopoda]</Hit_def>
+  <Hit_accession>XP_006830057</Hit_accession>
+  <Hit_len>163</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.1814</Hsp_bit-score>
+      <Hsp_score>191</Hsp_score>
+      <Hsp_evalue>2.37144e-16</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>59</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>PVHPFVAPLSYLLGTWRGQGEGEYPTI-PSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PLHPAVAPLSFLLGTWKGQGEGSFPTISSSFHYGEELTFSHSGGKPVIAY</Hsp_hseq>
+      <Hsp_midline>P+HP VAPLS+LLGTW+GQGEG +PTI  SF YGEE+ FSHS GKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|593697296|ref|XP_007149130.1|</Hit_id>
+  <Hit_def>hypothetical protein PHAVU_005G043600g [Phaseolus vulgaris] &gt;gi|561022394|gb|ESW21124.1| hypothetical protein PHAVU_005G043600g [Phaseolus vulgaris]</Hit_def>
+  <Hit_accession>XP_007149130</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.1814</Hsp_bit-score>
+      <Hsp_score>191</Hsp_score>
+      <Hsp_evalue>2.5625e-16</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>41</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>64</Hsp_align-len>
+      <Hsp_qseq>MNQLQQLQNPGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MDAREESPAPATSPPVIHPAVVPLSFLLGTWRGQGEGGFPTINSFSYGEELIFSHSPNKPVIGY</Hsp_hseq>
+      <Hsp_midline>M+  ++   P  SPPV HP V PLS+LLGTWRGQGEG +PTI SF YGEE+ FSHS  KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|658040998|ref|XP_008356111.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Malus domestica]</Hit_def>
+  <Hit_accession>XP_008356111</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.1814</Hsp_bit-score>
+      <Hsp_score>191</Hsp_score>
+      <Hsp_evalue>2.99691e-16</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>40</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>PVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PMHPAIAPISYLLGTWKGQGEGGFPTINSFSYVEHLNFSHSGKPFIAY</Hsp_hseq>
+      <Hsp_midline>P+HP +AP+SYLLGTW+GQGEG +PTI SF Y E + FSHSGKP IAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|697166446|ref|XP_009592055.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Nicotiana tomentosiformis]</Hit_def>
+  <Hit_accession>XP_009592055</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.7962</Hsp_bit-score>
+      <Hsp_score>190</Hsp_score>
+      <Hsp_evalue>4.09059e-16</Hsp_evalue>
+      <Hsp_query-from>7</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>57</Hsp_align-len>
+      <Hsp_qseq>LQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VSNQSETLPVHPAVKPISFLLGIWRGEGEGFFPTISSFNYSEELQFSHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>+ N  E+ PVHP V P+S+LLG WRG+GEG +PTI SF Y EE++FSHS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|351725737|ref|NP_001236079.1|</Hit_id>
+  <Hit_def>uncharacterized protein LOC100306509 [Glycine max] &gt;gi|255628739|gb|ACU14714.1| unknown [Glycine max] &gt;gi|734376543|gb|KHN21345.1| UPF0678 fatty acid-binding protein-like protein [Glycine soja]</Hit_def>
+  <Hit_accession>NP_001236079</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.411</Hsp_bit-score>
+      <Hsp_score>189</Hsp_score>
+      <Hsp_evalue>5.93307e-16</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>PGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PETSPAVIHPAVAPISYLLGTWRGQGEGGFPTINSFSYGEELHFSHSPNKPVIGY</Hsp_hseq>
+      <Hsp_midline>P  SP V HP VAP+SYLLGTWRGQGEG +PTI SF YGEE+ FSHS  KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|694371541|ref|XP_009363309.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Pyrus x bretschneideri]</Hit_def>
+  <Hit_accession>XP_009363309</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.0258</Hsp_bit-score>
+      <Hsp_score>188</Hsp_score>
+      <Hsp_evalue>6.00963e-16</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>40</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>PVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PMHPAIGPISYLLGTWKGQGEGGFPTINSFSYVEQLNFSHSGKPFIAY</Hsp_hseq>
+      <Hsp_midline>P+HP + P+SYLLGTW+GQGEG +PTI SF Y E++ FSHSGKP IAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|604328140|gb|EYU33808.1|</Hit_id>
+  <Hit_def>hypothetical protein MIMGU_mgv1a015209mg [Erythranthe guttata]</Hit_def>
+  <Hit_accession>EYU33808</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.485</Hsp_bit-score>
+      <Hsp_score>184</Hsp_score>
+      <Hsp_evalue>2.73699e-15</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>61</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>HPAVQPLSYLLGTWRGQGEGSFPTISPFKYSEELQFSHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>HP V PLSYLLGTWRGQGEG +PTI  F+Y EE++FSHS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|698508326|ref|XP_009799444.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Nicotiana sylvestris]</Hit_def>
+  <Hit_accession>XP_009799444</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.485</Hsp_bit-score>
+      <Hsp_score>184</Hsp_score>
+      <Hsp_evalue>3.05702e-15</Hsp_evalue>
+      <Hsp_query-from>7</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>44</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>57</Hsp_align-len>
+      <Hsp_qseq>LQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VSNQSETLLVHPAVKPLSFLLGTWRGEGQGFFPTISSFNYSEDLQFSHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>+ N  E+  VHP V PLS+LLGTWRG+G+G +PTI SF Y E+++FSHS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|698440950|ref|XP_009760869.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Nicotiana sylvestris]</Hit_def>
+  <Hit_accession>XP_009760869</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.0998</Hsp_bit-score>
+      <Hsp_score>183</Hsp_score>
+      <Hsp_evalue>3.55616e-15</Hsp_evalue>
+      <Hsp_query-from>7</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>57</Hsp_align-len>
+      <Hsp_qseq>LQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VSNQSETLSVHPAVKPISFLLGIWRGEGEGFFPTISSFNYSEELQFSHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>+ N  E+  VHP V P+S+LLG WRG+GEG +PTI SF Y EE++FSHS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|514780199|ref|XP_004969539.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Setaria italica]</Hit_def>
+  <Hit_accession>XP_004969539</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>74.3294</Hsp_bit-score>
+      <Hsp_score>181</Hsp_score>
+      <Hsp_evalue>7.96956e-15</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>54</Hsp_align-len>
+      <Hsp_qseq>PGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PTQPPATHPAVAPLAFLLGKWRGEGEGSFPAISSFRYGEELLFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline>P + P  HP VAPL++LLG WRG+GEG +P I SFRYGEE+ FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|502087668|ref|XP_004488605.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Cicer arietinum]</Hit_def>
+  <Hit_accession>XP_004488605</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.9442</Hsp_bit-score>
+      <Hsp_score>180</Hsp_score>
+      <Hsp_evalue>1.169e-14</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>40</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>52</Hsp_align-len>
+      <Hsp_qseq>SPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>SPPVCHPAVAPLSYLLGKWRGQGEGGYPTINSFSYGEELHFYHLPNKPVIGY</Hsp_hseq>
+      <Hsp_midline>SPPV HP VAPLSYLLG WRGQGEG YPTI SF YGEE+ F H   KPVI Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|226503922|ref|NP_001148838.1|</Hit_id>
+  <Hit_def>LOC100282456 [Zea mays] &gt;gi|195622536|gb|ACG33098.1| THAP domain-containing protein 4 [Zea mays] &gt;gi|414881005|tpg|DAA58136.1| TPA: THAP domain-containing protein 4 [Zea mays]</Hit_def>
+  <Hit_accession>NP_001148838</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.1738</Hsp_bit-score>
+      <Hsp_score>178</Hsp_score>
+      <Hsp_evalue>1.94848e-14</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>THPAVAPLAFLLGKWRGEGEGSFPTISSFRYGEELLFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline> HP VAPL++LLG WRG+GEG +PTI SFRYGEE+ FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>51</Hit_num>
+  <Hit_id>gi|516913013|ref|WP_018162678.1|</Hit_id>
+  <Hit_def>hypothetical protein [Smaragdicoccus niigatensis]</Hit_def>
+  <Hit_accession>WP_018162678</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.7886</Hsp_bit-score>
+      <Hsp_score>177</Hsp_score>
+      <Hsp_evalue>2.28276e-14</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHPDIAPLAGLLGTWKGQGAGEYPTIASFAYLEEVTFGHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP +APL+ LLGTW+GQG GEYPTI SF Y EE+ F H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>52</Hit_num>
+  <Hit_id>gi|734419490|gb|KHN40169.1|</Hit_id>
+  <Hit_def>UPF0678 fatty acid-binding protein-like protein [Glycine soja]</Hit_def>
+  <Hit_accession>KHN40169</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.4034</Hsp_bit-score>
+      <Hsp_score>176</Hsp_score>
+      <Hsp_evalue>3.43118e-14</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>55</Hsp_query-to>
+      <Hsp_hit-from>92</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>42</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS</Hsp_qseq>
+      <Hsp_hseq>PVIHPAVAPLSYLLGTWRGQGEGGFPTINSFSYGEELHFSHS</Hsp_hseq>
+      <Hsp_midline>P +HP VAPLSYLLGTWRGQGEG +PTI SF YGEE+ FSHS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>53</Hit_num>
+  <Hit_id>gi|473999745|gb|EMS52200.1|</Hit_id>
+  <Hit_def>hypothetical protein TRIUR3_11982 [Triticum urartu]</Hit_def>
+  <Hit_accession>EMS52200</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>72.0182</Hsp_bit-score>
+      <Hsp_score>175</Hsp_score>
+      <Hsp_evalue>4.48792e-14</Hsp_evalue>
+      <Hsp_query-from>10</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>36</Hsp_identity>
+      <Hsp_positive>41</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>PGESPPV-HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PQTQPPAPHPLVAPLSFLLGKWRGEGEGTFPSIAPFRYGEEILFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline>P   PP  HP VAPLS+LLG WRG+GEG +P+I  FRYGEEI FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>54</Hit_num>
+  <Hit_id>gi|695005842|ref|XP_009389385.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Musa acuminata subsp. malaccensis]</Hit_def>
+  <Hit_accession>XP_009389385</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.633</Hsp_bit-score>
+      <Hsp_score>174</Hsp_score>
+      <Hsp_evalue>6.70621e-14</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>22</Hsp_hit-from>
+      <Hsp_hit-to>61</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>40</Hsp_align-len>
+      <Hsp_qseq>LSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LSYLLGRWRGQGEGGFPTINSFAYGEELIFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>LSYLLG WRGQGEG +PTI SF YGEE+ FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>55</Hit_num>
+  <Hit_id>gi|102139973|gb|ABF70108.1|</Hit_id>
+  <Hit_def>hypothetical protein MBP_91N22.4 [Musa balbisiana]</Hit_def>
+  <Hit_accession>ABF70108</Hit_accession>
+  <Hit_len>191</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.633</Hsp_bit-score>
+      <Hsp_score>174</Hsp_score>
+      <Hsp_evalue>9.89679e-14</Hsp_evalue>
+      <Hsp_query-from>23</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>22</Hsp_hit-from>
+      <Hsp_hit-to>61</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>40</Hsp_align-len>
+      <Hsp_qseq>LSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LSYLLGRWRGQGEGGFPTINSFAYGEELIFSHSGKPVIAY</Hsp_hseq>
+      <Hsp_midline>LSYLLG WRGQGEG +PTI SF YGEE+ FSHSGKPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>56</Hit_num>
+  <Hit_id>gi|460409574|ref|XP_004250213.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Solanum lycopersicum]</Hit_def>
+  <Hit_accession>XP_004250213</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.2478</Hsp_bit-score>
+      <Hsp_score>173</Hsp_score>
+      <Hsp_evalue>1.06092e-13</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSG-KPVIAY</Hsp_qseq>
+      <Hsp_hseq>VHPAVKPLSDLLGTWKGEGEGFFPTISSFNYSEELQFTHSSKKPVIAY</Hsp_hseq>
+      <Hsp_midline>VHP V PLS LLGTW+G+GEG +PTI SF Y EE++F+HS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>57</Hit_num>
+  <Hit_id>gi|218188843|gb|EEC71270.1|</Hit_id>
+  <Hit_def>hypothetical protein OsI_03268 [Oryza sativa Indica Group]</Hit_def>
+  <Hit_accession>EEC71270</Hit_accession>
+  <Hit_len>179</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.2478</Hsp_bit-score>
+      <Hsp_score>173</Hsp_score>
+      <Hsp_evalue>1.25766e-13</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>75</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>34</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>QQLQNPGESPPV--HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>EEMEGGGATAPTAPHPAVAPLAFLLGKWRGEGEGSFPTISPFRYGEELLFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline>++++  G + P   HP VAPL++LLG WRG+GEG +PTI  FRYGEE+ FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>58</Hit_num>
+  <Hit_id>gi|565371652|ref|XP_006352416.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260-like [Solanum tuberosum]</Hit_def>
+  <Hit_accession>XP_006352416</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>70.8626</Hsp_bit-score>
+      <Hsp_score>172</Hsp_score>
+      <Hsp_evalue>1.34218e-13</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VHPAVKPLSDLLGTWKGEGEGFFPTISSFNYSEELQFTHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>VHP V PLS LLGTW+G+GEG +PTI SF Y EE++F+HS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>59</Hit_num>
+  <Hit_id>gi|460409576|ref|XP_004250214.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Solanum lycopersicum]</Hit_def>
+  <Hit_accession>XP_004250214</Hit_accession>
+  <Hit_len>214</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>70.8626</Hsp_bit-score>
+      <Hsp_score>172</Hsp_score>
+      <Hsp_evalue>2.3239e-13</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>49</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VHPAVKPLSDLIGTWKGEGEGFFPTISSFNYSEELQFTHSPNKPVIAY</Hsp_hseq>
+      <Hsp_midline>VHP V PLS L+GTW+G+GEG +PTI SF Y EE++F+HS  KPVIAY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>60</Hit_num>
+  <Hit_id>gi|661886537|emb|CDP09901.1|</Hit_id>
+  <Hit_def>unnamed protein product [Coffea canephora]</Hit_def>
+  <Hit_accession>CDP09901</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>69.3218</Hsp_bit-score>
+      <Hsp_score>168</Hsp_score>
+      <Hsp_evalue>5.71284e-13</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>59</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>TPTTHPAVQPLSFLLGTWKGQGEGGFPTITPFQYFEEVTFSHHPSKPVVAY</Hsp_hseq>
+      <Hsp_midline>+P  HP V PLS+LLGTW+GQGEG +PTI  F+Y EE+ FSH   KPV+AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>61</Hit_num>
+  <Hit_id>gi|242053993|ref|XP_002456142.1|</Hit_id>
+  <Hit_def>hypothetical protein SORBIDRAFT_03g031180 [Sorghum bicolor] &gt;gi|241928117|gb|EES01262.1| hypothetical protein SORBIDRAFT_03g031180 [Sorghum bicolor]</Hit_def>
+  <Hit_accession>XP_002456142</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.5514</Hsp_bit-score>
+      <Hsp_score>166</Hsp_score>
+      <Hsp_evalue>1.09301e-12</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>63</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>44</Hsp_align-len>
+      <Hsp_qseq>VAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VAPLAFLLGKWRGEGEGSFPTISSFRYGEELLFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline>VAPL++LLG WRG+GEG +PTI SFRYGEE+ FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>62</Hit_num>
+  <Hit_id>gi|504799881|ref|WP_014986983.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Nocardia brasiliensis] &gt;gi|407647343|ref|YP_006811102.1| hypothetical protein O3I_030895 [Nocardia brasiliensis ATCC 700358] &gt;gi|407310227|gb|AFU04128.1| hypothetical protein O3I_030895 [Nocardia brasiliensis ATCC 700358] &gt;gi|635332915|dbj|GAJ80746.1| hypothetical protein NBRGN_030_00420 [Nocardia brasiliensis NBRC 14402]</Hit_def>
+  <Hit_accession>WP_014986983</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.781</Hsp_bit-score>
+      <Hsp_score>164</Hsp_score>
+      <Hsp_evalue>1.67271e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>PPV--HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PPIAPHPDIAPLAALLGTWRGNGHGEYPTIQPFDYLEEVRFGHLGRPFLTY</Hsp_hseq>
+      <Hsp_midline>PP+  HP +APL+ LLGTWRG G GEYPTI  F Y EE+RF H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>63</Hit_num>
+  <Hit_id>gi|326496505|dbj|BAJ94714.1|</Hit_id>
+  <Hit_def>predicted protein [Hordeum vulgare subsp. vulgare]</Hit_def>
+  <Hit_accession>BAJ94714</Hit_accession>
+  <Hit_len>176</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.781</Hsp_bit-score>
+      <Hsp_score>164</Hsp_score>
+      <Hsp_evalue>1.89933e-12</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>72</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>45</Hsp_align-len>
+      <Hsp_qseq>FVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LVAPLSFLLGKWRGEGEGTFPTIAPFRYGEEILFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline> VAPLS+LLG WRG+GEG +PTI  FRYGEEI FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>64</Hit_num>
+  <Hit_id>gi|703415949|ref|WP_033424696.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Actinomadura flavalba]</Hit_def>
+  <Hit_accession>WP_033424696</Hit_accession>
+  <Hit_len>172</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>67.0106</Hsp_bit-score>
+      <Hsp_score>162</Hsp_score>
+      <Hsp_evalue>3.26086e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>27</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHPDLKPLEFLLGTWEGAGVGDYPTIEAFQFGQEVTFSHNGKPFLIY</Hsp_hseq>
+      <Hsp_midline>P +HP + PL +LLGTW G G G+YPTI +F++G+E+ FSH+GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>65</Hit_num>
+  <Hit_id>gi|656088209|ref|WP_029119203.1|</Hit_id>
+  <Hit_def>hypothetical protein [Mycobacterium sp. UNC410CL29Cvi84]</Hit_def>
+  <Hit_accession>WP_029119203</Hit_accession>
+  <Hit_len>160</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.6254</Hsp_bit-score>
+      <Hsp_score>161</Hsp_score>
+      <Hsp_evalue>5.15755e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PDLHPDVAVLAPLLGTWAGTGSGEYPTIASFDYLEEVTFGHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP VA L+ LLGTW G G GEYPTI SF Y EE+ F H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>66</Hit_num>
+  <Hit_id>gi|495533978|ref|WP_008258564.1|</Hit_id>
+  <Hit_def>hypothetical protein [Mycobacterium sp. H4Y] &gt;gi|442768182|gb|ELR86176.1| hypothetical protein W7U_13180 [Mycobacterium sp. H4Y]</Hit_def>
+  <Hit_accession>WP_008258564</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.6254</Hsp_bit-score>
+      <Hsp_score>161</Hsp_score>
+      <Hsp_evalue>5.42187e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHPDLAALAPLLGTWVGQGAGKYPTIPPFDYLEEVTFAHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP +A L+ LLGTW GQG G+YPTIP F Y EE+ F+H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>67</Hit_num>
+  <Hit_id>gi|497640819|ref|WP_009955003.1|</Hit_id>
+  <Hit_def>MULTISPECIES: fatty acid-binding protein [Mycobacterium avium complex (MAC)] &gt;gi|379755451|ref|YP_005344123.1| hypothetical protein OCO_34390 [Mycobacterium intracellulare MOTT-02] &gt;gi|406031689|ref|YP_006730580.1| hypothetical protein MIP_05178 [Mycobacterium indicus pranii MTCC 9506] &gt;gi|378805667|gb|AFC49802.1| hypothetical protein OCO_34390 [Mycobacterium intracellulare MOTT-02] &gt;gi|405130236|gb|AFS15491.1| Hypothetical protein MIP_05178 [Mycobacterium indicus pranii MTCC 9506] &gt;gi|576461878|gb|EUA55481.1| hypothetical protein I550_3636 [Mycobacterium intracellulare 1956] &gt;gi|698186527|gb|AIT86403.1| fatty acid-binding-like protein [Mycobacterium intracellulare 1956]</Hit_def>
+  <Hit_accession>WP_009955003</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>5.70287e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHPDLAALAPLLGTWVGQGAGKYPTIPPFDYLEEVTFAHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP +A L+ LLGTW GQG G+YPTIP F Y EE+ F+H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>68</Hit_num>
+  <Hit_id>gi|518943775|ref|WP_020099650.1|</Hit_id>
+  <Hit_def>hypothetical protein [Mycobacterium sp. 360MFTsu5.1]</Hit_def>
+  <Hit_accession>WP_020099650</Hit_accession>
+  <Hit_len>160</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>5.70649e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PDLHPDVAVLAPLLGTWAGTGSGEYPTIASFDYLEEVTFGHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP VA L+ LLGTW G G GEYPTI SF Y EE+ F H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>69</Hit_num>
+  <Hit_id>gi|657003677|gb|KEG00057.1|</Hit_id>
+  <Hit_def>hypothetical protein K883_00107 [Mycobacterium sp. TKK-01-0059]</Hit_def>
+  <Hit_accession>KEG00057</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>5.93808e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHPDLAALAPLLGTWVGQGAGKYPTIPPFDYLEEVTFAHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP +A L+ LLGTW GQG G+YPTIP F Y EE+ F+H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>70</Hit_num>
+  <Hit_id>gi|502614091|ref|WP_012851032.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Thermomonospora curvata] &gt;gi|269124916|ref|YP_003298286.1| hypothetical protein Tcur_0653 [Thermomonospora curvata DSM 43183] &gt;gi|268309874|gb|ACY96248.1| Domain of unknown function DUF1794 [Thermomonospora curvata DSM 43183]</Hit_def>
+  <Hit_accession>WP_012851032</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>6.05928e-12</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>KPELHPDLKPLEFLLGEWEGAGVGGYPTIDSFRFGQEISFTHNGKPFLIY</Hsp_hseq>
+      <Hsp_midline> P +HP + PL +LLG W G G G YPTI SFR+G+EI F+H+GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>71</Hit_num>
+  <Hit_id>gi|300681507|emb|CBH32601.1|</Hit_id>
+  <Hit_def>conserved hypothetical protein, expressed [Triticum aestivum] &gt;gi|669029660|emb|CDM83940.1| unnamed protein product [Triticum aestivum]</Hit_def>
+  <Hit_accession>CBH32601</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>6.10244e-12</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>45</Hsp_align-len>
+      <Hsp_qseq>FVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LVAPLSFLLGKWRGEGEGTFPSIAPFRYGEEILFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline> VAPLS+LLG WRG+GEG +P+I  FRYGEEI FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>72</Hit_num>
+  <Hit_id>gi|648522891|ref|WP_026214642.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Nonomuraea coxensis]</Hit_def>
+  <Hit_accession>WP_026214642</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>7.04367e-12</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>52</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>EEPEVHPALEPIAFLLGRWEGAGVGGYPTIESFNFGQEIEFGHNGKPFLTY</Hsp_hseq>
+      <Hsp_midline>E P VHP + P+++LLG W G G G YPTI SF +G+EI F H+GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>73</Hit_num>
+  <Hit_id>gi|651282818|ref|WP_026414792.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Actinomadura oligospora]</Hit_def>
+  <Hit_accession>WP_026414792</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>66.2402</Hsp_bit-score>
+      <Hsp_score>160</Hsp_score>
+      <Hsp_evalue>7.07681e-12</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>27</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PELHDDLKPLEFLLGTWKGAGVGDYPTIEAFNFGQEISFSHNGKPFLIY</Hsp_hseq>
+      <Hsp_midline>P +H  + PL +LLGTW+G G G+YPTI +F +G+EI FSH+GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>74</Hit_num>
+  <Hit_id>gi|648651743|ref|WP_026343490.1|</Hit_id>
+  <Hit_def>hypothetical protein [Nocardia sp. BMG111209]</Hit_def>
+  <Hit_accession>WP_026343490</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>8.65297e-12</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>46</Hsp_align-len>
+      <Hsp_qseq>HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>HPDIAHLAPLLGTWRGSGHGEYPTIEAFDYHEEIRFGHVGRPFLTY</Hsp_hseq>
+      <Hsp_midline>HP +A L+ LLGTWRG G GEYPTI +F Y EEIRF H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>75</Hit_num>
+  <Hit_id>gi|663745916|ref|WP_030521756.1|</Hit_id>
+  <Hit_def>hypothetical protein [Nocardia rhamnosiphila]</Hit_def>
+  <Hit_accession>WP_030521756</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>9.40949e-12</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>QTPAPHPAIAPLAGLLGTWRGRGQGDYPTIEPFGYLEEITFGHLGRPFLTY</Hsp_hseq>
+      <Hsp_midline>++P  HP +APL+ LLGTWRG+G+G+YPTI  F Y EEI F H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>76</Hit_num>
+  <Hit_id>gi|545323480|ref|WP_021597961.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Actinomadura madurae]</Hit_def>
+  <Hit_accession>WP_021597961</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>9.8359e-12</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>50</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>DPELHPDLEPLAFLLGTWEGAGVGGYPTIESFNFGQEISFTHVGKPFLIY</Hsp_hseq>
+      <Hsp_midline> P +HP + PL++LLGTW G G G YPTI SF +G+EI F+H GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>77</Hit_num>
+  <Hit_id>gi|500221196|ref|WP_011891303.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Mycobacterium gilvum] &gt;gi|145220906|ref|YP_001131584.1| hypothetical protein Mflv_0302 [Mycobacterium gilvum PYR-GCK] &gt;gi|315442123|ref|YP_004075002.1| hypothetical protein Mspyr1_04550 [Mycobacterium gilvum Spyr1] &gt;gi|218551755|sp|A4T0W5.1|Y302_MYCGI RecName: Full=UPF0678 fatty acid-binding protein-like protein Mflv_0302 [Mycobacterium gilvum PYR-GCK] &gt;gi|145213392|gb|ABP42796.1| conserved hypothetical protein [Mycobacterium gilvum PYR-GCK] &gt;gi|315260426|gb|ADT97167.1| protein of unknown function (DUF1794) [Mycobacterium gilvum Spyr1]</Hit_def>
+  <Hit_accession>WP_011891303</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>1.02645e-11</Hsp_evalue>
+      <Hsp_query-from>15</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>6</Hsp_hit-from>
+      <Hsp_hit-to>53</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>PVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PLHPDVVALAPLLGVWVGEGTGEYPTVPSFAYTEEITFGHVGKPFLSY</Hsp_hseq>
+      <Hsp_midline>P+HP V  L+ LLG W G+G GEYPT+PSF Y EEI F H GKP ++Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>78</Hit_num>
+  <Hit_id>gi|475626857|gb|EMT33498.1|</Hit_id>
+  <Hit_def>hypothetical protein F775_26818 [Aegilops tauschii]</Hit_def>
+  <Hit_accession>EMT33498</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>1.03012e-11</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>60</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>45</Hsp_align-len>
+      <Hsp_qseq>FVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LVAPLSFLLGKWRGEGEGTFPSIVPFRYGEEILFSHHPSKPVISY</Hsp_hseq>
+      <Hsp_midline> VAPLS+LLG WRG+GEG +P+I  FRYGEEI FSH   KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>79</Hit_num>
+  <Hit_id>gi|517359217|ref|WP_018534709.1|</Hit_id>
+  <Hit_def>hypothetical protein [Streptomyces sp. HmicA12]</Hit_def>
+  <Hit_accession>WP_018534709</Hit_accession>
+  <Hit_len>176</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.4698</Hsp_bit-score>
+      <Hsp_score>158</Hsp_score>
+      <Hsp_evalue>1.21982e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>65</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>48</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPS-FRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>THPLLAPVLGLLGTWRGRGQGEYPTLDSDFRYAQEVTFSHDGRPFLRY</Hsp_hseq>
+      <Hsp_midline> HP +AP+  LLGTWRG+G+GEYPT+ S FRY +E+ FSH G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>80</Hit_num>
+  <Hit_id>gi|260795877|ref|XP_002592931.1|</Hit_id>
+  <Hit_def>hypothetical protein BRAFLDRAFT_65518 [Branchiostoma floridae] &gt;gi|229278155|gb|EEN48942.1| hypothetical protein BRAFLDRAFT_65518 [Branchiostoma floridae]</Hit_def>
+  <Hit_accession>XP_002592931</Hit_accession>
+  <Hit_len>184</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.4698</Hsp_bit-score>
+      <Hsp_score>158</Hsp_score>
+      <Hsp_evalue>1.38402e-11</Hsp_evalue>
+      <Hsp_query-from>13</Hsp_query-from>
+      <Hsp_query-to>58</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>62</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>26</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>SPPVHPFVAPLSYLLGTWRGQ-GEGEYPTIPSFRYGEEIRFSHSGKP</Hsp_qseq>
+      <Hsp_hseq>APPLHDALKPLAWLLGTWRGEEGKGDYPTIKDFKYKEEVKFDHVGQP</Hsp_hseq>
+      <Hsp_midline>+PP+H  + PL++LLGTWRG+ G+G+YPTI  F+Y EE++F H G+P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>81</Hit_num>
+  <Hit_id>gi|499524008|ref|WP_011210648.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Nocardia farcinica] &gt;gi|54026085|ref|YP_120327.1| hypothetical protein nfa41140 [Nocardia farcinica IFM 10152] &gt;gi|81373749|sp|Q5YS78.1|Y4114_NOCFA RecName: Full=UPF0678 fatty acid-binding protein-like protein NFA_41140 [Nocardia farcinica IFM 10152] &gt;gi|54017593|dbj|BAD58963.1| hypothetical protein [Nocardia farcinica IFM 10152]</Hit_def>
+  <Hit_accession>WP_011210648</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.4698</Hsp_bit-score>
+      <Hsp_score>158</Hsp_score>
+      <Hsp_evalue>1.52612e-11</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>59</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>59</Hsp_align-len>
+      <Hsp_qseq>LQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MSAVAEPQPSVALHPDIAALAPLLGTWRGAGHGQYPTIESFDYHEEISFGHLGRPFLTY</Hsp_hseq>
+      <Hsp_midline>+  +  P  S  +HP +A L+ LLGTWRG G G+YPTI SF Y EEI F H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>82</Hit_num>
+  <Hit_id>gi|721643402|ref|XP_010232141.1|</Hit_id>
+  <Hit_def>PREDICTED: UPF0678 fatty acid-binding protein-like protein At1g79260 [Brachypodium distachyon]</Hit_def>
+  <Hit_accession>XP_010232141</Hit_accession>
+  <Hit_len>200</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.4698</Hsp_bit-score>
+      <Hsp_score>158</Hsp_score>
+      <Hsp_evalue>1.6095e-11</Hsp_evalue>
+      <Hsp_query-from>20</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>53</Hsp_hit-from>
+      <Hsp_hit-to>96</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>44</Hsp_align-len>
+      <Hsp_qseq>VAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS-GKPVIAY</Hsp_qseq>
+      <Hsp_hseq>VAPLLFLLGKWRGEGEGTFPTINPFRYGEEILFSHNPSKPVISY</Hsp_hseq>
+      <Hsp_midline>VAPL +LLG WRG+GEG +PTI  FRYGEEI FSH+  KPVI+Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>83</Hit_num>
+  <Hit_id>gi|684287168|gb|KGA06941.1|</Hit_id>
+  <Hit_def>hypothetical protein GM48_4530 [actinobacterium acIB-AMD-7]</Hit_def>
+  <Hit_accession>KGA06941</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.0846</Hsp_bit-score>
+      <Hsp_score>157</Hsp_score>
+      <Hsp_evalue>1.65753e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPDLMPLAWLIGTWRGKGRGEYPNLPSFQFAQEISFNHDGRAFLNY</Hsp_hseq>
+      <Hsp_midline>+HP + PL++L+GTWRG+G GEYP +PSF++ +EI F+H G+  + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>84</Hit_num>
+  <Hit_id>gi|723625396|gb|AIY18872.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Pimelobacter simplex]</Hit_def>
+  <Hit_accession>AIY18872</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.0846</Hsp_bit-score>
+      <Hsp_score>157</Hsp_score>
+      <Hsp_evalue>1.70245e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPDCGPIAWMLGTWRGNGHGDYPTIDSFQFGQELIFTHDGRPFFHY</Hsp_hseq>
+      <Hsp_midline>+HP   P++++LGTWRG G G+YPTI SF++G+E+ F+H G+P   Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>85</Hit_num>
+  <Hit_id>gi|504193497|ref|WP_014380599.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Mycobacterium intracellulare] &gt;gi|379748163|ref|YP_005338984.1| hypothetical protein OCU_34440 [Mycobacterium intracellulare ATCC 13950] &gt;gi|379762997|ref|YP_005349394.1| hypothetical protein OCQ_35610 [Mycobacterium intracellulare MOTT-64] &gt;gi|378800527|gb|AFC44663.1| hypothetical protein OCU_34440 [Mycobacterium intracellulare ATCC 13950] &gt;gi|378810939|gb|AFC55073.1| hypothetical protein OCQ_35610 [Mycobacterium intracellulare MOTT-64] &gt;gi|576333979|gb|ETZ28601.1| hypothetical protein L842_3628 [Mycobacterium intracellulare MIN_052511_1280] &gt;gi|576338668|gb|ETZ33255.1| hypothetical protein L843_3741 [Mycobacterium intracellulare MIN_061107_1834] &gt;gi|576438236|gb|EUA31908.1| hypothetical protein I548_0677 [Mycobacterium avium subsp. avium 2285 (S)]</Hit_def>
+  <Hit_accession>WP_014380599</Hit_accession>
+  <Hit_len>157</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.0846</Hsp_bit-score>
+      <Hsp_score>157</Hsp_score>
+      <Hsp_evalue>1.96103e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>47</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MHPDLAALAPLLGTWVGQGAGKYPTIPPFDYLEEVTFAHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>+HP +A L+ LLGTW GQG G+YPTIP F Y EE+ F+H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>86</Hit_num>
+  <Hit_id>gi|663218837|ref|WP_030255663.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Streptomyces violens]</Hit_def>
+  <Hit_accession>WP_030255663</Hit_accession>
+  <Hit_len>185</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.0846</Hsp_bit-score>
+      <Hsp_score>157</Hsp_score>
+      <Hsp_evalue>1.967e-11</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>69</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>55</Hsp_align-len>
+      <Hsp_qseq>NPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIP-SFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>DPDGTPAPHPLLAPVAGLLGTWAGRGSGEYPTLAEDFTYAQEVTFSHDGRPFLAY</Hsp_hseq>
+      <Hsp_midline>+P  +P  HP +AP++ LLGTW G+G GEYPT+   F Y +E+ FSH G+P +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>87</Hit_num>
+  <Hit_id>gi|696558371|ref|WP_033090461.1|</Hit_id>
+  <Hit_def>fatty acid-binding-like protein MAP_2833c [Nocardia seriolae] &gt;gi|586591960|dbj|GAF32238.1| hypothetical protein NS07_contig00158-0005 [Nocardia seriolae N-2927]</Hit_def>
+  <Hit_accession>WP_033090461</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.0846</Hsp_bit-score>
+      <Hsp_score>157</Hsp_score>
+      <Hsp_evalue>2.09202e-11</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>46</Hsp_align-len>
+      <Hsp_qseq>HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>HPDIAHLAPLLGTWRGRGQGEYPTIESFEYLEEVHFGHVGRPFLTY</Hsp_hseq>
+      <Hsp_midline>HP +A L+ LLGTWRG+G+GEYPTI SF Y EE+ F H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>88</Hit_num>
+  <Hit_id>gi|523910525|ref|WP_020823126.1|</Hit_id>
+  <Hit_def>hypothetical protein [Mycobacterium yongonense] &gt;gi|523914922|ref|YP_008189347.1| hypothetical protein OEM_34820 [Mycobacterium yongonense 05-1390] &gt;gi|521367182|gb|AGP65017.1| hypothetical protein OEM_34820 [Mycobacterium yongonense 05-1390]</Hit_def>
+  <Hit_accession>WP_020823126</Hit_accession>
+  <Hit_len>157</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.6994</Hsp_bit-score>
+      <Hsp_score>156</Hsp_score>
+      <Hsp_evalue>2.2357e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>47</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>MHPDLAALAPLLGTWVGQGAGKYPTIPPFDYLEEVTFAHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>+HP +A L+ LLGTW GQG G+YPTIP F Y EE+ F+H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>89</Hit_num>
+  <Hit_id>gi|655249737|ref|WP_028660420.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Nocardioides insulae]</Hit_def>
+  <Hit_accession>WP_028660420</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.6994</Hsp_bit-score>
+      <Hsp_score>156</Hsp_score>
+      <Hsp_evalue>2.34136e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPDCGPVAWMLGTWRGNGHGDYPTIDAFQYGQELVFAHDGRPFFHY</Hsp_hseq>
+      <Hsp_midline>+HP   P++++LGTWRG G G+YPTI +F+YG+E+ F+H G+P   Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>90</Hit_num>
+  <Hit_id>gi|655243424|ref|WP_028654688.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Nocardioides sp. J54]</Hit_def>
+  <Hit_accession>WP_028654688</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.6994</Hsp_bit-score>
+      <Hsp_score>156</Hsp_score>
+      <Hsp_evalue>2.56834e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPDCGPIAWMLGTWRGNGHGDYPTIESFQFGQELIFTHDGRPFFHY</Hsp_hseq>
+      <Hsp_midline>+HP   P++++LGTWRG G G+YPTI SF++G+E+ F+H G+P   Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>91</Hit_num>
+  <Hit_id>gi|495050070|ref|WP_007774906.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Mycobacterium colombiense] &gt;gi|400329840|gb|EJO87339.1| hypothetical protein MCOL_V220626 [Mycobacterium colombiense CECT 3035] &gt;gi|625011696|gb|KBZ63436.1| UPF0678 fatty acid-binding protein-like protein [Mycobacterium tuberculosis TKK-01-0051]</Hit_def>
+  <Hit_accession>WP_007774906</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.6994</Hsp_bit-score>
+      <Hsp_score>156</Hsp_score>
+      <Hsp_evalue>2.69042e-11</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>51</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PDLHPDLSALAPLLGTWAGQGSGKYPTIPPFDYLEEVVFGHVGKPFLAY</Hsp_hseq>
+      <Hsp_midline>P +HP ++ L+ LLGTW GQG G+YPTIP F Y EE+ F H GKP +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>92</Hit_num>
+  <Hit_id>gi|500051456|ref|WP_011731373.1|</Hit_id>
+  <Hit_def>fatty acid-binding protein [Mycobacterium smegmatis] &gt;gi|118469402|ref|YP_890786.1| hypothetical protein MSMEG_6574 [Mycobacterium smegmatis str. MC2 155] &gt;gi|399990766|ref|YP_006571117.1| hypothetical protein MSMEI_6396 [Mycobacterium smegmatis str. MC2 155] &gt;gi|218551774|sp|A0R6J8.1|Y6574_MYCS2 RecName: Full=UPF0678 fatty acid-binding protein-like protein MSMEG_6574/MSMEI_6396 [Mycobacterium smegmatis str. MC2 155] &gt;gi|118170689|gb|ABK71585.1| conserved hypothetical protein [Mycobacterium smegmatis str. MC2 155] &gt;gi|399235329|gb|AFP42822.1| UPF0678 fatty acid-binding protein-like protein [Mycobacterium smegmatis str. MC2 155] &gt;gi|698944786|gb|AIU11548.1| fatty acid-binding-like protein [Mycobacterium smegmatis str. MC2 155] &gt;gi|698953979|gb|AIU18173.1| fatty acid-binding-like protein [Mycobacterium smegmatis] &gt;gi|698962260|gb|AIU24795.1| fatty acid-binding-like protein [Mycobacterium smegmatis]</Hit_def>
+  <Hit_accession>WP_011731373</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>2.97455e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPNIAPLAPLLGTWAGPGAGEYPTIQSFEYLEEITFGHVGKPFLTY</Hsp_hseq>
+      <Hsp_midline>+HP +APL+ LLGTW G G GEYPTI SF Y EEI F H GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>93</Hit_num>
+  <Hit_id>gi|489994938|ref|WP_003897993.1|</Hit_id>
+  <Hit_def>hypothetical protein [Mycobacterium smegmatis] &gt;gi|440623894|gb|ELQ85767.1| hypothetical protein D806_6658 [Mycobacterium smegmatis MKD8]</Hit_def>
+  <Hit_accession>WP_003897993</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.03487e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPNIAPLAPLLGTWAGPGAGEYPTIQSFEYLEEITFGHVGKPFLTY</Hsp_hseq>
+      <Hsp_midline>+HP +APL+ LLGTW G G GEYPTI SF Y EEI F H GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>94</Hit_num>
+  <Hit_id>gi|517034350|ref|WP_018223997.1|</Hit_id>
+  <Hit_def>hypothetical protein [actinobacterium SCGC AAA278-I18]</Hit_def>
+  <Hit_accession>WP_018223997</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.1756e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>55</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>47</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>LHPDLMPLAWLVGTWRGKGRGDYPTIKPFQYAQEVSFNHDGRPFLNY</Hsp_hseq>
+      <Hsp_midline>+HP + PL++L+GTWRG+G G+YPTI  F+Y +E+ F+H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>95</Hit_num>
+  <Hit_id>gi|734348841|gb|KHN12024.1|</Hit_id>
+  <Hit_def>UPF0678 fatty acid-binding protein-like protein [Glycine soja]</Hit_def>
+  <Hit_accession>KHN12024</Hit_accession>
+  <Hit_len>89</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>63.1586</Hsp_bit-score>
+      <Hsp_score>152</Hsp_score>
+      <Hsp_evalue>3.29689e-11</Hsp_evalue>
+      <Hsp_query-from>16</Hsp_query-from>
+      <Hsp_query-to>55</Hsp_query-to>
+      <Hsp_hit-from>17</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>27</Hsp_identity>
+      <Hsp_positive>32</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>40</Hsp_align-len>
+      <Hsp_qseq>VHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHS</Hsp_qseq>
+      <Hsp_hseq>IHPALAPIFYLLSTWRAQGEGCFPTIDSFSYGEELHFSHS</Hsp_hseq>
+      <Hsp_midline>+HP +AP+ YLL TWR QGEG +PTI SF YGEE+ FSHS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>96</Hit_num>
+  <Hit_id>gi|602544990|emb|CDO21837.1|</Hit_id>
+  <Hit_def>hypothetical protein BN978_02301 [Mycobacterium mageritense DSM 44476]</Hit_def>
+  <Hit_accession>CDO21837</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.39966e-11</Hsp_evalue>
+      <Hsp_query-from>12</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>53</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>51</Hsp_align-len>
+      <Hsp_qseq>ESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>DSPDLHPGIAVLAPLLGTWAGPGDGEYPTIEGFGYAEEITFGHVGKLFLAY</Hsp_hseq>
+      <Hsp_midline>+SP +HP +A L+ LLGTW G G+GEYPTI  F Y EEI F H GK  +AY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>97</Hit_num>
+  <Hit_id>gi|633835648|emb|CDP87559.1|</Hit_id>
+  <Hit_def>hypothetical protein BN975_03436 [Mycobacterium farcinogenes]</Hit_def>
+  <Hit_accession>CDP87559</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.42321e-11</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>50</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PDLHPNLTALAPLLGTWAGRGAGEYPTIESFEYLEEITFDHVGKPFLTY</Hsp_hseq>
+      <Hsp_midline>P +HP +  L+ LLGTW G+G GEYPTI SF Y EEI F H GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>98</Hit_num>
+  <Hit_id>gi|499877113|ref|WP_011557847.1|</Hit_id>
+  <Hit_def>MULTISPECIES: fatty acid-binding protein [Mycobacterium] &gt;gi|108797401|ref|YP_637598.1| hypothetical protein Mmcs_0421 [Mycobacterium sp. MCS] &gt;gi|126433021|ref|YP_001068712.1| hypothetical protein Mjls_0408 [Mycobacterium sp. JLS] &gt;gi|123179649|sp|Q1BEZ2.1|Y421_MYCSS RecName: Full=UPF0678 fatty acid-binding protein-like protein Mmcs_0421 [Mycobacterium sp. MCS] &gt;gi|218551761|sp|A3PTJ4.1|Y408_MYCSJ RecName: Full=UPF0678 fatty acid-binding protein-like protein Mjls_0408 [Mycobacterium sp. JLS] &gt;gi|108767820|gb|ABG06542.1| conserved hypothetical protein [Mycobacterium sp. MCS] &gt;gi|126232821|gb|ABN96221.1| conserved hypothetical protein [Mycobacterium sp. JLS]</Hit_def>
+  <Hit_accession>WP_011557847</Hit_accession>
+  <Hit_len>175</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.51393e-11</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>64</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>49</Hsp_align-len>
+      <Hsp_qseq>PPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>PEVHPDLTALAPLLGTWSGKGSGEYPTIEPFDYTEEITFGHTGKPFLTY</Hsp_hseq>
+      <Hsp_midline>P VHP +  L+ LLGTW G+G GEYPTI  F Y EEI F H+GKP + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>99</Hit_num>
+  <Hit_id>gi|640162014|ref|WP_024806388.1|</Hit_id>
+  <Hit_def>hypothetical protein [Nocardia sp. BMG51109]</Hit_def>
+  <Hit_accession>WP_024806388</Hit_accession>
+  <Hit_len>166</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.3142</Hsp_bit-score>
+      <Hsp_score>155</Hsp_score>
+      <Hsp_evalue>3.51942e-11</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>33</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>46</Hsp_align-len>
+      <Hsp_qseq>HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>HPDIAHLAPLLGTWRGTGHGEYPTIDSFDYHEEISFGHVGRPFLTY</Hsp_hseq>
+      <Hsp_midline>HP +A L+ LLGTWRG G GEYPTI SF Y EEI F H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>100</Hit_num>
+  <Hit_id>gi|663737128|ref|WP_030513123.1|</Hit_id>
+  <Hit_def>hypothetical protein [Nocardia sp. NRRL WC-3656]</Hit_def>
+  <Hit_accession>WP_030513123</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>63.929</Hsp_bit-score>
+      <Hsp_score>154</Hsp_score>
+      <Hsp_evalue>4.10372e-11</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>62</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>56</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>33</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>46</Hsp_align-len>
+      <Hsp_qseq>HPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY</Hsp_qseq>
+      <Hsp_hseq>HPDIAHLAPLLGTWRGSGHGEYPTIEPFDYHEEIRFGHVGRPFLTY</Hsp_hseq>
+      <Hsp_midline>HP +A L+ LLGTWRG G GEYPTI  F Y EEIRF H G+P + Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>54183042</Statistics_db-num>
+      <Statistics_db-len>19531459180</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
+
