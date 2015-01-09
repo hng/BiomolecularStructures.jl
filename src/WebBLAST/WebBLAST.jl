@@ -96,6 +96,6 @@ module WebBLAST
     end
   end
 
-  main()
+  #main()
 
 end
