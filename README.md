@@ -1,5 +1,6 @@
 # JuliaPDB
 
+[![Build Status](https://travis-ci.org/gp0/JuliaPDB.svg?branch=master)](https://travis-ci.org/gp0/JuliaPDB)
 
 ## Dependencies
 
