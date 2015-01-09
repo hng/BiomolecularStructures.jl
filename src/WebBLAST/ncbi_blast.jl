@@ -170,7 +170,7 @@ end
 
 
 # construct Hsp, i'd like this to be an inner constructor in type Hsp,
-# but i can't get it too work.
+# but i can't get it to work.
 
 function construct_hsp(hsps)
   hsp_num = int(hsps["Hsp_num"])
