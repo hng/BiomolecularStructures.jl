@@ -1,6 +1,6 @@
 # BiomolecularStructures.jl
 
-[![Build Status](https://travis-ci.org/hng/JuliaPDB.svg?branch=master)](https://travis-ci.org/hng/JuliaPDB) [![Coverage Status](https://coveralls.io/repos/hng/JuliaPDB/badge.png)](https://coveralls.io/r/hng/JuliaPDB)
+[![Build Status](https://travis-ci.org/hng/BiomolecularStructures.jl.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures.jl) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures.jl/badge.png)](https://coveralls.io/r/hng/BiomolecularStructures.jl)
 
 ## Dependencies
 
