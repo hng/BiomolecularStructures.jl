@@ -1,4 +1,4 @@
-# JuliaPDB
+# BiomolecularStructures.jl
 
 [![Build Status](https://travis-ci.org/hng/JuliaPDB.svg?branch=master)](https://travis-ci.org/hng/JuliaPDB) [![Coverage Status](https://coveralls.io/repos/hng/JuliaPDB/badge.png)](https://coveralls.io/r/hng/JuliaPDB)
 
