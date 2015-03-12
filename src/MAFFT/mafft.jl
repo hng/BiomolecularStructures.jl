@@ -7,9 +7,6 @@ function mafft(fasta_in::String)
 	return fr
 end
 
-# Usage
-# mafft("examples/fasta/il4.fasta")
-
 function mafft_from_string(fasta_in::String)
     # write to tempfile because mafft can not read from stdin
     tempfile_path, tempfile_io = mktemp()
