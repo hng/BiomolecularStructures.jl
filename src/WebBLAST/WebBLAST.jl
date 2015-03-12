@@ -10,9 +10,9 @@ module WebBLAST
 
   # include types, web interfaces
   
-  include(Pkg.dir("JuliaPDB", "src/WebBLAST", "hit.jl")) 
-  include(Pkg.dir("JuliaPDB", "src/WebBLAST", "ncbi_blast.jl")) 
-  include(Pkg.dir("JuliaPDB", "src/WebBLAST", "ebi_blast.jl")) 
+  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "hit.jl")) 
+  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ncbi_blast.jl")) 
+  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ebi_blast.jl")) 
 
   function parse_commandline()
       s = ArgParseSettings(description = "WebBLAST")
@@ -95,6 +95,6 @@ module WebBLAST
     end
   end
 
-  #main()
+  main()
 
 end
