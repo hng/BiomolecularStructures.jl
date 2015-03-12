@@ -1,5 +1,5 @@
-module JuliaPDB
-	include(Pkg.dir("JuliaPDB", "src/WebBLAST", "WebBLAST.jl"))	
+module BiomolecularStructures
+	include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "WebBLAST.jl"))	
 
-	include(Pkg.dir("JuliaPDB", "src/MAFFT", "mafft.jl"))	
+	include(Pkg.dir("BiomolecularStructures", "src/MAFFT", "mafft.jl"))	
 end
