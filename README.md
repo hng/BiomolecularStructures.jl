@@ -1,6 +1,6 @@
-# BiomolecularStructures.jl
+# BiomolecularStructures
 
-[![Build Status](https://travis-ci.org/hng/BiomolecularStructures.jl.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures.jl) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures.jl/badge.png)](https://coveralls.io/r/hng/BiomolecularStructures.jl)
+[![Build Status](https://travis-ci.org/hng/BiomolecularStructures.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures/badge.png)](https://coveralls.io/r/hng/BiomolecularStructures)
 
 ## Dependencies
 
