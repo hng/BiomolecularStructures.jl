@@ -22,7 +22,26 @@ export calc_centroid, kabsch
 		P = broadcast(-,P, centroid_p)
 		Q = broadcast(-,Q, centroid_q)
 
-		# Compute covariance matrix
-		Cov = *(P', Q)		
+		# Compute covariance matrix A
+		A = *(P', Q)		
+
+		# calculate SVD (singular value decomposition) of covariance matrix
+		V, S, W = svd(A)
+		
+		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
+		d = det(V) * det(W) < 0.0
+		println(d)
+		if d
+			S[end] = -S[end]
+			V[:end] = -V[:end]
+		end
+		# calculate optimal rotation matrix U
+		println(V)
+		println(W)
+
+		# FIXME?
+		U = *(V, W)
+		
+		println(U)
 	end
 end
