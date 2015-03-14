@@ -29,19 +29,17 @@ export calc_centroid, kabsch
 		V, S, W = svd(A)
 		
 		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
-		d = det(V) * det(W) < 0.0
-		println(d)
-		if d
+
+		d = det(V) * det(W)
+		
+		if d < 0.0
 			S[end] = -S[end]
 			V[:end] = -V[:end]
 		end
 		# calculate optimal rotation matrix U
-		println(V)
-		println(W)
-
-		# FIXME?
-		U = *(V, W)
+		m = [1 0 0; 0 1 0; 0 0 d]
+		U = *(*(W, m), V')
 		
-		println(U)
+		return U
 	end
 end
