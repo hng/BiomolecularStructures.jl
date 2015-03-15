@@ -1,5 +1,5 @@
 module Kabsch
-export calc_centroid, kabsch
+export calc_centroid, kabsch, rotate
 	# calculate a centroid of a matrix
 	function calc_centroid(m)
 		sum_m = sum(m,1)
@@ -8,10 +8,10 @@ export calc_centroid, kabsch
 		return map(x -> x/size_m, sum_m)
 	end
 
-	# Input: Two sets of Points: P, Q as Nx3 Matrices
-	# Zwei Proteinstrukturen P, Q mit je N Atomen
+	# Input: Two sets of points: P, Q as Nx3 Matrices (so)
+	# returns optimal rotation matrix U
 	function kabsch(P,Q)
-		
+		println(P)
 		# Calculate centroids P, Q
 		# Die Massenzentren der Proteine
 		centroid_p = calc_centroid(P)
@@ -27,19 +27,22 @@ export calc_centroid, kabsch
 
 		# calculate SVD (singular value decomposition) of covariance matrix
 		V, S, W = svd(A)
-		
-		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
 
+		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
 		d = det(V) * det(W)
 		
 		if d < 0.0
 			S[end] = -S[end]
-			V[:end] = -V[:end]
+			V[:,end] = -V[:,end]
 		end
 		# calculate optimal rotation matrix U
 		m = [1 0 0; 0 1 0; 0 0 d]
 		U = *(*(W, m), V')
-		
-		return U
+		return U, P
+	end
+
+	function rotate(P, Q)
+		U, P = kabsch(P,Q)
+		return *(P, U)
 	end
 end
