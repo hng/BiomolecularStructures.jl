@@ -1,5 +1,21 @@
 module Kabsch
-export calc_centroid, kabsch, rotate
+export calc_centroid, kabsch, rotate, rmsd, translate_points
+	# Calculate root mean square deviation of two matrices A, B
+	# http://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions
+	function rmsd(A, B)
+		RMSD = 0.0
+
+		# D pairs of equivalent atoms
+		D = size(A)[2]
+		# N coordinates
+		N = length(A)
+
+		for i = 1:N
+			RMSD += (A[i] - B[i])^2
+		end
+		return sqrt(RMSD / D)
+	end
+
 	# calculate a centroid of a matrix
 	function calc_centroid(m)
 		sum_m = sum(m,1)
@@ -7,20 +23,26 @@ export calc_centroid, kabsch, rotate
 
 		return map(x -> x/size_m, sum_m)
 	end
-
-	# Input: Two sets of points: P, Q as Nx3 Matrices (so)
-	# returns optimal rotation matrix U
-	function kabsch(P,Q)
-		println(P)
+	
+	# Translate P, Q so centroids are equal to the origin of the coordinate system
+	# Translation der Massenzentren, so dass beide Zentren im Ursprung des Koordinatensystems liegen
+	function translate_points(P, Q)
 		# Calculate centroids P, Q
 		# Die Massenzentren der Proteine
 		centroid_p = calc_centroid(P)
 		centroid_q = calc_centroid(Q)
 
-		# Translate P, Q so centroids are equal to the origin of the coordinate system
-		# Translation der Massenzentren, so dass beide Zentren im Ursprung des Koordinatensystems liegen
 		P = broadcast(-,P, centroid_p)
 		Q = broadcast(-,Q, centroid_q)
+
+		return P, Q
+	end
+
+	# Input: Two sets of points: P, Q as Nx3 Matrices (so)
+	# returns optimal rotation matrix U
+	function kabsch(P,Q)
+
+		P, Q  = translate_points(P, Q)
 
 		# Compute covariance matrix A
 		A = *(P', Q)		
@@ -38,6 +60,7 @@ export calc_centroid, kabsch, rotate
 		# calculate optimal rotation matrix U
 		m = [1 0 0; 0 1 0; 0 0 d]
 		U = *(*(W, m), V')
+	
 		return U, P
 	end
 
