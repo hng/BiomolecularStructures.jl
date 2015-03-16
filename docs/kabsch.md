@@ -6,15 +6,9 @@ The Kabsch algorithm computes the optimal rotation matrix for two sets of points
 
 ### `rmsd(A, B)`
 
-Calculates the root mean square deviation of two matrices A and B using the following formula:
+Calculates the root mean square deviation of two matrices A and B in using the following formula:
 
-: <math>
-\begin{align}
-\mathrm{RMSD}(\mathbf{v}, \mathbf{w}) & = \sqrt{\frac{1}{n}\sum_{i=1}^{n} \|v_i - w_i\|^2} \\
-& = \sqrt{\frac{1}{n}\sum_{i=1}^{n} 
-      (({v_i}_x - {w_i}_x)^2 + ({v_i}_y - {w_i}_y)^2 + ({v_i}_z - {w_i}_z)^2})
-\end{align}
-</math>
+![RMSD formula][rmsd-formula]
 
 ### `calc_centroid(m)`
 
@@ -29,8 +23,26 @@ Translates two matrices P, Q so that their centroids are the origin of the coord
 Calculates the optimal rotation matrix of two matrices P, Q.
 Using `translate_points` it shifts the matrices' centroids to the origin of the coordinate system, then computes the covariance matrix A:
 
+![Covariance Formula][cov-formula]
+
 Next is the singular value decomposition of A:
+
+![SVD formula][svd-formula]
 
 It's possible that the rotation matrix needs correction (basically flipping the sign of each element of the matrix):
 
-Finally the optimal rotation matrix U is calculated and returned together with the matrix P.
+![Sign correction formula][correction-formula]
+
+We check if d is < 0.0, if so, we flip the sign(s)
+
+Finally the optimal rotation matrix U is calculated
+
+![Optimal rotation matrix U][optu-formula]
+
+and returned together with the matrix P.
+
+[rmsd-formula] http://upload.wikimedia.org/math/2/4/6/24612ddd0afbb048bb37093de3ac88fa.png "RMSD Formula"
+[cov-formula] http://upload.wikimedia.org/math/c/b/8/cb8ca6c9c787b2d8a0fd2bf3daad5a0f.png "Covariance matrix formula"
+[svd-formula] http://upload.wikimedia.org/math/4/3/d/43dd92d762ec8b8acf2a5e299b90038a.png "SVD Formula"
+[correction-formula] http://upload.wikimedia.org/math/6/c/6/6c68ceda711c032f1f90b7bf03d38cae.png "Sign correction formula"
+[optu-formula] http://upload.wikimedia.org/math/1/e/d/1ed72885bd9cd4105593aea62883e5a7.png "Optimal rotation matrix U"
