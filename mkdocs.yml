@@ -6,5 +6,5 @@ pages:
 - ['index.md', 'Home']
 - ['modules.md', 'Modules']
 - ['kabsch.md', 'Kabsch Algorithm']
-markdown_extensions: [mathjax]
+
 docs_dir: 'docs'
