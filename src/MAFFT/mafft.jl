@@ -5,6 +5,11 @@ export mafft, mafft_from_string
     using FastaIO
 
     function mafft(fasta_in::String)
+        try success(`mafft -v`)
+        catch
+            error("MAFFT is not installed.")
+        end
+
         fasta = readall(`mafft '--auto' '--quiet' $fasta_in`)
         fr = readall(FastaReader(IOBuffer(fasta)))
         return fr
