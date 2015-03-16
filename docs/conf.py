@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # BiomolecularStructures documentation build configuration file, created by
-# sphinx-quickstart on Mon Mar 16 15:56:15 2015.
+# sphinx-quickstart on Mon Mar 16 17:57:24 2015.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -16,7 +16,6 @@ import sys
 import os
 import shlex
 import juliadoc
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -31,6 +30,7 @@ import juliadoc
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'juliadoc.julia',
@@ -51,8 +51,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'BiomolecularStructures'
-copyright = u'2015, Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann'
-author = u'Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann'
+copyright = u'2015, Simon Malischewski, Henning, Schumann, Philipp Gerling, Simon Leßmann'
+author = u'Simon Malischewski, Henning, Schumann, Philipp Gerling, Simon Leßmann'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -227,7 +227,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   (master_doc, 'BiomolecularStructures.tex', u'BiomolecularStructures Documentation',
-   u'Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann', 'manual'),
+   u'Simon Malischewski, Henning, Schumann, Philipp Gerling, Simon Leßmann', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -286,3 +286,5 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+html_theme_path = [juliadoc.get_theme_dir()]
+html_sidebars = juliadoc.default_sidebars()
