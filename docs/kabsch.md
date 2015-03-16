@@ -2,6 +2,25 @@
 
 The Kabsch algorithm computes the optimal rotation matrix for two sets of points so that the RMSD (Root mean squared deviation) is minimal.
 
+## Example
+
+Define two matrices P, Q:
+```julia
+P = [1 2 3; 4 5 6; 7 8 9]
+Q = [9 8 7; 6 5 4; 3 2 1]
+```
+
+RMSD the normal way:
+
+```julia
+rmsd(P, Q)
+8.94427190999916
+```
+After rotation with the optimal rotation matrix:
+```
+kabsch_rmsd(P, Q)
+1.6616296724220897e-15 (~ 0)
+``` 
 ## Functions
 
 ### `rmsd(A, B)`
@@ -33,13 +52,21 @@ It's possible that the rotation matrix needs correction (basically flipping the 
 
 ![Sign correction formula][correction-formula]
 
-We check if d is < 0.0, if so, we flip the sign(s)
+We check if d is < 0.0, if so, we flip the sign(s).
 
 Finally the optimal rotation matrix U is calculated
 
 ![Optimal rotation matrix U][optu-formula]
 
 and returned together with the matrix P.
+
+## `rotate(P, Q)`
+
+peforms the actual rotation
+
+## `kabsch_rmsd(P,Q)`
+Directly returns the RMSD after rotation for convenience.
+
 
 [rmsd-formula]: http://upload.wikimedia.org/math/2/4/6/24612ddd0afbb048bb37093de3ac88fa.png "RMSD Formula"
 [cov-formula]: http://upload.wikimedia.org/math/c/b/8/cb8ca6c9c787b2d8a0fd2bf3daad5a0f.png "Covariance matrix formula"
