@@ -60,11 +60,11 @@ Finally the optimal rotation matrix U is calculated
 
 and returned together with the matrix P.
 
-## `rotate(P, Q)`
+### `rotate(P, Q)`
 
 peforms the actual rotation
 
-## `kabsch_rmsd(P,Q)`
+### `kabsch_rmsd(P,Q)`
 Directly returns the RMSD after rotation for convenience.
 
 
