@@ -20,8 +20,4 @@ Q = [9 8 7; 6 5 4; 3 2 1]
 
 @test_approx_eq_eps rmsd(P,Q) 8.94427191 1e-4
 
-# Q needs to be translated to the origin of the coordinate system, otherwise the comparison makes no sense
-P_1, Q_1 = translate_points(P,Q)
-P = rotate(P, Q)
-
-@test_approx_eq_eps rmsd(P,Q_1) 2.4323767778e-15 1e-6
+@test_approx_eq_eps kabsch_rmsd(P,Q) 2.4323767778e-15 1e-6

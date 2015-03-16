@@ -1,5 +1,5 @@
 module Kabsch
-export calc_centroid, kabsch, rotate, rmsd, translate_points
+export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 	# Calculate root mean square deviation of two matrices A, B
 	# http://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions
 	function rmsd(A, B)
@@ -48,7 +48,7 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points
 		A = *(P', Q)		
 
 		# calculate SVD (singular value decomposition) of covariance matrix
-		# http://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegung
+		# http://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegunggo
 		V, S, W = svd(A)
 
 		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
@@ -68,5 +68,12 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points
 	function rotate(P, Q)
 		U, P = kabsch(P,Q)
 		return *(P, U)
+	end
+
+	# directly return RMSD for matrices P, Q for convenience
+	function kabsch_rmsd(P, Q)
+		P_1, Q_1 = translate_points(P, Q)
+		P = rotate(P, Q)
+		return rmsd(P, Q_1)
 	end
 end
