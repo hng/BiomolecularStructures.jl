@@ -41,8 +41,8 @@ Finally the optimal rotation matrix U is calculated
 
 and returned together with the matrix P.
 
-[rmsd-formula] http://upload.wikimedia.org/math/2/4/6/24612ddd0afbb048bb37093de3ac88fa.png "RMSD Formula"
-[cov-formula] http://upload.wikimedia.org/math/c/b/8/cb8ca6c9c787b2d8a0fd2bf3daad5a0f.png "Covariance matrix formula"
-[svd-formula] http://upload.wikimedia.org/math/4/3/d/43dd92d762ec8b8acf2a5e299b90038a.png "SVD Formula"
-[correction-formula] http://upload.wikimedia.org/math/6/c/6/6c68ceda711c032f1f90b7bf03d38cae.png "Sign correction formula"
-[optu-formula] http://upload.wikimedia.org/math/1/e/d/1ed72885bd9cd4105593aea62883e5a7.png "Optimal rotation matrix U"
+[rmsd-formula]: http://upload.wikimedia.org/math/2/4/6/24612ddd0afbb048bb37093de3ac88fa.png "RMSD Formula"
+[cov-formula]: http://upload.wikimedia.org/math/c/b/8/cb8ca6c9c787b2d8a0fd2bf3daad5a0f.png "Covariance matrix formula"
+[svd-formula]: http://upload.wikimedia.org/math/4/3/d/43dd92d762ec8b8acf2a5e299b90038a.png "SVD Formula"
+[correction-formula]: http://upload.wikimedia.org/math/6/c/6/6c68ceda711c032f1f90b7bf03d38cae.png "Sign correction formula"
+[optu-formula]: http://upload.wikimedia.org/math/1/e/d/1ed72885bd9cd4105593aea62883e5a7.png "Optimal rotation matrix U"
