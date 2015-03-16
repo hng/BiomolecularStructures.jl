@@ -48,6 +48,7 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points
 		A = *(P', Q)		
 
 		# calculate SVD (singular value decomposition) of covariance matrix
+		# http://de.wikipedia.org/wiki/Singul%C3%A4rwertzerlegung
 		V, S, W = svd(A)
 
 		# decide if rotation matrix needs correction (ensures right-handed coordinate system)
