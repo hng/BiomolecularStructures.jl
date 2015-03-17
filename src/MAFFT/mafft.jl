@@ -1,6 +1,6 @@
 # Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
 module MAFFT
-export mafft, mafft_from_string
+export mafft, mafft_from_string, print_aligned_fasta
 
     using FastaIO
 
@@ -21,5 +21,11 @@ export mafft, mafft_from_string
         write(tempfile_io, fasta_in)
         close(tempfile_io)
         return mafft(tempfile_path)
+    end
+
+    function print_aligned_fasta(fasta)
+        for f in fasta
+            println(f[2])
+        end
     end
 end
