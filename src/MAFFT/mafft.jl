@@ -3,7 +3,7 @@
     - group to group alignments
 """
 module MAFFT
-export mafft, mafft_from_string, mafft_linsi, mafft_ginsi, print_aligned_fasta
+export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta
 
     using FastaIO
 
@@ -80,14 +80,14 @@ export mafft, mafft_from_string, mafft_linsi, mafft_ginsi, print_aligned_fasta
            cycles only) 
     """
     function mafft_nwnsi(fasta_in::String)
-        return mafft(fasta_in, ["-retree", "2", "--maxiterate", "2", "--nofft"])
+        return mafft(fasta_in, ["--retree", "2", "--maxiterate", "2", "--nofft"])
     end
     const nwnsi = mafft_nwnsi
 
     """ NW-NS-2 (fast; progressive method without the FFT approximation)
     """
     function mafft_nwns(fasta_in::String)
-        return mafft(fasta_in, ["-retree", "2", "--maxiterate", "0", "--nofft"])
+        return mafft(fasta_in, ["--retree", "2", "--maxiterate", "0", "--nofft"])
     end
     const nwns = mafft_nwns
 
