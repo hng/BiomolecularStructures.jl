@@ -11,7 +11,7 @@ export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_e
     # fasta_in: path to FASTA file
     # args: optional commandline arguments for MAFFT (array of strings)
     function mafft(fasta_in::String, args=["--auto"])
-        try success(`mafft -v`)
+        try success(`mafft --version`)
         catch
             error("MAFFT is not installed.")
         end
@@ -91,11 +91,16 @@ export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_e
     end
     const nwns = mafft_nwns
 
-    # helper methods
+    # helper methods for aligned FASTA
 
     function print_aligned_fasta(fasta)
         for f in fasta
             println(f[2])
         end
+    end
+
+    # returns the length of the alignment (FastaIO-format as input)
+    function alignment_length(fasta)
+        return length(first(fasta)[2])
     end
 end
