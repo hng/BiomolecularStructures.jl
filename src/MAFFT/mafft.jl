@@ -3,7 +3,7 @@
     - group to group alignments
 """
 module MAFFT
-export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length
+export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length
 
     using FastaIO
 
@@ -30,6 +30,15 @@ export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_e
         write(tempfile_io, fasta_in)
         close(tempfile_io)
         return mafft(tempfile_path, args)
+    end
+
+    " calls MAFFT with the given FASTA in FastaIO format
+      fasta_in: FASTA in FastaIO format
+      args: optional commandline arguments for MAFFT (array of strings) "
+    function mafft_from_fasta(fasta_in, args=["--auto"])
+        io = IOBuffer()
+        writefasta(io, fasta_in)
+        return mafft_from_string(takebuf_string(io), args)
     end
 
     # Accuracy-oriented methods
