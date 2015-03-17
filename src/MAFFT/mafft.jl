@@ -3,13 +3,13 @@
     - group to group alignments
 """
 module MAFFT
-export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta
+export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length
 
     using FastaIO
 
-    # calls MAFFT and returns aligned FASTA
-    # fasta_in: path to FASTA file
-    # args: optional commandline arguments for MAFFT (array of strings)
+    " calls MAFFT and returns aligned FASTA
+      fasta_in: path to FASTA file
+      args: optional commandline arguments for MAFFT (array of strings) "
     function mafft(fasta_in::String, args=["--auto"])
         try success(`mafft --version`)
         catch
@@ -21,9 +21,9 @@ export mafft, mafft_from_string, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_e
         return fr
     end
     
-    # calls MAFFT with the given FASTA string as input and returns aligned FASTA
-    # fasta_in: FASTA string
-    # args: optional commandline arguments for MAFFT (array of strings)
+    " calls MAFFT with the given FASTA string as input and returns aligned FASTA
+      fasta_in: FASTA string
+      args: optional commandline arguments for MAFFT (array of strings) "
     function mafft_from_string(fasta_in::String, args=["--auto"])
         # write to tempfile because mafft can not read from stdin
         tempfile_path, tempfile_io = mktemp()
