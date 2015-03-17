@@ -1,4 +1,7 @@
-# Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
+""" Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
+    TODO
+    - group to group alignments
+"""
 module MAFFT
 export mafft, mafft_from_string, mafft_linsi, mafft_ginsi, print_aligned_fasta
 
@@ -57,6 +60,36 @@ export mafft, mafft_from_string, mafft_linsi, mafft_ginsi, print_aligned_fasta
     end
     const einsi = mafft_einsi
 
+    # Speed-oriented methods
+    
+    """ FFT-NS-i (iterative refinement method; two cycles only)
+    """
+    function mafft_fftnsi(fasta_in::String)
+        return mafft(fasta_in, ["--retree", "2", "--maxiterate", "2"])
+    end
+    const fftnsi = mafft_fftnsi
+
+    """ FFT-NS-2 (fast; progressive method)
+    """
+    function mafft_fftns(fasta_in::String)
+        return mafft(fasta_in, ["--retree", "2", "--maxiterate", "0"])
+    end
+    const fftns = mafft_fftns
+
+    """ NW-NS-i (iterative refinement method without FFT approximation; two
+           cycles only) 
+    """
+    function mafft_nwnsi(fasta_in::String)
+        return mafft(fasta_in, ["-retree", "2", "--maxiterate", "2", "--nofft"])
+    end
+    const nwnsi = mafft_nwnsi
+
+    """ NW-NS-2 (fast; progressive method without the FFT approximation)
+    """
+    function mafft_nwns(fasta_in::String)
+        return mafft(fasta_in, ["-retree", "2", "--maxiterate", "0", "--nofft"])
+    end
+    const nwns = mafft_nwns
 
     # helper methods
 
