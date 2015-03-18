@@ -3,9 +3,10 @@
     - group to group alignments
 """
 module MAFFT
-export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length
+export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length, to_aminoacids
 
     using FastaIO
+    using BioSeq
 
     " calls MAFFT and returns aligned FASTA
       fasta_in: path to FASTA file
@@ -111,5 +112,14 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_gin
     # returns the length of the alignment (FastaIO-format as input)
     function alignment_length(fasta)
         return length(first(fasta)[2])
+    end
+    
+    # converts a FastaIO-formatted array into an array of BioSeq AminoAcid
+    function to_aminoacids(fasta)
+        aminoacids = Array{AminoAcid,1}[] 
+        for f in fasta
+            push!(aminoacids, aminoacid(f[2]))
+        end
+        return aminoacids
     end
 end
