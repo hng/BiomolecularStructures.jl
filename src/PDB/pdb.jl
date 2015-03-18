@@ -3,6 +3,8 @@
 # sudo pip install biopython
 # sudo apt-get install numpy | unless you want to compile it..
 # julia: Pkg.add("PyCall")
+include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
+using Kabsch
 using PyCall
 @pyimport Bio.PDB as pdb
 
@@ -34,3 +36,8 @@ function pdb_to_c_alpha_matrix(filename::String)
 	return matrix
 end
 
+Q = pdb_to_c_alpha_matrix("examples/data/1GGZ.pdb")
+P = pdb_to_c_alpha_matrix("examples/data/1CLL.pdb")
+
+println(rmsd(P,Q))
+println(kabsch_rmsd(P,Q))
