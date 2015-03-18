@@ -3,17 +3,37 @@
 # sudo pip install biopython
 # sudo apt-get install numpy | unless you want to compile it..
 # julia: Pkg.add("PyCall")
-include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
-using Kabsch
+module PDB
+export get_structure, get_chains, structure_to_matrix
+
 using PyCall
 @pyimport Bio.PDB as pdb
 
-# Read in a PDB file and return a matrix of C_Alpha atom coordinates
-function pdb_to_c_alpha_matrix(filename::String)
-	pdbparser = pdb.PDBParser()
+# get a structure from a PDB File
+function get_structure(filename::String)
+	pdbparser = pdb.PDBParser(PERMISSIVE = 1)
 
 	# parse the file
 	structure = pdbparser[:get_structure](filename, filename)
+	return structure
+end
+
+# get chains from structure
+function get_chains(structure)
+	chains = structure[:get_chains]()
+
+	chainMatrices = Any[]
+
+	for c in chains
+		push!(chainMatrices,structure_to_matrix(c))
+	end
+
+	return chainMatrices
+end
+
+# Read in a PDB file and return a matrix of C_Alpha atom coordinates
+function structure_to_matrix(structure)
+	
 
 	atoms = structure[:get_atoms]()
 	# Filter out C_Alpha atoms
@@ -36,8 +56,4 @@ function pdb_to_c_alpha_matrix(filename::String)
 	return matrix
 end
 
-Q = pdb_to_c_alpha_matrix("examples/data/1GGZ.pdb")
-P = pdb_to_c_alpha_matrix("examples/data/1CLL.pdb")
-
-println(rmsd(P,Q))
-println(kabsch_rmsd(P,Q))
+end
