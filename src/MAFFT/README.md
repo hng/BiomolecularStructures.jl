@@ -1,11 +1,33 @@
 # MAFFT Module
 
 This module provides a Julia wrapper for [MAFFT](http://mafft.cbrc.jp/alignment/software/) (Multiple alignment program for amino acid or nucleotide sequences).
+Provides functions to call mafft with different pre-configurations (analogues to the provided anliases by mafft, see the mafft manpage) or custom parameters.
 
 Tested with MAFFT v7.215 (2014/12/17)
 
+## Dependencies
+
+  * MAFFT has to be installed
+  * FastaIO
+
 ## Usage
+
+```julia
 mafft("examples/fasta/il4.fasta")
+```
+
+Runs mafft with the provided fasta file and returns the alignment in FastaIO dataformat. By default mafft is called with the `--auto` option.
+
+
+```julia
+mafft("examples/fasta/il4.fasta", ["--localpair", "--maxiterate", "1000"])
+```
+
+Calling mafft with custom arguments. Arguments have to be a array of strings. This call is also equivalent to calling:
+
+```julia
+ mafft_linsi("examples/fasta/il4.fasta")
+```
 
 ## References
 <ul>
