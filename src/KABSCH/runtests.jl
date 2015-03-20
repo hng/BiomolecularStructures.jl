@@ -1,10 +1,8 @@
 include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
 include(Pkg.dir("BiomolecularStructures", "src/PDB", "pdb.jl")) 
-include(Pkg.dir("BiomolecularStructures", "src/PLOT", "plot.jl")) 
 using Base.Test
 using Kabsch
 using PDB
-using MatrixPlot
 # julia uses MATLAB-style syntax for matrices
 P = [0.1 0.2 0.3; 0.5 -0.5 -0.3; 0.2 -0.3 8.3]
 centroid = calc_centroid(P)

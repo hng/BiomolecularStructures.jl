@@ -1,4 +1,3 @@
-
 module MatrixPlot
 using PyPlot
 export matrices_plot
