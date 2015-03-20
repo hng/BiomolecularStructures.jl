@@ -11,7 +11,8 @@ using PyCall
 
 # get a structure from a PDB File
 function get_structure(filename::String)
-	pdbparser = pdb.PDBParser(PERMISSIVE = 1)
+	# using QUIET to supress discontinous chains warning
+	pdbparser = pdb.PDBParser(QUIET = 1)
 
 	# parse the file
 	structure = pdbparser[:get_structure](filename, filename)
