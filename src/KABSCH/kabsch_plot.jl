@@ -15,5 +15,8 @@ alpha_2 = chains[3]
 beta_1 = chains[2]
 beta_2 = chains[4]
 
-matrices_plot(alpha_1, kabsch(alpha_1, alpha_2))
+#matrices_plot(alpha_1, alpha_2)
+#matrices_plot(beta_1, beta_2)
+
+#matrices_plot(alpha_1, kabsch(alpha_1, alpha_2))
 matrices_plot(beta_1, kabsch(beta_1, beta_2))
