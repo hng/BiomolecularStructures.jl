@@ -3,8 +3,8 @@ julia:
   - release
   - nightly
 before_install:
-	- sudo apt-get update -qq
-	- sudo apt-get install -qq python-biopython
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq python-biopython
 script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("BiomolecularStructures"); Pkg.test("BiomolecularStructures"; coverage=true)'  
