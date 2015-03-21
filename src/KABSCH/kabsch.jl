@@ -3,6 +3,7 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 	# Calculate root mean square deviation of two matrices A, B
 	# http://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions
 	function rmsd(A, B)
+
 		RMSD = 0.0
 
 		# D pairs of equivalent atoms

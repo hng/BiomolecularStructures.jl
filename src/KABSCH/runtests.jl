@@ -22,7 +22,7 @@ Q = [51.30 -2.99 46.54;
 
 @test_approx_eq_eps rmsd(P,Q) 3.87845580529 1e-4
 
-@test_approx_eq_eps kabsch_rmsd(P,Q) 0.00304375026351 1e-6
+@test_approx_eq_eps kabsch_rmsd(P,Q) 0.00304375026351 1e-5
 
 structure = get_structure("examples/data/2HHB.pdb")
 chains = get_chains(structure)
