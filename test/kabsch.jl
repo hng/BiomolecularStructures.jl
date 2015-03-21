@@ -34,15 +34,15 @@ c_2 = [ 51.86499786  -1.81249988  47.88249969]
 @test_approx_eq_eps centroid_p1[3] c_1[3] 1e-4
 
 # Matrix with negative Determinant
-rotation = [1 -1 1; 1 1 1; 1 1 -2]
+rotation = [1.0 -1.0 1.0; 1.0 1.0 1.0; 1.0 1.0 -2.0]
 
-vt_z = [-1 -1 -1]
+vt_z = [-1.0, -1.0, -1.0]
 
 vt_z = correct_reflection(rotation, vt_z)
 
-@test vt_z[1] == 1
-@test vt_z[2] == 1
-@test vt_z[3] == 1
+@test vt_z[1] == 1.0
+@test vt_z[2] == 1.0
+@test vt_z[3] == 1.0
 
 @test_approx_eq_eps rmsd(P,Q) 3.87845580529 1e-4
 
