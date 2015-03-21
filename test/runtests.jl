@@ -2,5 +2,4 @@ using Base.Test
 using JuliaPDB.jl
 using FastaIO
 
-#@test 0 == 1
-
+include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "runtests.jl"))
