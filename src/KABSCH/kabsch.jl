@@ -1,5 +1,5 @@
 module Kabsch
-export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
+export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd, correct_reflection
 	# Calculate root mean square deviation of two matrices A, B
 	# http://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions
 	function rmsd(A, B)
@@ -40,6 +40,14 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 		return P, Q, centroid_p, centroid_q
 	end
 
+	# corrects possible reflection
+	function correct_reflection(rotation, vt_z)
+		if det(rotation) < 0.0
+			vt_z = -vt_z
+		end
+		return vt_z
+	end
+
 	# Input: Two sets of points: reference, coords as Nx3 Matrices (so)
 	# returns optimally rotated matrix 
 	function kabsch(reference,coords)
@@ -56,17 +64,12 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 		# Calculate Singular Value Decomposition (SVD) of A
 		u, d, vt = svd(A)
 
+		# check for reflection
+		vt[:,3] = correct_reflection(*(vt, u'), vt[:,3])
+		
 		# Calculate the optimal rotation matrix
 		rotation = *(vt, u')
 		rotation  = rotation'
-
-		# check for reflection
-		if det(rotation) < 0.0
-			vt[:,3] = -vt[:,3]
-			rotation = *(vt', u)
-			rotation = rotation'
-		end
-		
 
 		# calculate the transformation
 		transformation = broadcast(-, centroid_q, *(centroid_p, rotation))

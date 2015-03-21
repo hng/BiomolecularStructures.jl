@@ -1,3 +1,3 @@
 using Base.Test
 
-include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "runtests.jl"))
+include(Pkg.dir("BiomolecularStructures", "test", "kabsch.jl"))

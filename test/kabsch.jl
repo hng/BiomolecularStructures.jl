@@ -10,8 +10,6 @@ centroid = calc_centroid(P)
 @test_approx_eq_eps centroid[2] -0.199999 1e-4
 @test_approx_eq_eps centroid[3] 2.766666666666667 1e-4
 
-
-
 P = [51.65 -1.90 50.07;
     50.40 -1.23 50.65;
     50.68 -0.04 51.54;
@@ -34,6 +32,17 @@ c_2 = [ 51.86499786  -1.81249988  47.88249969]
 @test_approx_eq_eps centroid_p1[1] c_1[1] 1e-4
 @test_approx_eq_eps centroid_p1[2] c_1[2] 1e-4
 @test_approx_eq_eps centroid_p1[3] c_1[3] 1e-4
+
+# Matrix with negative Determinant
+rotation = [1 -1 1; 1 1 1; 1 1 -2]
+
+vt_z = [-1 -1 -1]
+
+vt_z = correct_reflection(rotation, vt_z)
+
+@test vt_z[1] == 1
+@test vt_z[2] == 1
+@test vt_z[3] == 1
 
 @test_approx_eq_eps rmsd(P,Q) 3.87845580529 1e-4
 
