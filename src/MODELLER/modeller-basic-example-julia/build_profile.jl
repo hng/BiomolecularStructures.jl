@@ -1,7 +1,5 @@
 using PyCall
-macro R_str(s)
-    s
-end
+
 pyinitialize()
 @pyimport modeller
 @pyimport _modeller
