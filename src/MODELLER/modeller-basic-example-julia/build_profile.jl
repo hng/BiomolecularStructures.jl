@@ -1,7 +1,11 @@
 using PyCall
-
+macro R_str(s)
+    s
+end
+pyinitialize()
 @pyimport modeller
-
+@pyimport _modeller
+mod_lib = _modeller.mod_libdir_get()
 modeller.log[:verbose]()
 env = modeller.environ()
 
@@ -29,9 +33,9 @@ aln[:append](file="TvLDH.ali", alignment_format="PIR", align_codes="ALL")
 prf = aln[:to_profile]()
 
 #-- Scan sequence database to pick up homologous sequences
-prf[:build](sdb, matrix_offset=-450, rr_file="""$(pyeval("\$LIB"))/blosum62.sim.mat""",
+prf[:build](sdb, matrix_offset=-450, rr_file=string(mod_lib,"/blosum62.sim.mat"),
           gap_penalties_1d=(-500, -50), n_prof_iterations=1,
-          check_profile=False, max_aln_evalue=0.01)
+          check_profile=false, max_aln_evalue=0.01)
 
 #-- Write out the profile in text format
 prf[:write](file="build_profile.prf", profile_format="TEXT")
