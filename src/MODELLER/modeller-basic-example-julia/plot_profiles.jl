@@ -2,7 +2,6 @@ using PyCall
 using PyPlot
 
 @pyimport modeller
-@pyimport pylab
 
 function r_enumerate(seq)
     """Enumerate a sequence in reverse order"""
