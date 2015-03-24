@@ -4,3 +4,4 @@ FastaIO
 ArgParse
 BioSeq
 PyCall
+PyPlot
