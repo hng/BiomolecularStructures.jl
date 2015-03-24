@@ -4,14 +4,20 @@ The PDB module provides utility functions to deal with [PDB (Protein Data Bank)]
 
 ## Exported functions
 
-```julia get_structure(filename::String)```
+```julia
+get_structure(filename::String)
+```
 
 Parses a PDB file and returns a structure PyObject.
 
-```get_chains(structure::PyObject)```
+```julia
+get_chains(structure::PyObject)
+```
 
 Gets the chains of protein structure from a BioPython PyObject and returns an Array of Array{Float64,2} matrices.
 
-```structure_to_matrix(structure::PyObject)```
+```julia
+structure_to_matrix(structure::PyObject)
+```
 
 Converts a BioPython structure to a Array{Float64,2} matrix.
