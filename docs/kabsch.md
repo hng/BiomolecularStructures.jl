@@ -24,13 +24,7 @@ julia> kabsch_rmsd(P, Q)
 
 ## Exported functions
 
-<dl class="function">
-<dt id="BiomolecularStructures.Kabsch.rmsd">
-<tt class="descname">rmsd</tt><big>(</big><em><b>A</b>::Array{Float64,2}</em>, <em><b>B</b>::Array{Float64,2}<big>)</big></em> → Float64<a class="headerlink" href="#BiomolecularStructures.Kabsch.rmsd" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates the root mean square deviation of two matrices A and B in using the following formula:
-![RMSD formula](assets/kabsch/rmsd.png)
-</p>
-</dd></dl>
+```julia rmsd(A::Array{Float64,2}, B::Array{Float64,2}) ```
 
 Calculates the root mean square deviation of two matrices A and B in using the following formula:
 
