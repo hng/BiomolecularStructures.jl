@@ -7,9 +7,9 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 		RMSD::Float64 = 0.0
 
 		# D pairs of equivalent atoms
-		D::Int64 = size(A)[1]::Int64
+		D::Int64 = size(A)[1]::Int32 # <- oddly _only_ changing this to Int32 makes it work on 32-bit systems.
 		# N coordinates
-		N::Int64 = length(A)::Int64
+		N::Int64 = length(A)::Int32
 
 		for i::Int64 = 1:N
 			RMSD += (A[i]::Float64 - B[i]::Float64)^2
