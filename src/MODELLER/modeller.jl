@@ -3,13 +3,14 @@
 "
 
 module MODELLER
-export model_single
+export model_single, gen_script
     using PyCall
 
-    @pyimport modeller
-    @pyimport modeller.automodel as am
-
     function model_single(alnf, know, seq)
+
+        @pyimport modeller
+        @pyimport modeller.automodel as am
+
         env = modeller.environ()
         a = am.automodel(env, alnfile=alnf,
               knowns=know, sequence=seq,
@@ -21,4 +22,15 @@ export model_single
         a[:make]()
     end
 
+    # Generator for MODELLER julia scripts.
+    # These scripts are based on the basic example scripts from the MODELLER website.
+    # Scripts are generated in the current working directory
+    # name: The name of the script (minus the extension), e.g. "build_profile"
+    function gen_script(name::String)
+       file = Pkg.dir("BiomolecularStructures", "src/MODELLER/modeller-basic-example-julia", "$name.jl")
+       if isfile(file)
+          cp(file, "./$name.jl")
+          println("Generated $name.jl MODELLER script") 
+       end 
+    end
 end
