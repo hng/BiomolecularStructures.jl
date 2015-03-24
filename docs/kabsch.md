@@ -1,36 +1,4 @@
 # Kabsch Algorithm
-## Introduction
-
-The Kabsch algorithm, named after Wolfgang Kabsch, computes the optimal rotation matrix for two sets of points so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation) is minimal. In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures. 
-
-To illustrate this the following excerpt of the [PDB](https://www.wwpdb.org/documentation/file-format) file of [human deoxyhaemoglobin](http://www.rcsb.org/pdb/explore/explore.do?structureId=2HHB) shows part of one of the alpha chains of the structure. The C<sub>&alpha;</sub> atomic coordinates shown can be used to construct a reference matrix which together with another matrix of coordinates (constructed the same way) could serve as the input of the algorithm.
-
-<pre>
-<code>
-ATOM     17  <b>CA</b>  SER A   3      <b>12.286  19.774   7.034</b>  1.00 27.60           C  
-ATOM     18  C   SER A   3      13.529  20.322   6.334  1.00 30.36           C  
-ATOM     19  O   SER A   3      13.995  19.754   5.344  1.00 27.40           O  
-ATOM     20  CB  SER A   3      12.719  19.060   8.326  1.00 23.83           C  
-ATOM     21  OG  SER A   3      13.844  18.245   8.107  1.00 29.07           O  
-ATOM     22  N   PRO A   4      14.075  21.454   6.786  1.00 37.36           N  
-ATOM     23  <b>CA</b>  PRO A   4      <b>15.285  22.042   6.167</b>  1.00 39.58           C  
-ATOM     24  C   PRO A   4      16.466  21.103   6.290  1.00 21.30           C  
-ATOM     25  O   PRO A   4      17.288  21.019   5.368  1.00 32.82           O  
-ATOM     26  CB  PRO A   4      15.637  23.315   6.942  1.00 45.84           C  
-ATOM     27  CG  PRO A   4      14.398  23.603   7.765  1.00 43.31           C  
-ATOM     28  CD  PRO A   4      13.513  22.346   7.796  1.00 38.50           C  
-ATOM     29  N   ALA A   5      16.484  20.391   7.438  1.00 22.62           N  
-ATOM     30  <b>CA</b>  ALA A   5      <b>17.533  19.415   7.651</b>  1.00 26.71           C 
-</code>
-</pre>
-
-Plotting the initial coordinates of both alpha chains (shown in red and green) already hints at a non-minimal RMSD  (39.46851976701876 Å).
-
-![Initial coordinates alpha chains](assets/kabsch/alpha_init.png)
-
-After running the algorithm the alpha chains are superimposed and the RMSD is minimized (0.2300387105661853 Å).
-
-![Initial coordinates alpha chains](assets/kabsch/alphas_transformed.png)
 
 ## Usage / Example
 
@@ -98,11 +66,42 @@ Directly returns the RMSD after rotation for convenience.
 
 ## Background
 
-The Kabsch algorithm solves a constrained orthogonal Procrustes problem. A Procrustes problem is to compare two (or more) shapes. To this, they must be optimally superimposed by translating, rotating and scaling them. 
+The Kabsch algorithm (named after Wolfgang Kabsch), solves a constrained orthogonal Procrustes problem. In Greek mythology [Procrustes](http://en.wikipedia.org/wiki/Procrustes), ("the stretcher") is a son of Poseidon who invited travelers to his home and then stretched (or amputated limbs in later versions) to fit his guests to an iron bed using his smith's hammer.
+
+A Procrustes *problem* is to compare two (or more) shapes. For this, they must be optimally superimposed by translating, rotating and scaling them.
 
 The constraint applied is that only rotations of the shapes (or matrices in this case) are allowed. Additionally, reflections are not allowed.
 
-In Greek mythology [Procrustes](http://en.wikipedia.org/wiki/Procrustes), ("the stretcher") is a son of Poseidon  who invited travelers to his home and then stretched (or amputated limbs in later versions) to fit his guests to an iron bed using his smith's hammer.
+In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation) is minimal.  
+
+To illustrate this, the following excerpt of the [PDB](https://www.wwpdb.org/documentation/file-format) file of [human deoxyhaemoglobin](http://www.rcsb.org/pdb/explore/explore.do?structureId=2HHB) shows part of one of the alpha chains of the structure. The C<sub>&alpha;</sub> atomic coordinates shown can be used to construct a reference matrix which together with another matrix of coordinates (constructed the same way) could serve as the input of the algorithm.
+
+<pre>
+<code>
+ATOM     17  <b>CA</b>  SER A   3      <b>12.286  19.774   7.034</b>  1.00 27.60           C  
+ATOM     18  C   SER A   3      13.529  20.322   6.334  1.00 30.36           C  
+ATOM     19  O   SER A   3      13.995  19.754   5.344  1.00 27.40           O  
+ATOM     20  CB  SER A   3      12.719  19.060   8.326  1.00 23.83           C  
+ATOM     21  OG  SER A   3      13.844  18.245   8.107  1.00 29.07           O  
+ATOM     22  N   PRO A   4      14.075  21.454   6.786  1.00 37.36           N  
+ATOM     23  <b>CA</b>  PRO A   4      <b>15.285  22.042   6.167</b>  1.00 39.58           C  
+ATOM     24  C   PRO A   4      16.466  21.103   6.290  1.00 21.30           C  
+ATOM     25  O   PRO A   4      17.288  21.019   5.368  1.00 32.82           O  
+ATOM     26  CB  PRO A   4      15.637  23.315   6.942  1.00 45.84           C  
+ATOM     27  CG  PRO A   4      14.398  23.603   7.765  1.00 43.31           C  
+ATOM     28  CD  PRO A   4      13.513  22.346   7.796  1.00 38.50           C  
+ATOM     29  N   ALA A   5      16.484  20.391   7.438  1.00 22.62           N  
+ATOM     30  <b>CA</b>  ALA A   5      <b>17.533  19.415   7.651</b>  1.00 26.71           C 
+</code>
+</pre>
+
+Plotting the initial coordinates of both alpha chains (shown in red and green) already hints at a non-minimal RMSD  (39.46851976701876 Å).
+
+![Initial coordinates alpha chains](assets/kabsch/alpha_init.png)
+
+After running the algorithm the alpha chains are superimposed and the RMSD is minimized (0.2300387105661853 Å).
+
+![Initial coordinates alpha chains](assets/kabsch/alphas_transformed.png)
 
 ## References
 
