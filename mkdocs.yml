@@ -6,5 +6,6 @@ pages:
 - ['index.md', 'Home']
 - ['modules.md', 'Modules']
 - ['kabsch.md', 'Kabsch Algorithm']
+- ['pdb.md', 'PBD Utilities']
 
 docs_dir: 'docs'
