@@ -7,5 +7,6 @@ pages:
 - ['modules.md', 'Modules']
 - ['kabsch.md', 'Kabsch Algorithm']
 - ['pdb.md', 'PBD Utilities']
+- ['plot.md', 'Plotting Utilities']
 
 docs_dir: 'docs'
