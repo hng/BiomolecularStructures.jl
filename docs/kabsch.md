@@ -1,8 +1,29 @@
 # Kabsch Algorithm
 
-The Kabsch algorithm computes the optimal rotation matrix for two sets of points so that the RMSD (Root mean squared deviation) is minimal.
+The Kabsch algorithm computes the optimal rotation matrix for two sets of points so that the RMSD (Root mean squared deviation) is minimal. In Bioinformatics this applies to superimposing the C_Alpha atomic coordinates of two protein structures. 
 
-## Example
+The following excerpt of the PDB(link) file of human deoxyhaemoglobin(link) shows part of the alpha chain of the structure. The C_alpha atomic coordinates shown can be used to construct a reference matrix which together with a another matrix of coordinates (constructed the same way) serve as the input of the algorithm.
+
+```
+[...]
+ATOM     17  **CA**  SER A   3      **12.286  19.774   7.034**  1.00 27.60           C  
+ATOM     18  C   SER A   3      13.529  20.322   6.334  1.00 30.36           C  
+ATOM     19  O   SER A   3      13.995  19.754   5.344  1.00 27.40           O  
+ATOM     20  CB  SER A   3      12.719  19.060   8.326  1.00 23.83           C  
+ATOM     21  OG  SER A   3      13.844  18.245   8.107  1.00 29.07           O  
+ATOM     22  N   PRO A   4      14.075  21.454   6.786  1.00 37.36           N  
+ATOM     23  **CA**  PRO A   4      **15.285  22.042   6.167**  1.00 39.58           C  
+ATOM     24  C   PRO A   4      16.466  21.103   6.290  1.00 21.30           C  
+ATOM     25  O   PRO A   4      17.288  21.019   5.368  1.00 32.82           O  
+ATOM     26  CB  PRO A   4      15.637  23.315   6.942  1.00 45.84           C  
+ATOM     27  CG  PRO A   4      14.398  23.603   7.765  1.00 43.31           C  
+ATOM     28  CD  PRO A   4      13.513  22.346   7.796  1.00 38.50           C  
+ATOM     29  N   ALA A   5      16.484  20.391   7.438  1.00 22.62           N  
+ATOM     30  **CA**  ALA A   5      **17.533  19.415   7.651**  1.00 26.71           C 
+[...]
+```
+
+## Usage / Example
 
 Define two matrices P, Q:
 ```julia
@@ -21,7 +42,7 @@ After rotation with the optimal rotation matrix:
 kabsch_rmsd(P, Q)
 1.6616296724220897e-15 (~ 0)
 ``` 
-## Functions
+## Exported functions
 
 ### `rmsd(A, B)`
 
@@ -37,7 +58,7 @@ Returns the centroid of a matrix m.
 
 Translates two matrices P, Q so that their centroids are the origin of the coordinate system.
 
-### `kabsch(P,Q)`
+### `kabsch(reference::Array{Float64,2},coords::Array{Float64,2})`
 
 Calculates the optimal rotation matrix of two matrices P, Q.
 Using `translate_points` it shifts the matrices' centroids to the origin of the coordinate system, then computes the covariance matrix A:
@@ -48,7 +69,7 @@ Next is the singular value decomposition of A:
 
 ![SVD formula][svd-formula]
 
-It's possible that the rotation matrix needs correction (basically flipping the sign of each element of the matrix):
+It's possible that the rotation matrix needs correction
 
 ![Sign correction formula][correction-formula]
 
@@ -57,6 +78,8 @@ We check if d is < 0.0, if so, we flip the sign(s).
 Finally the optimal rotation matrix U is calculated
 
 ![Optimal rotation matrix U][optu-formula]
+
+
 
 and returned together with the matrix P.
 
