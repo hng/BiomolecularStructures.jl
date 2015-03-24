@@ -7,7 +7,7 @@ pages:
 - ['index.md', 'Home']
 - ['modules.md', 'Modules']
 - ['kabsch.md', 'Kabsch - Kabsch Algorithm']
-- ['pdb.md', 'PDB - PBD Utilities']
+- ['pdb.md', 'PDB - PDB Utilities']
 - ['plot.md', 'MatrixPlot - Plotting Utilities']
 
 docs_dir: 'docs'
