@@ -2,10 +2,11 @@ module MatrixPlot
 using PyPlot
 export matrices_plot
 
-function matrix_prep(A)
-	x = Float64[]
-	y = Float64[]
-	z = Float64[]
+# convert a matrix to PyPlot format
+function matrix_prep(A::Array{Float64,2})
+	x::Array{Float64,1} = Float64[]
+	y::Array{Float64,1} = Float64[]
+	z::Array{Float64,1} = Float64[]
 	for i=1:size(A,1)
 		xyz = A[i,:]
 		push!(x,xyz[1])
@@ -15,13 +16,13 @@ function matrix_prep(A)
 
 	return x, y, z
 end
-
-function matrices_plot(P,Q)
+# Plot a 3D scatterplot of two matrices
+function matrices_plot(P::Array{Float64,2},Q::Array{Float64,2})
 	
 	pygui(true)
-	x, y, z = matrix_prep(P)
+	x::Array{Float64,1}, y::Array{Float64,1}, z::Array{Float64,1} = matrix_prep(P)
 	scatter3D(x, y, z, color="red")
-	x, y, z = matrix_prep(Q)
+	x::Array{Float64,1}, y::Array{Float64,1}, z::Array{Float64,1} = matrix_prep(Q)
 	scatter3D(x, y, z, color="green")
 	readline()
 end
