@@ -2,11 +2,12 @@ site_name: BiomolecularStructures
 site_author: Simon Malischewski Henning Schumann Philipp Gerling Simon Leßmann
 repo_url: https://github.com/hng/BiomolecularStructures
 theme: readthedocs
+# convention: <ModulName> - <Modul desccription>
 pages:
 - ['index.md', 'Home']
 - ['modules.md', 'Modules']
-- ['kabsch.md', 'Kabsch Algorithm']
-- ['pdb.md', 'PBD Utilities']
-- ['plot.md', 'Plotting Utilities']
+- ['kabsch.md', 'Kabsch - Kabsch Algorithm']
+- ['pdb.md', 'PDB - PBD Utilities']
+- ['plot.md', 'MatrixPlot - Plotting Utilities']
 
 docs_dir: 'docs'
