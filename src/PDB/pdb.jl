@@ -20,7 +20,7 @@ function get_structure(filename::String)
 end
 
 # get chains from structure
-function get_chains(structure)
+function get_chains(structure::PyObject)
 	chains = structure[:get_chains]()
 
 	chainMatrices = Any[]
@@ -33,9 +33,7 @@ function get_chains(structure)
 end
 
 # Read in a PDB file and return a matrix of C_Alpha atom coordinates
-function structure_to_matrix(structure)
-	
-
+function structure_to_matrix(structure::PyObject)
 	atoms = structure[:get_atoms]()
 	# Filter out C_Alpha atoms
 	atoms = filter(x -> x[:get_name]() == "CA", atoms) 
