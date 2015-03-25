@@ -5,7 +5,7 @@ theme: readthedocs
 # convention: <ModulName> - <Modul desccription>
 pages:
 - ['index.md', 'Home']
-- ['modules.md', 'Modules']
+- ['webblast.md', 'WebBLAST - NCBI/EBI BLAST Web-API']
 - ['kabsch.md', 'Kabsch - Kabsch Algorithm']
 - ['pdb.md', 'PDB - PDB Utilities']
 - ['plot.md', 'MatrixPlot - Plotting Utilities']
