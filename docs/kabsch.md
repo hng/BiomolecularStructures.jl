@@ -82,7 +82,7 @@ A Procrustes *problem* is to compare two (or more) shapes. For this, they must b
 
 The constraint applied is that only rotations of the shapes (or matrices in this case) are allowed. Additionally, reflections are not allowed.
 
-In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation), one of the most commonly used difference measure (Kavraki, L. 2007), is minimal.  
+In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation), one of the most commonly used difference measures (Kavraki, L. 2007), is minimal.  
 
 To illustrate this, the following excerpt of the [PDB](https://www.wwpdb.org/documentation/file-format) file of [human deoxyhaemoglobin](http://www.rcsb.org/pdb/explore/explore.do?structureId=2HHB) shows part of one of the alpha chains of the structure. The C<sub>&alpha;</sub> atomic coordinates shown can be used to construct a reference matrix which together with another matrix of coordinates (constructed the same way) could serve as the input of the algorithm.
 
