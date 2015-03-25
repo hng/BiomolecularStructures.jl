@@ -5,8 +5,8 @@
 ```julia
 using BiomolecularStructures.Kabsch
 # Define two matrices P, Q:
-P = [1.0 2.0 3.0; 4.0 5.0 6.0; 7.0 8.0 9.0]
-Q = [9.0 8.0 7.0; 6.0 5.0 4.0; 3.0 2.0 1.0]
+P = [-1. 0. 0.; 0. 0. 0.; 0. 1. 0.; 0. 1. 1]
+Q = [0. -1. -1.; 0. -1. 0; 0. 0. 0.; -1. 0. 0.]
 ```
 
 RMSD before superimposing:
@@ -14,13 +14,13 @@ RMSD before superimposing:
 ```julia
 julia> rmsd(P, Q)
 ```
-8.94427190999916
+1.4142135623730951
 
 After running the Kabsch algorithm:
 ```
 julia> kabsch_rmsd(P, Q)
 ``` 
-4.8989794855663575
+2.435541875787129e-16
 
 ## Exported functions
 
@@ -28,7 +28,7 @@ julia> kabsch_rmsd(P, Q)
 rmsd(A::Array{Float64,2}, B::Array{Float64,2})
 ```
 
-Calculates the root mean square deviation of two matrices A and B in using the following formula:
+Calculates the root mean square deviation of two matrices A and B in using the following formula (Kavraki, L. 2007):
 
 ![RMSD formula](assets/kabsch/rmsd.png)
 
@@ -76,13 +76,13 @@ Directly returns the RMSD after rotation for convenience.
 
 ## Background
 
-The Kabsch algorithm (named after Wolfgang Kabsch), solves a constrained orthogonal Procrustes problem. In Greek mythology [Procrustes](http://en.wikipedia.org/wiki/Procrustes), ("the stretcher") is a son of Poseidon who invited travelers to his home and then stretched (or amputated limbs in later versions) to fit his guests to an iron bed using his smith's hammer.
+The Kabsch algorithm (Kabsch 1976, Kabsch 1978), solves a constrained orthogonal Procrustes problem. In Greek mythology [Procrustes](http://en.wikipedia.org/wiki/Procrustes), ("the stretcher") is a son of Poseidon who invited travelers to his home and then stretched (or amputated limbs in later versions) to fit his guests to an iron bed using his smith's hammer.
 
 A Procrustes *problem* is to compare two (or more) shapes. For this, they must be optimally superimposed by translating, rotating and scaling them.
 
 The constraint applied is that only rotations of the shapes (or matrices in this case) are allowed. Additionally, reflections are not allowed.
 
-In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation) is minimal.  
+In Bioinformatics this applies to superimposing the C<sub>&alpha;</sub> atomic coordinates of two protein structures so that the [RMSD](https://en.wikipedia.org/wiki/Root-mean-square_deviation_of_atomic_positions) (Root mean squared deviation), one of the most commonly used difference measure (Kavraki, L. 2007), is minimal.  
 
 To illustrate this, the following excerpt of the [PDB](https://www.wwpdb.org/documentation/file-format) file of [human deoxyhaemoglobin](http://www.rcsb.org/pdb/explore/explore.do?structureId=2HHB) shows part of one of the alpha chains of the structure. The C<sub>&alpha;</sub> atomic coordinates shown can be used to construct a reference matrix which together with another matrix of coordinates (constructed the same way) could serve as the input of the algorithm.
 
@@ -119,4 +119,4 @@ After running the algorithm the alpha chains are superimposed and the RMSD is mi
 
 [Kabsch, W. (1978). A discussion of the solution for the best rotation to related two sets of vectors.Acta. Crystal, 34A:827-828.](http://scripts.iucr.org/cgi-bin/paper?S0567739478001680)
 
-[Kavraki, L. Molecular Distance Measures. OpenStax CNX. 11. Juni 2007](http://cnx.org/contents/1d5f91b1-dc0b-44ff-8b4d-8809313588f2@23@23)
+[Kavraki, L. Molecular Distance Measures. OpenStax CNX. 11. Juni 2007](http://cnx.org/contents/1d5f91b1-dc0b-44ff-8b4d-8809313588f2@23)
