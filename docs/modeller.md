@@ -15,4 +15,4 @@ Scripts are generated in the current working directory. You can find all scripts
 
 **Example:**
 
-``align2d("1bdm", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvLDH", "TvLDH-1bdmA")``
+``align2d("1bdm.pdb", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvLDH", "TvLDH-1bdmA")``
