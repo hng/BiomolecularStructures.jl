@@ -2,7 +2,7 @@
   adapted from the modeller example scripts
 "
 
-module MODELLER
+module Modeller
 export model_single, gen_script
     using PyCall
 
