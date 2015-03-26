@@ -7,6 +7,7 @@ pages:
 - ['index.md', 'Home']
 - ['webblast.md', 'WebBLAST - NCBI/EBI BLAST Web-API']
 - ['kabsch.md', 'Kabsch - Kabsch Algorithm']
+- ['mafft.md', 'MAFFT - Julia API for MAFFT commandline tool for sequence alignment']
 - ['pdb.md', 'PDB - PDB Utilities']
 - ['plot.md', 'MatrixPlot - Plotting Utilities']
 
