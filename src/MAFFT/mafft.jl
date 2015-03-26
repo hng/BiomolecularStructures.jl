@@ -104,9 +104,12 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_gin
     # helper methods for aligned FASTA
 
     function print_aligned_fasta(fasta)
+        aligned = String[]
         for f in fasta
+            push!(aligned, f[2])
             println(f[2])
         end
+        return aligned
     end
 
     # returns the length of the alignment (FastaIO-format as input)
