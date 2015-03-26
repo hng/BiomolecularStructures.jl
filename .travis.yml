@@ -2,6 +2,7 @@ language: julia
 julia:
   - release
 before_install:
+  - sudo add-apt-repository -y "deb > http://archive.ubuntu.com/ubuntu/ vivid main universe"
   - sudo apt-get update -qq
   - sudo apt-get install -qq python-biopython
   - sudo apt-get install -qq mafft
