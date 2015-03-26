@@ -35,11 +35,11 @@ export model_single, gen_script, evaluate_model
         a[:make]()
     end
 
-    function evaluate_model(pdbfile::String; outputfile::String)
+    function evaluate_model(pdbfile::String, outputfile::String = "")
 
         # check for optional argument output and set it to the first part of the name of the PDB file
-        if !isdefined(:outputfile)
-            outputfile = string(split(a,".")[1], ".profile")
+        if outputfile == ""
+            outputfile = string(split(pdbfile,".")[1], ".profile")
         end
 
         @pyimport modeller
