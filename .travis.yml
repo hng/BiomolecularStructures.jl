@@ -4,7 +4,12 @@ julia:
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq python-biopython
-  - sudo apt-get install -qq mafft
+  - wget -P ~ http://mafft.cbrc.jp/alignment/software/mafft-7.215-with-extensions-src.tgz
+  - tar -zxvf ~/mafft-7.215-with-extensions-src.tgz -C ~
+  - mkdir ~/mafft
+  - ruby -pi -e "gsub(/^PREFIX = \/usr\/local/, 'PREFIX = ~/mafft/')" ~/mafft-7.215-with-extensions/core/Makefile
+  - (cd ~/mafft-7.215-with-extensions/core/ && make clean && make && make install)
+  - export PATH=$PATH:~/mafft/bin
 script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("BiomolecularStructures"); Pkg.test("BiomolecularStructures"; coverage=true)'  
