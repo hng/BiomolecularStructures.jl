@@ -18,5 +18,6 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Kabsch - Superimposing protein structures
 * PDB - Utility functions for parsing PDB files
 * Plot - Rudimentary plotting of matrices of atomic coordinates
+* Mafft - Julia API for multisequence alignment with MAFFT
 * Modeller - 
 * Cluster -

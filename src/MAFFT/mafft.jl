@@ -2,7 +2,7 @@
     TODO
     - group to group alignments
 """
-module MAFFT
+module Mafft
 export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length, to_aminoacids
 
     using FastaIO
