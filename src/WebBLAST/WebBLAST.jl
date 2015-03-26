@@ -14,6 +14,8 @@ module WebBLAST
   include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ncbi_blast.jl")) 
   include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ebi_blast.jl")) 
 
+  export check_threshold
+
   function parse_commandline()
       s = ArgParseSettings(description = "WebBLAST")
 
@@ -95,6 +97,6 @@ module WebBLAST
     end
   end
 
-  main()
+  #main()
 
 end
