@@ -3,7 +3,7 @@
     - group to group alignments
 """
 module Mafft
-export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, print_aligned_fasta, alignment_length, to_aminoacids
+export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_ginsi, ginsi, mafft_einsi, einsi, mafft_fftnsi, fftnsi, mafft_fftns, fftns, mafft_nwnsi, nwnsi, mafft_nwns, nwns, mafft_profile, print_aligned_fasta, alignment_length, to_aminoacids
 
     using FastaIO
     using BioSeq
@@ -100,6 +100,19 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_linsi, linsi, mafft_gin
         return mafft(fasta_in, ["--retree", "2", "--maxiterate", "0", "--nofft"])
     end
     const nwns = mafft_nwns
+
+    # Group-to-group alignments
+    # group1 and group2 have to be files with alignments
+    function mafft_profile(group1::String, group2::String)
+        try success(`mafft --version`)
+        catch
+            error("MAFFT is not installed.")
+        end
+
+        fasta = readall(`mafft '--quiet' --maxiterate 1000 --seed $group1 --seed $group2 /dev/null`)
+        fr = readall(FastaReader(IOBuffer(fasta)))
+        return fr
+    end
 
     # helper methods for aligned FASTA
 
