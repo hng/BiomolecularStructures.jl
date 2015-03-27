@@ -3,8 +3,8 @@
 ## Exported functions
 
 ```julia
-    gen_script(name::String)
-    ```
+gen_script(name::String)
+```
 
 Generates Julia scripts for MODELLER.
 name: The name of the script (minus the extension), e.g. "build_profile"
