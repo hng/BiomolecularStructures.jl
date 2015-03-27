@@ -62,10 +62,14 @@ function export_pdb(matrix::Array{Float64,2}, filename::String)
 
 	for i in 1:size(matrix)[1]
 		line = rpad("", 80, " ")
-		line[1,5] = "ATOM"
+		line[1,5] = "ATOM  "
 		line[13,2] = "CA"
 		println(line)
-		line = string("ATOM ", i, " CA ", "VAL", " A ", " 1 ", " ", matrix[i,:][1], " ", matrix[i,:][2], " ", matrix[i,:][3], " ", 1.0, " ", 0.0, " C\n")
+        i_test = string(i)
+        for s in range(1, (length(i_test) - 5))
+            i_test = string(" ", i_test)
+        end
+		line = string("ATOM  ", i_test, " CA ", "VAL", " A ", " 1 ", " ", matrix[i,:][1], " ", matrix[i,:][2], " ", matrix[i,:][3], " ", 1.0, " ", 0.0, " C\n")
 		push!(lines, line)
 	end
 
