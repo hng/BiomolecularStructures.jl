@@ -1,6 +1,4 @@
 #= Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
-    TODO
-    - group to group alignments
 =#
 module Mafft
 export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, print_aligned_fasta, alignment_length, to_aminoacids
