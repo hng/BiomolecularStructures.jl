@@ -26,8 +26,29 @@ mafft("examples/fasta/il4.fasta", ["--localpair", "--maxiterate", "1000"])
 Calling mafft with custom arguments. Arguments have to be a array of strings. This call is also equivalent to calling:
 
 ```julia
- mafft_linsi("examples/fasta/il4.fasta")
+ mafft("examples/fasta/il4.fasta", :linsi)
 ```
+
+## Exported functions
+
+```julia
+mafft(fasta_in::String, args=:default)
+```
+
+Runs mafft with the provided fasta file and returns the alignment in FastaIO dataformat. By default mafft is called with the `--auto` option.
+
+```julia
+ mafft_from_string(fasta_in::String, args=:default)
+```
+
+```julia
+ mafft_from_fasta(fasta_in::String, args=:default)
+```
+
+```julia
+mafft_profile(group1::String, group2::String)
+```
+
 
 ## References
 <ul>
