@@ -45,39 +45,39 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, print_aligned_
 
     #= calls MAFFT and returns aligned FASTA
        fasta_in: path to FASTA file
-       args: optional commandline arguments for MAFFT (array of strings)
+       preconfiguration: optional commandline arguments for MAFFT (array of strings)
     =#
-    function mafft(fasta_in::String, args=:default)
+    function mafft(fasta_in::String, preconfiguration=:default)
         try success(`mafft --version`)
         catch
             error("MAFFT is not installed.")
         end
 
-        fasta = readall(`mafft '--quiet' $(eval(args)) $fasta_in`)
+        fasta = readall(`mafft '--quiet' $(eval(preconfiguration)) $fasta_in`)
         fr = readall(FastaReader(IOBuffer(fasta)))
         return fr
     end
     
     #= calls MAFFT with the given FASTA string as input and returns aligned FASTA
        fasta_in: FASTA string
-       args: optional commandline arguments for MAFFT (array of strings) 
+       preconfiguration: optional commandline arguments for MAFFT (array of strings) 
     =#
-    function mafft_from_string(fasta_in::String, args=:default)
+    function mafft_from_string(fasta_in::String, preconfiguration=:default)
         # write to tempfile because mafft can not read from stdin
         tempfile_path, tempfile_io = mktemp()
         write(tempfile_io, fasta_in)
         close(tempfile_io)
-        return mafft(tempfile_path, args)
+        return mafft(tempfile_path, preconfiguration)
     end
 
     #= calls MAFFT with the given FASTA in FastaIO format
        fasta_in: FASTA in FastaIO format
-       args: optional commandline arguments for MAFFT (array of strings)
+       preconfiguration: optional commandline arguments for MAFFT (array of strings)
     =#
-    function mafft_from_fasta(fasta_in, args=:default)
+    function mafft_from_fasta(fasta_in, preconfiguration=:default)
         io = IOBuffer()
         writefasta(io, fasta_in)
-        return mafft_from_string(takebuf_string(io), args)
+        return mafft_from_string(takebuf_string(io), preconfiguration)
     end
 
     #= Group-to-group alignments
