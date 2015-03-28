@@ -67,14 +67,14 @@ export  gen_script, build_profile, model_single, evaluate_model, align2d
 
     end
 
-    function model_single(alnf::String, know, seq)
+    function model_single(alnf::String, known_structure::String, seq::String)
 
         @pyimport modeller
         @pyimport modeller.automodel as am
 
         env = modeller.environ()
         a = am.automodel(env, alnfile=alnf,
-              knowns=know, sequence=seq,
+              knowns=known_structure, sequence=seq,
               assess_methods=(am.assess[:DOPE],
                               #soap_protein_od.Scorer(),
                               am.assess[:GA341]))
