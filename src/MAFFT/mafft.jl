@@ -1,7 +1,7 @@
 #= Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
 =#
 module Mafft
-export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, print_aligned_fasta, alignment_length, to_aminoacids
+export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_from_string, mafft_profile_from_fasta, print_aligned_fasta, alignment_length, to_aminoacids
 
     using FastaIO
     using BioSeq
@@ -80,7 +80,7 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, print_aligned_
         return mafft_from_string(takebuf_string(io), preconfiguration)
     end
 
-    #= Group-to-group alignments
+    #= Group-to-group alignments with input as paths to FASTA files
        group1 and group2 have to be files with alignments
     =#
     function mafft_profile(group1::String, group2::String)
@@ -92,6 +92,35 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, print_aligned_
         fasta = readall(`mafft '--quiet' --maxiterate 1000 --seed $group1 --seed $group2 /dev/null`)
         fr = readall(FastaReader(IOBuffer(fasta)))
         return fr
+    end
+
+    #= Group-to-group alignments with input strings in FASTA format
+       group1 and group2 have to be strings with alignments in FASTA format
+    =#
+    function mafft_profile_from_string(group1::String, group2::String)
+        # write to tempfiles because mafft can not read from stdin
+        tempfile1_path, tempfile1_io = mktemp()
+        write(tempfile1_io, group1)
+        close(tempfile1_io)
+
+        tempfile2_path, tempfile2_io = mktemp()
+        write(tempfile2_io, group2)
+        close(tempfile2_io)
+
+        return mafft_profile(tempfile1_path, tempfile2_path)
+    end
+
+    #= Group-to-group alignments with input in FastaIO format
+       group1 and group2 have to be in FastaIO format and have to be alignments
+    =#
+    function mafft_profile_from_fasta(group1, group2)
+        io = IOBuffer()
+        writefasta(io, group1)
+        group1_string = takebuf_string(io)
+        writefasta(io, group2)
+        group2_string = takebuf_string(io)
+
+        return mafft_profile_from_string(group1_string, group2_string)
     end
 
     # helper methods for aligned FASTA

@@ -42,7 +42,7 @@ Runs mafft with the provided fasta file and returns the alignment in FastaIO dat
 *preconfiguration*: optional commandline arguments for MAFFT (array of strings)
 
 ```julia
- mafft_from_string(fasta_in::String, preconfiguration=:default)
+mafft_from_string(fasta_in::String, preconfiguration=:default)
 ```
 
 Calls MAFFT with the given FASTA string as input and returns aligned FASTA in the FastaIO dataformat. 
@@ -52,7 +52,7 @@ Calls MAFFT with the given FASTA string as input and returns aligned FASTA in th
 *preconfiguration*: optional commandline arguments for MAFFT (array of strings) 
 
 ```julia
- mafft_from_fasta(fasta_in, preconfiguration=:default)
+mafft_from_fasta(fasta_in, preconfiguration=:default)
 ```
 
 Calls MAFFT with the given FASTA in FastaIO format
@@ -67,6 +67,21 @@ mafft_profile(group1::String, group2::String)
 Group-to-group alignments
 
 *group1* and *group2* have to be files with alignments. Returns aligned FASTA in the FastaIO dataformat.
+
+```julia
+mafft_profile_from_string(group1::String, group2::String)
+```
+Group-to-group alignments with input strings in FASTA format.
+ 
+ *group1* and *group2* have to be strings with alignments in FASTA format.
+ 
+```julia
+mafft_profile_from_fasta(group1, group2)
+```
+
+Group-to-group alignments with input in FastaIO format
+
+*group1* and *group2* have to be in FastaIO format and have to be alignments
 
 ## Supported pre-configurations (strategies)
 
