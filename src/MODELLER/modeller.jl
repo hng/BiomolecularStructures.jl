@@ -3,14 +3,14 @@
 "
 
 module Modeller
-export  gen_script, build_profile, model_single, evaluate_model, align2d
+export  gen_modeller_script, build_profile, model_single, evaluate_model, align2d
     using PyCall
 
     # Generator for MODELLER julia scripts.
     # These scripts are based on the basic example scripts from the MODELLER website.
     # Scripts are generated in the current working directory
     # name: The name of the script (minus the extension), e.g. "build_profile"
-    function gen_script(name::String)
+    function gen_modeller_script(name::String)
        file = Pkg.dir("BiomolecularStructures", "src/MODELLER/modeller-basic-example-julia", "$name.jl")
        if isfile(file)
           cp(file, "./$name.jl")
