@@ -2,6 +2,7 @@
 
 This module provides a Julia wrapper for [MAFFT](http://mafft.cbrc.jp/alignment/software/) (Multiple alignment program for amino acid or nucleotide sequences).
 Provides functions to call mafft with different pre-configurations (analogues to the provided anliases by mafft, see the mafft manpage) or custom parameters.
+For general use of Mafft consult the [Mafft manual](http://mafft.cbrc.jp/alignment/software/manual/manual.html) or manpage.
 
 Tested with MAFFT v7.215 (2014/12/17)
 
@@ -76,8 +77,8 @@ The following mafft strategies are supported by built-in preconfigurations which
   * G-INS-i (``:ginsi``)
   * E-INS-i (``:einsi``)
   * FFT-NS-i (``:fftnsi``)
-  * FFT-NS-2 (``:fftns)
-  * NW-NS-i (``:nwnsi)
+  * FFT-NS-2 (``:fftns``)
+  * NW-NS-i (``:nwnsi``)
   * NW-NS-2 (``:nwns``)
 
 ## References
