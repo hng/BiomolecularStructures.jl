@@ -12,7 +12,7 @@ Generates Julia templates for MODELLER usage with Julia.
 
 name: The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
 
-These scripts are based on the basic example scripts from Tutorial on the MODELLER website.
+These scripts are based on the basic example scripts from  the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MODELLER website.
 Scripts are generated in the current working directory. You can find all scripts that can be generated in `src/MODELLER/modeller-basic-example-julia`.
 
 **Example:**
