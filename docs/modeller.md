@@ -8,7 +8,7 @@ You need to [install](https://salilab.org/modeller/download_installation.html) M
 gen_modeller_script(name::String)
 ```
 
-Generates Julia scripts for MODELLER.
+Generates Julia templates for MODELLER usage with Julia.
 
 name: The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
 
