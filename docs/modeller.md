@@ -1,5 +1,5 @@
 # Modeller
-This module provides simple Julia integration for [MODELLER](https://salilab.org/modeller/), a bioinformatics tool for comparative protein structure modelling.
+This module provides simple Julia integration with [MODELLER](https://salilab.org/modeller/), a bioinformatics tool for comparative protein structure modelling.
 You need to [install](https://salilab.org/modeller/download_installation.html) MODELLER locally on your computer in order to use this module.
 
 ## Exported functions
@@ -9,7 +9,9 @@ gen_modeller_script(name::String)
 ```
 
 Generates Julia scripts for MODELLER.
+
 name: The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
+
 These scripts are based on the basic example scripts from Tutorial on the MODELLER website.
 Scripts are generated in the current working directory. You can find all scripts that can be generated in `src/MODELLER/modeller-basic-example-julia`.
 
@@ -47,7 +49,9 @@ align2d("1bdm.pdb", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvL
 model_single(alnf::String, known_structure::String, seq::String)
 ```
 alnf: path to alignment file
+
 known_structure: path or name of known pdb structure
+
 seq: sequence  
 
 **Example:**
@@ -60,6 +64,7 @@ model_single("TvLDH-1bdmA.ali", "1bdmA", "TvLDH")
 evaluate_model(pdbfile::String, outputfile::String = "")
 ```
 pdbfile: path to pdb file
+
 outputfile: optional path to output file. Defaults to pdbfile+".profile" 
 
 **Example:**
