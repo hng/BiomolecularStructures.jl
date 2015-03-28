@@ -87,7 +87,7 @@ export  gen_modeller_script, build_profile, model_single, evaluate_model, align2
 
         # check for optional argument output and set it to the first part of the name of the PDB file
         if outputfile == ""
-            outputfile = string(split(pdbfile,".")[1], ".profile")
+            outputfile = string(pdbfile, ".profile")
         end
 
         @pyimport modeller
