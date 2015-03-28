@@ -3,13 +3,19 @@
 ## Exported functions
 
 ```julia
-gen_script(name::String)
+gen_modeller_script(name::String)
 ```
 
 Generates Julia scripts for MODELLER.
-name: The name of the script (minus the extension), e.g. "build_profile"
+name: The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
 These scripts are based on the basic example scripts from the MODELLER website.
-Scripts are generated in the current working directory. You can find all scripts that can be generated in src/MODELLER/modeller-basic-example-julia .
+Scripts are generated in the current working directory. You can find all scripts that can be generated in `src/MODELLER/modeller-basic-example-julia`.
+
+**Example:**
+
+```julia
+gen_modeller_script("build_profile")
+```
 
 ```julia
 build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", alignment_file::String = "", alignment_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
