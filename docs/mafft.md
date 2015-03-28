@@ -32,23 +32,53 @@ Calling mafft with custom arguments. Arguments have to be a array of strings. Th
 ## Exported functions
 
 ```julia
-mafft(fasta_in::String, args=:default)
+mafft(fasta_in::String, preconfiguration=:default)
 ```
 
 Runs mafft with the provided fasta file and returns the alignment in FastaIO dataformat. By default mafft is called with the `--auto` option.
 
-```julia
- mafft_from_string(fasta_in::String, args=:default)
-```
+*fasta_in*: path to FASTA file
+
+*preconfiguration*: optional commandline arguments for MAFFT (array of strings)
 
 ```julia
- mafft_from_fasta(fasta_in::String, args=:default)
+ mafft_from_string(fasta_in::String, preconfiguration=:default)
 ```
+
+Calls MAFFT with the given FASTA string as input and returns aligned FASTA in the FastaIO dataformat. 
+
+*fasta_in*: FASTA string
+
+*preconfiguration*: optional commandline arguments for MAFFT (array of strings) 
+
+```julia
+ mafft_from_fasta(fasta_in, preconfiguration=:default)
+```
+
+Calls MAFFT with the given FASTA in FastaIO format
+
+*fasta_in*: FASTA in FastaIO format
+
+*preconfiguration*: optional commandline arguments for MAFFT (array of strings)
 
 ```julia
 mafft_profile(group1::String, group2::String)
 ```
+Group-to-group alignments
 
+*group1* and *group2* have to be files with alignments. Returns aligned FASTA in the FastaIO dataformat.
+
+## Supported pre-configurations (strategies)
+
+The following mafft strategies are supported by built-in preconfigurations which can be used by supplying the function calls with the corresponding symbol (in the parentheses). 
+
+  * L-INS-i (``:linsi``)
+  * G-INS-i (``:ginsi``)
+  * E-INS-i (``:einsi``)
+  * FFT-NS-i (``:fftnsi``)
+  * FFT-NS-2 (``:fftns)
+  * NW-NS-i (``:nwnsi)
+  * NW-NS-2 (``:nwns``)
 
 ## References
 <ul>
