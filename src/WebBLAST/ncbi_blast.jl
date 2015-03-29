@@ -18,7 +18,7 @@ function call_api(;args...)
   end
 
   query_string = "$(base_url)$(query_string)"
-
+  println(query_string)
   return get(query_string)
 
 end
@@ -113,7 +113,7 @@ if hits != 0
 
         hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsps)
         
-        
+        println(hit)
 
         # check if e-value of this hit is within threshold        
         if threshold > 0.0
@@ -134,7 +134,7 @@ if hits != 0
   end
 
 # returns the RID of the query
-function ncbi_blast_put(query, database="nr", program="blastp", hitlist_size=500)
+function ncbi_blast_put(query, database="pdb", program="blastp", hitlist_size=500)
   response = call_api(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size)
 
   m = match(r"RID = (.*)\n", response.data)
