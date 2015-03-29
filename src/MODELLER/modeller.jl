@@ -3,7 +3,7 @@
 "
 
 module Modeller
-export  gen_modeller_script, build_profile, model_single, evaluate_model, align2d
+export  gen_modeller_script, build_profile, compare, model_single, evaluate_model, align2d
     using PyCall
 
     # Generator for MODELLER julia scripts.
@@ -18,8 +18,8 @@ export  gen_modeller_script, build_profile, model_single, evaluate_model, align2
        end 
     end
 
-    function build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", alignment_file::String = "", alignment_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
-        seq_database_file_out = string(split(seq_database_file, "."), ".bin")
+    function build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", sequence_file::String = "", sequence_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
+        seq_database_file_out = string(seq_database_file, ".bin")
 
         pyinitialize()
         @pyimport modeller
@@ -45,7 +45,7 @@ export  gen_modeller_script, build_profile, model_single, evaluate_model, align2
 
         #-- Read in the target sequence/alignment
         aln = modeller.alignment(env)
-        aln[:append](file=alignment_file, alignment_format=alignment_format, align_codes="ALL")
+        aln[:append](file=sequence_file, alignment_format=sequence_format, align_codes="ALL")
 
         #-- Convert the input sequence/alignment into
         #   profile format
@@ -65,6 +65,22 @@ export  gen_modeller_script, build_profile, model_single, evaluate_model, align2
         #-- Write out the alignment file
         aln[:write](file=string(output_name, ".ali"), alignment_format=output_alignment_format)
 
+    end
+
+    function compare(pdbs, matrix_file::String)
+        @pyimport modeller
+
+        env = modeller.environ()
+        aln = modeller.alignment(env)
+        for (pdb, chain) in pdbs
+            m = modeller.model(env, file=pdb, model_segment=("FIRST:$chain", "LAST:$chain"))
+            aln[:append_model](m, atom_files=pdb, align_codes=string(pdb, chain))
+        end
+        aln[:malign]()
+        aln[:malign3d]()
+        aln[:compare_structures]()
+        aln[:id_table](matrix_file=matrix_file)
+        env[:dendrogram](matrix_file=matrix_file, cluster_cut=-1.0)
     end
 
     function model_single(alnf::String, known_structure::String, seq::String)

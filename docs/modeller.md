@@ -24,16 +24,27 @@ gen_modeller_script("build_profile")
 This module also provides a few simple functions that provide common MODELLER tasks. These are again adapted from the MODELLER basic example. The given examples calls should work inside the modeller-basic-example directory. 
 
 ```julia
-build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", alignment_file::String = "", alignment_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
+build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", sequence_file::String = "",
+sequence_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
 ```
 
-Note: this function is using keyword arguments
+Searches a given sequence database for a given sequence (file) and writes hits to a profile and a alignment file with the given name/path and format.
+
+Note: this function is using keyword arguments.
+
+```julia
+compare(pdbs)
+```
+Prints out a table with the similarities between the given structures and a dendrogram.
+
+*pdbs:* Array of pairs of pdb-files and chains that should be compared.
 
 **Example:**
 
-```julia
-build_profile(seq_database_file="pdb_95.pir", alignment_file="TvLDH.ali") 
-```
+compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
+                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
+
+
 
 ```julia
 align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
@@ -72,6 +83,18 @@ outputfile: optional path to output file. Defaults to pdbfile+".profile"
 ```julia
 evaluate_model("TvLDH.B99990002.pdb", "TvLDH.profile")
 ```
+
+## Usage / Usecase
+This usecase is again based on the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MOELLER website. You should download the corresponding files and call the julia functions with the julia interactive prompt inside the tutorial example folder.
+
+```julia
+julia> build_profile(seq_database_file="pdb_95.pir", sequence_file="TvLDH.ali") 
+```
+
+Searches the sequence database ``pdb_95.pir`` for the sequence(s) in the sequence file ``TvLDH.ali``. Creates a profile (``build_profile.prf"``) and an alignment file with the database matches (``build_profile.ali``) in the current folder.
+
+## Background
+...
 
 ##References
 
