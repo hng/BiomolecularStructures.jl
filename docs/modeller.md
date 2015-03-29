@@ -44,8 +44,6 @@ Prints out a table with the similarities between the given structures and a dend
 compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
                      ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
 
-
-
 ```julia
 align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
 ```
@@ -82,6 +80,30 @@ outputfile: optional path to output file. Defaults to pdbfile+".profile"
 
 ```julia
 evaluate_model("TvLDH.B99990002.pdb", "TvLDH.profile")
+```
+
+```julia
+plot_profiles(alignment_file::String, template_profile::String, template_sequence::String, model_profile::String, model_sequence::String, plot_file::String = "dope_profile.png")
+```
+
+Plots a two profiles with data from a corresponding alignment file (for both structures).
+
+*alignment_file:* path to alignment file
+
+*template_profile:* path to profile that was used as the template
+
+*template_profile:* sequence name from *template_profile* that should be used
+
+*model_profile:* path to model profile 
+
+*model_profile:* sequence name from *model_profile* that should be used
+
+*plot_file:* (optional) path where created plot should be saved. Default: dope_profile.png
+
+**Example:**
+
+```julia
+plot_profiles("TvLDH-1bdmA.ali", "1bdmA.profile", "1bdmA", "TvLDH.profile", "TvLDH")
 ```
 
 ## Usage / Usecase

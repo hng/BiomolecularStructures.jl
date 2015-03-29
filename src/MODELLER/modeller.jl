@@ -3,8 +3,9 @@
 "
 
 module Modeller
-export  gen_modeller_script, build_profile, compare, model_single, evaluate_model, align2d
+export  gen_modeller_script, build_profile, compare, model_single, evaluate_model, align2d, plot_profiles
     using PyCall
+    using PyPlot
 
     # Generator for MODELLER julia scripts.
     # These scripts are based on the basic example scripts from the MODELLER website.
@@ -67,7 +68,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
 
     end
 
-    function compare(pdbs, matrix_file::String)
+    function compare(pdbs)
         @pyimport modeller
 
         env = modeller.environ()
@@ -79,8 +80,8 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
         aln[:malign]()
         aln[:malign3d]()
         aln[:compare_structures]()
-        aln[:id_table](matrix_file=matrix_file)
-        env[:dendrogram](matrix_file=matrix_file, cluster_cut=-1.0)
+        aln[:id_table](matrix_file="family.mat")
+        env[:dendrogram](matrix_file="family.mat", cluster_cut=-1.0)
     end
 
     function model_single(alnf::String, known_structure::String, seq::String)
@@ -137,5 +138,63 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
        aln[:align2d]()
        aln[:write](file=string(outputname, ".ali"), alignment_format="PIR")
        aln[:write](file=string(outputname, ".pap"), alignment_format="PAP")
+    end
+    
+    function plot_profiles(alignment_file::String, template_profile::String, template_sequence::String, model_profile::String, model_sequence::String, plot_file::String = "dope_profile.png")
+
+        @pyimport modeller
+
+        function r_enumerate(seq)
+            """Enumerate a sequence in reverse order"""
+            # Note that we don"t use reversed() since Python 2.3 doesn"t have it
+            num = pybuiltin(:len)(seq) - 1
+            while num >= 0
+                produce((num, get(seq, num)))
+                num -= 1
+            end
+        end
+
+        function get_profile(profile_file, seq)
+            """Read `profile_file` into a Python array, and add gaps corresponding to
+               the alignment sequence `seq`."""
+            # Read all non-comment and non-blank lines from the file:
+            f = open(profile_file)
+            vals = Any[]
+            for line in eachline(f)
+                if line[1] != '#' && length(line) > 10
+                    spl = split(line)
+                    push!(vals, float(last(spl)))
+                end
+            end
+            close(f)
+            # Insert gaps into the profile corresponding to those in seq:
+            taskAtr = @task r_enumerate(seq[:residues])
+            for x in taskAtr
+                n = x[1]
+                res = x[2]
+                for gap in range(1, res[:get_leading_gaps]())
+                    # Julia arrays start from 1 so we have to add 1 to the position
+                    insert!(vals, n+1, nothing)
+                end
+            end
+            # Add a gap at position "0", so that we effectively count from 1:
+            insert!(vals, 1, nothing)
+            return vals
+        end
+
+        e = modeller.environ()
+        a = modeller.alignment(e, file=alignment_file)
+
+        template = get_profile(template_profile, get(a, template_sequence))
+        model = get_profile(model_profile, get(a, model_sequence))
+
+        # Plot the template and model profiles in the same plot for comparison:
+        PyPlot.figure(1, figsize=(10,6))
+        PyPlot.xlabel("Alignment position")
+        PyPlot.ylabel("DOPE per-residue score")
+        PyPlot.plot(model, color="red", linewidth=2, label="Model")
+        PyPlot.plot(template, color="green", linewidth=2, label="Template")
+        PyPlot.legend()
+        PyPlot.savefig(plot_file, dpi=65)
     end
 end
