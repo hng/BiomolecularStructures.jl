@@ -10,7 +10,7 @@ gen_modeller_script(name::String)
 
 Generates Julia templates for MODELLER usage with Julia.
 
-name: The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
+*name:* The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
 
 These scripts are based on the basic example scripts from  the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MODELLER website.
 Scripts are generated in the current working directory. You can find all scripts that can be generated in `src/MODELLER/modeller-basic-example-julia`.
@@ -40,9 +40,9 @@ Prints out a table with the similarities between the given structures and a dend
 *pdbs:* Array of pairs of pdb-files and chains that should be compared.
 
 **Example:**
-
+```julia
 compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
-                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
+                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))```
 
 ```julia
 align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
@@ -57,11 +57,11 @@ align2d("1bdm.pdb", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvL
 ```julia
 model_single(alnf::String, known_structure::String, seq::String)
 ```
-alnf: path to alignment file
+*alnf:* path to alignment file
 
-known_structure: path or name of known pdb structure
+*known_structure:* path or name of known pdb structure
 
-seq: sequence  
+*seq:* sequence  
 
 **Example:**
 
@@ -72,9 +72,9 @@ model_single("TvLDH-1bdmA.ali", "1bdmA", "TvLDH")
 ```julia
 evaluate_model(pdbfile::String, outputfile::String = "")
 ```
-pdbfile: path to pdb file
+*pdbfile:* path to pdb file
 
-outputfile: optional path to output file. Defaults to pdbfile+".profile" 
+*outputfile:* optional path to output file. Defaults to pdbfile+".profile" 
 
 **Example:**
 
