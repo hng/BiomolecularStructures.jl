@@ -42,7 +42,8 @@ Prints out a table with the similarities between the given structures and a dend
 **Example:**
 ```julia
 compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
-                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))```
+                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
+```
 
 ```julia
 align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
