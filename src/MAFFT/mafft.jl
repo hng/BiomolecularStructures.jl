@@ -1,7 +1,7 @@
 #= Julia Wrapper for MAFFT (http://mafft.cbrc.jp/alignment/software/)
 =#
 module Mafft
-export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_from_string, mafft_profile_from_fasta, print_aligned_fasta, alignment_length, to_aminoacids
+export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_from_string, mafft_profile_from_fasta, print_fasta, alignment_length, to_aminoacids
 
     using FastaIO
     using BioSeq
@@ -125,13 +125,11 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_
 
     # helper methods for aligned FASTA
 
-    function print_aligned_fasta(fasta)
-        aligned = String[]
+    function print_fasta(fasta)
         for f in fasta
-            push!(aligned, f[2])
+            println(">", f[1])
             println(f[2])
         end
-        return aligned
     end
 
     # returns the length of the alignment (FastaIO-format as input)
