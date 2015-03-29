@@ -1,4 +1,3 @@
-
 # BLAST API base url
 base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
@@ -18,7 +17,7 @@ function call_api(;args...)
   end
 
   query_string = "$(base_url)$(query_string)"
-  println(query_string)
+  
   return get(query_string)
 
 end
@@ -113,8 +112,6 @@ if hits != 0
 
         hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsps)
         
-        println(hit)
-
         # check if e-value of this hit is within threshold        
         if threshold > 0.0
           if check_threshold(threshold, hit) 

@@ -32,6 +32,7 @@ type Hit
 	hsps::Array{Hsp,1}
 end
 
+export fastarepresentation
 function fastarepresentation(hit::Hit)
 	fasta = ""
 
