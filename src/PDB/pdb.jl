@@ -4,9 +4,10 @@
 # sudo apt-get install numpy | unless you want to compile it..
 # julia: Pkg.add("PyCall")
 module PDB
-export get_structure, get_chains, structure_to_matrix
+export get_structure, get_chains, structure_to_matrix, export_to_pdb
 
 using PyCall
+using Formatting
 @pyimport Bio.PDB as pdb
 
 # get a structure from a PDB File
@@ -53,6 +54,25 @@ function structure_to_matrix(structure::PyObject)
 	matrix = reshape(matrix,n,3)
 
 	return matrix
+end
+
+# Export a matrix of C_alpha atom coordinates to a PDB file
+function export_to_pdb(residueName::String,chainID::String,matrix::Array{Float64,2}, filename::String)
+	lines = String[]
+
+	atomExpr = FormatExpr("{: <6}{: >5} {: >4}{: <1}{: >3} {: <1}{: >4}{: <1}   {: >8}{: >8}{: >8}{: >6}{: >6}      {: <4}{: >2}{: <2}\n")
+
+	for i in 1:size(matrix)[1]
+		line = format(atomExpr, "ATOM", i, "CA", " ", residueName, chainID, "1", " ", matrix[i,:][1], matrix[i,:][2], matrix[i,:][3], 1.0, 0.0, "A1", "C", " ")
+		
+		push!(lines, line)
+	end
+
+	f = open(filename, "w")
+	write(f,lines)
+	close(f)
+
+	return lines
 end
 
 end
