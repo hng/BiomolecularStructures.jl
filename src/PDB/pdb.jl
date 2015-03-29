@@ -4,12 +4,11 @@
 # sudo apt-get install numpy | unless you want to compile it..
 # julia: Pkg.add("PyCall")
 module PDB
-export get_structure, get_chains, structure_to_matrix, export_pdb
+export get_structure, get_chains, structure_to_matrix, export_to_pdb
 
 using PyCall
+using Formatting
 @pyimport Bio.PDB as pdb
-@pyimport Bio.PDB.StructureBuilder as struc
-@pyimport Bio.PDB.Atom as atomObject
 
 # get a structure from a PDB File
 function get_structure(filename::String)
@@ -57,23 +56,23 @@ function structure_to_matrix(structure::PyObject)
 	return matrix
 end
 
-function export_pdb(matrix::Array{Float64,2}, filename::String)
+# Export a matrix of C_alpha atom coordinates to a PDB file
+function export_to_pdb(residueName::String,chainID::String,matrix::Array{Float64,2}, filename::String)
 	lines = String[]
 
+	atomExpr = FormatExpr("{: <6}{: >5} {: >4}{: <1}{: >3} {: <1}{: >4}{: <1}   {: >8}{: >8}{: >8}{: >6}{: >6}      {: <4}{: >2}{: <2}\n")
+
 	for i in 1:size(matrix)[1]
-		line = rpad("", 80, " ")
-		line[1,5] = "ATOM  "
-		line[13,2] = "CA"
-		println(line)
-        i_test = string(repeat(" ", (5 - length(i))), i)
-		line = string("ATOM  ", i_test, " CA ", "VAL", " A ", " 1 ", " ", matrix[i,:][1], " ", matrix[i,:][2], " ", matrix[i,:][3], " ", 1.0, " ", 0.0, " C\n")
+		line = format(atomExpr, "ATOM", i, "CA", " ", residueName, chainID, "1", " ", matrix[i,:][1], matrix[i,:][2], matrix[i,:][3], 1.0, 0.0, "A1", "C", " ")
+		
 		push!(lines, line)
 	end
-
 
 	f = open(filename, "w")
 	write(f,lines)
 	close(f)
+
+	return lines
 end
 
 end

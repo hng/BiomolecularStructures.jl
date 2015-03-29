@@ -1,6 +1,5 @@
 using PyCall
-using BiomolecularStructures.PDB
-using Base.Test
+
 struc = get_structure("2HHB.pdb")
 
 # Extremely rudimentary test, basically do we get anything back from our PyCall?
@@ -18,15 +17,15 @@ chains = get_chains(struc)
 @test size(chains[4]) == (146,3)
 
 # PDB export test
-
-P = [51.65 -1.90 50.07;
-    50.40 -1.23 50.65;
-    50.68 -0.04 51.54;
-    50.22 -0.02 52.85]
+P = [31.132 16.439 58.160;
+	 6.870 17.784 4.702
+]
 
 f = open("pdb_export_test.pdb")
-pdb_expected = readlines(f)
+pdb_expected = convert(Array{String,1},readlines(f))
 
-export_pdb(P, "pdb_exported_test.pdb")
+pdb_handler(r::Test.Success) = rm("pdb_exported_test.pdb")
 
-#@test pdb_expected == 
+Test.with_handler(pdb_handler) do
+	@test pdb_expected == export_to_pdb("VAL", "A", P, "pdb_exported_test.pdb")
+end
