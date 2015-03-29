@@ -84,6 +84,31 @@ Group-to-group alignments with input in FastaIO format
 
 *group1* and *group2* have to be in FastaIO format and have to be alignments
 
+### Helper functions for aligned FASTA
+This module also includes a few helper functions for the FastaIO dataformat (which is returned by the mafft functions of this module).
+
+```julia
+alignment_length(fasta)
+```
+Returns the length of the alignment.
+
+*fasta*: A FastaIO dataformat object
+
+```julia
+to_aminoacids(fasta)
+```
+Converts a FastaIO-formatted array into an array of BioSeq AminoAcid.
+
+*fasta*: A FastaIO dataformat object
+
+```julia
+print_fasta(fasta)
+```
+Prints a FastaIO object in a nicely formatted way to the screen.
+
+*fasta*: A FastaIO dataformat object
+
+
 ## Supported pre-configurations (strategies)
 
 The following mafft strategies are supported by built-in preconfigurations which can be used by supplying the function calls with the corresponding symbol (in the parentheses). 
