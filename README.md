@@ -11,7 +11,8 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * PDB - Utility functions for parsing PDB files
 * Plot - Rudimentary plotting of matrices of atomic coordinates
 * Mafft - Julia API for multisequence alignment with MAFFT
-* Modeller - 
+* Modeller - Functions and scripts to use MODELLER with Julia
+  
 * Cluster -
 
 <hr />
