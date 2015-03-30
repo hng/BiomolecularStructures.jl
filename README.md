@@ -12,7 +12,6 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Plot - Rudimentary plotting of matrices of atomic coordinates
 * Mafft - Julia API for multisequence alignment with MAFFT
 * Modeller - Functions and scripts to use MODELLER with Julia
-  
 * Cluster -
 
 <hr />
