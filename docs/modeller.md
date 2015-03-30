@@ -28,7 +28,7 @@ Scripts are generated in the current working directory. You can find all scripts
 gen_modeller_script("build_profile")
 ```
 
-This module also provides a few simple functions that provide common MODELLER tasks. These are again adapted from the MODELLER basic example. The given examples calls should work inside the modeller-basic-example directory. 
+This module also provides a few simple functions that provide common MODELLER tasks. These are again adapted from the MODELLER basic example. The given examples calls should work inside the modeller-basic-example directory. These functions can be used as building blocks or starting points for more sophisticated workflows.
 
 ```julia
 build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", sequence_file::String = "",
