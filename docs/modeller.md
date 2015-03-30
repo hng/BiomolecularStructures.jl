@@ -39,21 +39,25 @@ Prints out a table with the similarities between the given structures and a dend
 
 *pdbs:* Array of pairs of pdb-files and chains that should be compared.
 
-**Example:**
 ```julia
-compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
-                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
+align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, sequence_file::String, sequence_codes::String, outputname::String)
 ```
 
-```julia
-align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
-```
+Aligns a structure model (pdb) with a sequence. Writes the alignment to <outputname>.ali in PIR format and to <outputname>.pap in PAP format.
 
-**Example:**
+*model_file:* the file of the structure model
 
-```julia
-align2d("1bdm.pdb", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvLDH", "TvLDH-1bdmA")
-```
+*model_segment:* the segment of the model to be used, e.g. ``('FIRST:A','LAST:A')``
+
+*model_align_codes:* the code name of the structure. e.g. "1bdmA" for "1bdm:A"
+
+*atom_files:* path to the model pdb file
+
+*sequence_file:* path to the sequence file
+
+*sequence_codes:* the code name of the structure, e.g. "TvLDH"
+
+*outputname:* name of the files that ``align2d()`` creates.
 
 ```julia
 model_single(alnf::String, known_structure::String, seq::String)
@@ -64,24 +68,12 @@ model_single(alnf::String, known_structure::String, seq::String)
 
 *seq:* sequence  
 
-**Example:**
-
-```julia
-model_single("TvLDH-1bdmA.ali", "1bdmA", "TvLDH")
-```
-
 ```julia
 evaluate_model(pdbfile::String, outputfile::String = "")
 ```
 *pdbfile:* path to pdb file
 
 *outputfile:* optional path to output file. Defaults to pdbfile+".profile" 
-
-**Example:**
-
-```julia
-evaluate_model("TvLDH.B99990002.pdb", "TvLDH.profile")
-```
 
 ```julia
 plot_profiles(alignment_file::String, template_profile::String, template_sequence::String, model_profile::String, model_sequence::String, plot_file::String = "dope_profile.png")
@@ -101,12 +93,6 @@ Plots a two profiles with data from a corresponding alignment file (for both str
 
 *plot_file:* (optional) path where created plot should be saved. Default: dope_profile.png
 
-**Example:**
-
-```julia
-plot_profiles("TvLDH-1bdmA.ali", "1bdmA.profile", "1bdmA", "TvLDH.profile", "TvLDH")
-```
-
 ## Usage / Usecase
 This usecase is again based on the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MOELLER website. You should download the corresponding files and call the julia functions with the julia interactive prompt inside the tutorial example folder.
 
@@ -116,8 +102,36 @@ julia> build_profile(seq_database_file="pdb_95.pir", sequence_file="TvLDH.ali")
 
 Searches the sequence database ``pdb_95.pir`` for the sequence(s) in the sequence file ``TvLDH.ali``. Creates a profile (``build_profile.prf"``) and an alignment file with the database matches (``build_profile.ali``) in the current folder.
 
-## Background
-...
+After looking at the output we can do a comparision between the hits that seem to be especially promising (e.g. low e-value of the alignment):
+
+```julia
+julia> compare((("1b8p", "A"), ("1bdm", "A"), ("1civ", "A"),
+                     ("5mdh", "A"), ("7mdh", "A"), ("1smk", "A")))
+```
+
+After selecting a good structure for modelling (here: 1bdm:A) we first have to align our sequence with this structure:
+
+```julia
+julia> align2d("1bdm.pdb", ("FIRST:A","LAST:A"), "1bdmA", "1bdm.pdb", "TvLDH.ali", "TvLDH", "TvLDH-1bdmA")
+```
+
+We can then use the alignment file that ``align2d()``created, the template structure and our sequence to calculate a 3D model with MODELLER:
+
+```julia
+julia> model_single("TvLDH-1bdmA.ali", "1bdmA", "TvLDH")
+```
+
+If several models have been created we can use the ``evaluate_model()`` function in order to pick the best model:
+
+```julia
+julia> evaluate_model("TvLDH.B99990002.pdb", "TvLDH.profile")
+```
+
+With ``plot_profile()`` we can then plot the profile that ``evaluate_model()`` creates:
+
+```julia
+julia>  plot_profiles("TvLDH-1bdmA.ali", "1bdmA.profile", "1bdmA", "TvLDH.profile", "TvLDH")
+```
 
 ##References
 
