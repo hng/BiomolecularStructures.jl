@@ -127,14 +127,14 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
                   normalize_profile=true, smoothing_window=15)
     end
 
-   function align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, align_file::String, align_codes::String, outputname::String)
+   function align2d(model_file::String, model_segment, model_codes::String, atom_files::String, sequence_file::String, sequence_codes::String, outputname::String)
        @pyimport modeller
 
        env = modeller.environ()
        aln = modeller.alignment(env)
        mdl = modeller.model(env, file=model_file, model_segment=model_segment)
-       aln[:append_model](mdl, align_codes=model_align_codes, atom_files=atom_files)
-       aln[:append](file=align_file, align_codes=align_codes)
+       aln[:append_model](mdl, align_codes=model_codes, atom_files=atom_files)
+       aln[:append](file=sequence_file, align_codes=sequence_codes)
        aln[:align2d]()
        aln[:write](file=string(outputname, ".ali"), alignment_format="PIR")
        aln[:write](file=string(outputname, ".pap"), alignment_format="PAP")

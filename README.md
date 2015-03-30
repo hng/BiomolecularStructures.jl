@@ -13,3 +13,6 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Mafft - Julia API for multisequence alignment with MAFFT
 * Modeller - 
 * Cluster -
+
+<hr />
+<small>A [Bioinformatics WS 2014/15](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml) course project by Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann</small>
