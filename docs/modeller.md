@@ -2,6 +2,13 @@
 This module provides simple Julia integration with [MODELLER](https://salilab.org/modeller/), a bioinformatics tool for comparative protein structure modelling.
 You need to [install](https://salilab.org/modeller/download_installation.html) MODELLER locally on your computer in order to use this module.
 
+## Dependencies
+
+  * Julia Packages
+    * PyCall
+    * PyPlot
+  * [MODELLER](https://salilab.org/modeller/download_installation.html)
+
 ## Exported functions
 
 ```julia
