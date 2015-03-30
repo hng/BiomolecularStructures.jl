@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/hng/BiomolecularStructures/master/biom-logo.png)
+![Logo](https://raw.githubusercontent.com/hng/BiomolecularStructures/master/docs/assets/biom-logo.png)
 
 [![Build Status](https://travis-ci.org/hng/BiomolecularStructures.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures/badge.svg?branch=master)](https://coveralls.io/r/hng/BiomolecularStructures?branch=master) [![Documentation Status](https://readthedocs.org/projects/biomolecularstructures/badge/?version=latest)](https://readthedocs.org/projects/biomolecularstructures/?badge=latest)
 

@@ -1,4 +1,6 @@
-# BiomolecularStructures Documentation
+![Logo](assets/biom-logo.png)
+
+# Documentation
 
 The BiomolecularStructures package provides several Bioinformatics-related modules which can be used like this:
 
