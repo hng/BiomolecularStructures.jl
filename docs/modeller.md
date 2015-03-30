@@ -11,6 +11,8 @@ You need to [install](https://salilab.org/modeller/download_installation.html) M
 
 ## Exported functions
 
+### Generator function
+
 ```julia
 gen_modeller_script(name::String)
 ```
@@ -27,8 +29,11 @@ Scripts are generated in the current working directory. You can find all scripts
 ```julia
 gen_modeller_script("build_profile")
 ```
+### Functions for MODELLER integration with Julia
 
 This module also provides a few simple functions that provide common MODELLER tasks. These are again adapted from the MODELLER basic example. The given examples calls should work inside the modeller-basic-example directory. These functions can be used as building blocks or starting points for more sophisticated workflows.
+
+#### build_profile
 
 ```julia
 build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", sequence_file::String = "",
@@ -39,12 +44,16 @@ Searches a given sequence database for a given sequence (file) and writes hits t
 
 Note: this function is using keyword arguments.
 
+#### compare
+
 ```julia
 compare(pdbs)
 ```
 Prints out a table with the similarities between the given structures and a dendrogram.
 
 *pdbs:* Array of pairs of pdb-files and chains that should be compared.
+
+#### align2d
 
 ```julia
 align2d(model_file::String, model_segment, model_align_codes::String, atom_files::String, sequence_file::String, sequence_codes::String, outputname::String)
@@ -66,6 +75,8 @@ Aligns a structure model (pdb) with a sequence. Writes the alignment to <outputn
 
 *outputname:* name of the files that ``align2d()`` creates.
 
+#### model_single
+
 ```julia
 model_single(alnf::String, known_structure::String, seq::String)
 ```
@@ -75,12 +86,16 @@ model_single(alnf::String, known_structure::String, seq::String)
 
 *seq:* sequence  
 
+#### evaluate_model
+
 ```julia
 evaluate_model(pdbfile::String, outputfile::String = "")
 ```
 *pdbfile:* path to pdb file
 
 *outputfile:* optional path to output file. Defaults to pdbfile+".profile" 
+
+#### plot_profiles
 
 ```julia
 plot_profiles(alignment_file::String, template_profile::String, template_sequence::String, model_profile::String, model_sequence::String, plot_file::String = "dope_profile.png")
