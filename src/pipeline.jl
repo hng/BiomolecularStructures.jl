@@ -24,7 +24,7 @@ FLFLIKHNPTNTIVYFGRYWSP"
 threshold = 0.005
 
 
-results = webblast("ncbi", seq, threshold, true)
+results = webblast(seq, threshold, :ncbi, true)
 
 
 # PDB IDs and Chain IDs

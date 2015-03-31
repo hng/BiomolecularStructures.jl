@@ -99,7 +99,7 @@ module WebBLAST
 
   #main()
 
-  function webblast(provider::String, sequence::String, threshold::Float64, cached=false)
+  function webblast(sequence::String, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
       info("Searching for sequence: $(sequence)")
 
       # try to use cached version
@@ -117,7 +117,7 @@ module WebBLAST
       end
 
       
-      if provider == "ncbi"
+      if provider == :ncbi
         rid, rtoe = ncbi_blast_put(sequence)
         info("NCBI rid: $(rid)")
         if ncbi_blast_search_info(rid)
