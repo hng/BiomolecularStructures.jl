@@ -1,33 +1,19 @@
 # WebBLAST
 
-An API for Julia to call the BLAST Web API of NCBI and EBI.
-## Usage
+API for Julia to call the BLAST Web API of NCBI and EBI.
 
+## Exported functions
+
+#### webblast
+
+```julia
+webblast(provider::String, sequence::String, threshold::Float64, cached=false)
 ```
-usage: WebBLAST.jl [-f FASTA FASTA] [-s SEQUENCE] [-t THRESHOLD] [-h]
-                   fasta_out
 
-WebBLAST
+Calls the the API of the given provider to search for a protein sequence and returns all hits within a E-Value threshold.
 
-positional arguments:
-  fasta_out             FASTA output file
+**provider** A provider for a BLAST REST API, e.g. NCBI/EBI BLAST. Default "ncbi" (EBI to be implemented), "ncbi" searches for the sequence in the PDB.
 
-optional arguments:
-  -f, --fasta FASTA FASTA
-                        Sequences in FASTA format, Sequence #
-  -s, --sequence SEQUENCE
-                        Sequence as string
-  -t, --threshold THRESHOLD
-                        E-Value threshold (type: Float64, default:
-                        0.0)
-  -h, --help            show this help message and exit
+**sequence** The sequence to search for.
 
-```
-## Examples
-
-Sequence:
-```julia WebBLAST/WebBLAST.jl -s MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY -t 0.000000000000000000000000000001 out.fasta```
-
-FASTA:
-
-```julia WebBLAST.jl -f fasta.txt 4```
+**cached** Default ```false```, results can be cached, for example during development.

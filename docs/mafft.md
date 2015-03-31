@@ -38,7 +38,7 @@ mafft(fasta_in::String, preconfiguration=:default)
 
 Runs mafft with the provided fasta file and returns the alignment in FastaIO dataformat. By default mafft is called with the `--auto` option.
 
-*fasta_in*: path to FASTA file
+**fasta_in**: path to FASTA file
 
 *preconfiguration*: optional commandline arguments for MAFFT (array of strings)
 
@@ -48,9 +48,9 @@ mafft_from_string(fasta_in::String, preconfiguration=:default)
 
 Calls MAFFT with the given FASTA string as input and returns aligned FASTA in the FastaIO dataformat. 
 
-*fasta_in*: FASTA string
+**fasta_in**: FASTA string
 
-*preconfiguration*: optional commandline arguments for MAFFT (array of strings) 
+**preconfiguration**: optional commandline arguments for MAFFT (array of strings) 
 
 ```julia
 mafft_from_fasta(fasta_in, preconfiguration=:default)
@@ -58,7 +58,7 @@ mafft_from_fasta(fasta_in, preconfiguration=:default)
 
 Calls MAFFT with the given FASTA in FastaIO format
 
-*fasta_in*: FASTA in FastaIO format
+**fasta_in**: FASTA in FastaIO format
 
 *preconfiguration*: optional commandline arguments for MAFFT (array of strings)
 
@@ -67,14 +67,14 @@ mafft_profile(group1::String, group2::String)
 ```
 Group-to-group alignments
 
-*group1* and *group2* have to be files with alignments. Returns aligned FASTA in the FastaIO dataformat.
+**group1** and **group2** have to be files with alignments. Returns aligned FASTA in the FastaIO dataformat.
 
 ```julia
 mafft_profile_from_string(group1::String, group2::String)
 ```
 Group-to-group alignments with input strings in FASTA format.
  
- *group1* and *group2* have to be strings with alignments in FASTA format.
+ **group1** and **group2** have to be strings with alignments in FASTA format.
  
 ```julia
 mafft_profile_from_fasta(group1, group2)
@@ -82,7 +82,7 @@ mafft_profile_from_fasta(group1, group2)
 
 Group-to-group alignments with input in FastaIO format
 
-*group1* and *group2* have to be in FastaIO format and have to be alignments
+**group1** and **group2** have to be in FastaIO format and have to be alignments
 
 ### Helper functions for aligned FASTA
 This module also includes a few helper functions for the FastaIO dataformat (which is returned by the mafft functions of this module).
@@ -92,21 +92,21 @@ alignment_length(fasta)
 ```
 Returns the length of the alignment.
 
-*fasta*: A FastaIO dataformat object
+**fasta**: A FastaIO dataformat object
 
 ```julia
 to_aminoacids(fasta)
 ```
 Converts a FastaIO-formatted array into an array of BioSeq AminoAcid.
 
-*fasta*: A FastaIO dataformat object
+**fasta**: A FastaIO dataformat object
 
 ```julia
 print_fasta(fasta)
 ```
 Prints a FastaIO object in a nicely formatted way to the screen.
 
-*fasta*: A FastaIO dataformat object
+**fasta**: A FastaIO dataformat object
 
 
 ## Supported pre-configurations (strategies)

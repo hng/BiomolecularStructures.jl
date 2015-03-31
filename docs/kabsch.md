@@ -24,6 +24,8 @@ julia> kabsch_rmsd(P, Q)
 
 ## Exported functions
 
+### rmsd
+
 ```julia
 rmsd(A::Array{Float64,2}, B::Array{Float64,2})
 ```
@@ -32,23 +34,44 @@ Calculates the root mean square deviation of two matrices A and B in using the f
 
 ![RMSD formula](assets/kabsch/rmsd.png)
 
+**A** a matrix
+
+**B** a matrix
+
+### calc_centroid
+
 ```julia
 calc_centroid(m::Array{Float64,2})
 ```
 
 Returns the centroid of a matrix m as a [x y z] vector (An ```Array{Float54,2}```).
 
+**m** a matrix
+
+
+### translate_points
 ```julia
 translate_points(P::Array{Float64,2}, Q::Array{Float64,2})
 ```
 
 Translates two matrices P, Q so that their centroids are equal to the origin of the coordinate system.
 
+**P** a matrix
+
+**Q** a matrix
+
+### kabsch
+
 ```julia
 kabsch(reference::Array{Float64,2},coords::Array{Float64,2})
 ```
 
-Calculates the optimal rotation matrix of two matrices P, Q.
+Calculates the optimal rotation matrix of two matrices P, Q and superimposes the two matrices
+
+**reference** a matrix to superimpose on.
+
+**coords** the matrix to be rotated
+
 Using ```translate_points``` it shifts the matrices' centroids to the origin of the coordinate system, then computes the covariance matrix A:
 
 ![Covariance Formula](assets/kabsch/cov.png)
@@ -69,10 +92,17 @@ The last two steps are translating U so that the superimposed matrix will "fit" 
 
 The function returns the superimposed matrix.
 
+### kabsch_rmsd
+
 ```julia
 kabsch_rmsd(P::Array{Float64,2}, Q::Array{Float64,2})
 ```
-Directly returns the RMSD after rotation for convenience.
+Directly returns the RMSD after rotation for 
+convenience.
+
+**P** reference matrix 
+
+**Q** matrix to be rotated
 
 ## Background
 

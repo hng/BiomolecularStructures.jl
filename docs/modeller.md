@@ -19,7 +19,7 @@ gen_modeller_script(name::String)
 
 Generates Julia templates for MODELLER usage with Julia.
 
-*name:* The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
+**name:** The name of the script (minus the extension). Possible values: "align2d", "build_profile", "compare", "evaluate_model", "model-single", "plot_profiles".
 
 These scripts are based on the basic example scripts from  the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MODELLER website.
 Scripts are generated in the current working directory. You can find all scripts that can be generated in `src/MODELLER/modeller-basic-example-julia`.
@@ -51,7 +51,7 @@ compare(pdbs)
 ```
 Prints out a table with the similarities between the given structures and a dendrogram.
 
-*pdbs:* Array of pairs of pdb-files and chains that should be compared.
+**pdbs:** Array of pairs of pdb-files and chains that should be compared.
 
 #### align2d
 
@@ -61,39 +61,39 @@ align2d(model_file::String, model_segment, model_align_codes::String, atom_files
 
 Aligns a structure model (pdb) with a sequence. Writes the alignment to <outputname>.ali in PIR format and to <outputname>.pap in PAP format.
 
-*model_file:* the file of the structure model
+**model_file:** the file of the structure model
 
-*model_segment:* the segment of the model to be used, e.g. ``('FIRST:A','LAST:A')``
+**model_segment:** the segment of the model to be used, e.g. ``('FIRST:A','LAST:A')``
 
-*model_align_codes:* the code name of the structure. e.g. "1bdmA" for "1bdm:A"
+**model_align_codes:** the code name of the structure. e.g. "1bdmA" for "1bdm:A"
 
-*atom_files:* path to the model pdb file
+**atom_files:** path to the model pdb file
 
-*sequence_file:* path to the sequence file
+**sequence_file:** path to the sequence file
 
-*sequence_codes:* the code name of the structure, e.g. "TvLDH"
+**sequence_codes:** the code name of the structure, e.g. "TvLDH"
 
-*outputname:* name of the files that ``align2d()`` creates.
+**outputname:** name of the files that ``align2d()`` creates.
 
 #### model_single
 
 ```julia
 model_single(alnf::String, known_structure::String, seq::String)
 ```
-*alnf:* path to alignment file
+**alnf:** path to alignment file
 
-*known_structure:* path or name of known pdb structure
+**known_structure:** path or name of known pdb structure
 
-*seq:* sequence  
+**seq:** sequence  
 
 #### evaluate_model
 
 ```julia
 evaluate_model(pdbfile::String, outputfile::String = "")
 ```
-*pdbfile:* path to pdb file
+**pdbfile:** path to pdb file
 
-*outputfile:* optional path to output file. Defaults to pdbfile+".profile" 
+**outputfile:** optional path to output file. Defaults to pdbfile+".profile" 
 
 #### plot_profiles
 
@@ -103,17 +103,17 @@ plot_profiles(alignment_file::String, template_profile::String, template_sequenc
 
 Plots a two profiles with data from a corresponding alignment file (for both structures).
 
-*alignment_file:* path to alignment file
+**alignment_file:** path to alignment file
 
-*template_profile:* path to profile that was used as the template
+**template_profile:** path to profile that was used as the template
 
-*template_profile:* sequence name from *template_profile* that should be used
+**template_profile:** sequence name from *template_profile* that should be used
 
-*model_profile:* path to model profile 
+**model_profile:** path to model profile 
 
-*model_profile:* sequence name from *model_profile* that should be used
+**model_profile:** sequence name from *model_profile* that should be used
 
-*plot_file:* (optional) path where created plot should be saved. Default: dope_profile.png
+**plot_file:** (optional) path where created plot should be saved. Default: dope_profile.png
 
 ## Usage / Usecase
 This usecase is again based on the [tutorial](https://salilab.org/modeller/tutorial/basic.html) on the MOELLER website. You should download the corresponding files and call the julia functions with the julia interactive prompt inside the tutorial example folder.
