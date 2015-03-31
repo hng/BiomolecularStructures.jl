@@ -11,7 +11,7 @@ You need to [install](https://salilab.org/modeller/download_installation.html) M
 
 ## Exported functions
 
-### Generator function
+#### gen_modeller_script
 
 ```julia
 gen_modeller_script(name::String)
