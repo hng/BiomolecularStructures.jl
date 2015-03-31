@@ -110,15 +110,15 @@ Prints a FastaIO object in a nicely formatted way to the screen.
 
 ## Supported pre-configurations (strategies)
 
-The following mafft strategies are supported by built-in preconfigurations which can be used by supplying the function calls with the corresponding symbol (in the parentheses). 
+The following mafft strategies are supported by built-in preconfigurations which can be used by supplying the function calls with the corresponding symbol (in the parentheses). The descriptions where taken from the Mafft manpage. 
 
-  * L-INS-i (``:linsi``)
-  * G-INS-i (``:ginsi``)
-  * E-INS-i (``:einsi``)
-  * FFT-NS-i (``:fftnsi``)
-  * FFT-NS-2 (``:fftns``)
-  * NW-NS-i (``:nwnsi``)
-  * NW-NS-2 (``:nwns``)
+  * L-INS-i (``:linsi``): probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information
+  * G-INS-i (``:ginsi``): suitable for sequences of similar lengths; recommended for <200 sequences; iterative refinement method incorporating global pairwise alignment information
+  * E-INS-i (``:einsi``): suitable for sequences containing large unalignable regions; recommended for <200 sequences
+  * FFT-NS-i (``:fftnsi``): iterative refinement method; two cycles only
+  * FFT-NS-2 (``:fftns``): fast; progressive method
+  * NW-NS-i (``:nwnsi``): iterative refinement method without FFT approximation; two cycles only
+  * NW-NS-2 (``:nwns``): fast; progressive method without the FFT approximation
 
 ## Usage
 
