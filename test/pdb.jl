@@ -29,3 +29,20 @@ pdb_handler(r::Test.Success) = rm("pdb_exported_test.pdb")
 Test.with_handler(pdb_handler) do
 	@test pdb_expected == export_to_pdb("VAL", "A", P, "pdb_exported_test.pdb")
 end
+
+# remote pdb test
+
+# flush cache
+rm(Pkg.dir("BiomolecularStructures", ".cache"), recursive=true)
+
+remote_pdb_handler(r::Test.Success) = rm(Pkg.dir("BiomolecularStructures", ".cache", "2HHB"))
+f = open("2HHB.pdb", "r")
+reference = readall(f)
+
+# hit downloading first
+@test reference == readall(open(get_remote_pdb("2HHB"), "r"))
+
+# then check caching code path
+Test.with_handler(remote_pdb_handler) do
+	@test reference == readall(open(get_remote_pdb("2HHB"), "r"))	
+end
