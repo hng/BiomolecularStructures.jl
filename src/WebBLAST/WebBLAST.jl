@@ -14,7 +14,7 @@ module WebBLAST
   include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ncbi_blast.jl")) 
   include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ebi_blast.jl")) 
 
-  export check_threshold, ncbi_blast_put, ncbi_blast_get_results, ncbi_blast_search_info
+  export webblast
 
   function parse_commandline()
       s = ArgParseSettings(description = "WebBLAST")
@@ -98,5 +98,39 @@ module WebBLAST
   end
 
   #main()
+
+  function webblast(provider::String, sequence::String, threshold::Float64, cached=false)
+      info("Searching for sequence: $(sequence)")
+
+      # try to use cached version
+      if cached
+        # create cache if not present
+        if !isdir(Pkg.dir("BiomolecularStructures", ".cache")) 
+          mkdir(Pkg.dir("BiomolecularStructures", ".cache"))
+        end
+        # return the cached results
+        cached_result_filename = Pkg.dir("BiomolecularStructures", ".cache", base(16,hash(sequence)))
+        if isreadable(cached_result_filename)
+          f = open(cached_result_filename, "r")
+          return deserialize(f)
+        end
+      end
+
+      
+      if provider == "ncbi"
+        rid, rtoe = ncbi_blast_put(sequence)
+        info("NCBI rid: $(rid)")
+        if ncbi_blast_search_info(rid)
+          results = ncbi_blast_get_results(rid, threshold)
+
+          # cache the results
+          if cached
+            f = open(cached_result_filename, "w")
+            serialize(f, results)
+          end
+          return results
+        end
+    end
+  end
 
 end
