@@ -26,7 +26,7 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 
 ## Example pipeline
 
-See ```src/pipeline.jl``` for a sketch of a pipeline that runs several of the package's modules.
+See [```src/pipeline.jl```](https://github.com/hng/BiomolecularStructures/blob/master/src/pipeline.jl) for a sketch of a pipeline that runs several of the package's modules.
 
 <hr />
 <small>A [Bioinformatics WS 2014/15](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml) course project by Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann. Supervision by [Prof. Dr. Daniel Hoffmann](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml).</small>
