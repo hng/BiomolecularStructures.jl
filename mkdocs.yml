@@ -1,5 +1,5 @@
 site_name: BiomolecularStructures
-site_author: Simon Malischewski Henning Schumann Philipp Gerling Simon Leßmann
+site_author: Simon Malischewski Henning Schumann
 repo_url: https://github.com/hng/BiomolecularStructures
 theme: readthedocs
 # convention: <ModulName> - <Modul desccription>
