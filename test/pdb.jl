@@ -33,8 +33,9 @@ end
 # remote pdb test
 
 # flush cache
-rm(Pkg.dir("BiomolecularStructures", ".cache"), recursive=true)
-
+if isreadable(Pkg.dir("BiomolecularStructures", ".cache"))
+	rm(Pkg.dir("BiomolecularStructures", ".cache"), recursive=true)
+end
 remote_pdb_handler(r::Test.Success) = rm(Pkg.dir("BiomolecularStructures", ".cache", "2HHB"))
 f = open("2HHB.pdb", "r")
 reference = readall(f)
