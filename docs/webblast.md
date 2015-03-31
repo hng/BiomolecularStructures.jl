@@ -38,7 +38,7 @@ We can than use a sequence from the FASTA file to search BLAST. We choose the se
 
 ```julia
 using BiomolecularStructures.WebBLAST
-webblast(fasta[2][2])
+results = webblast(fasta[2][2])
 ```
 
-FastaIO reads a FASTA file to an array where each sequence is saved as a tuppel o (``descriptio::String, sequence::String)``.
+FastaIO reads a FASTA file to an array where each sequence is saved as a tuppel of (``descriptio::String, sequence::String)``. Thats why we use ``fasta[2][2]`` to get the second sequence.
