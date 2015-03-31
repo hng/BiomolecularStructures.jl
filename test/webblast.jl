@@ -1,4 +1,4 @@
-include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "webblast.jl")) 
+include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "WebBLAST.jl")) 
 using Base.Test
 using WebBLAST
 
