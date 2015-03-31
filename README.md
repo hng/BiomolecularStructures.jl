@@ -15,4 +15,4 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Cluster -
 
 <hr />
-<small>A [Bioinformatics WS 2014/15](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml) course project by Simon Malischewski, Henning Schumann, Philipp Gerling, Simon Leßmann. Supervision by [Prof. Dr. Daniel Hoffmann](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml).</small>
+<small>A [Bioinformatics WS 2014/15](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml) course project by Simon Malischewski, Henning Schumann. Supervision by [Prof. Dr. Daniel Hoffmann](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml).</small>
