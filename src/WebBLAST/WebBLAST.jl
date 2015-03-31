@@ -49,4 +49,10 @@ module WebBLAST
         end
     end
   end
+
+  # webblast with BioSeq AminoAcid Array as input
+  function webblast(sequence::Array{AminoAcid,1}, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
+    return webblast(convert(ASCIIString, sequence), threshold, provider, cached)
+  end
+
 end
