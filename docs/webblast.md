@@ -23,7 +23,53 @@ Calls the the API of the given provider to search for a protein sequence and ret
 webblast(sequence::Array{AminoAcid,1}, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
 ```
 
-Same as above but with a Array of BioSeq AminoAcid types as input.
+Same as above but with an Array of BioSeq AminoAcid types as input.
+
+## Types
+
+``webblast`` returns an Array of Hit types, that are defined as:
+
+```julia
+
+type Hit
+	hit_num::Int
+	id::String
+	def::String
+	accession::String
+	len::Int
+	
+	hsps::Array{Hsp,1}
+end
+
+type Hsp
+	hsp_num::Int
+	bitScore::Float64
+	evalue::Float64
+	queryFrom::Int
+	queryTo::Int
+	queryFrame::Int
+	hitFrame::Int
+	identity::Int
+	positive::Int
+	gaps::Int
+	alignLen::Int
+
+	qseq::Array{AminoAcid,1}
+	qseq_str::String
+
+	hseq::Array{AminoAcid,1}
+	midline::Array{AminoAcid,1}
+end
+```
+This type is an 1:1 adaption of the returned hits in the XML result of the NCBI BLAST web API. 
+
+#### fastarepresentation
+
+```julia
+fastarepresentation(hit::Hit)
+```
+Returns a ``FastaIO`` style representation of the **hit**.
+
 
 ## Usecase
 
