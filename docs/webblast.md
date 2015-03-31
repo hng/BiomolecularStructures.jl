@@ -18,3 +18,27 @@ Calls the the API of the given provider to search for a protein sequence and ret
 **provider** A provider for a BLAST REST API, e.g. NCBI/EBI BLAST. Default ``:ncbi` (EBI to be implemented), "ncbi" searches for the sequence in the PDB.
 
 **cached** Default ```false```, results can be cached, for example during development.
+
+```julia
+webblast(sequence::Array{AminoAcid,1}, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
+```
+
+Same as above but with a Array of BioSeq AminoAcid types as input.
+
+## Usecase
+
+First we load a FASTA file with ``FastaIO``:
+
+```julia
+using FastaIO
+fasta = readall(FastaReader("examples/fasta/il4.fasta"))
+```
+
+We can than use a sequence from the FASTA file to search BLAST. We choose the second sequence:
+
+```julia
+using BiomolecularStructures.WebBLAST
+webblast(fasta[2][2])
+```
+
+FastaIO reads a FASTA file to an array where each sequence is saved as a tuppel o (``descriptio::String, sequence::String)``.
