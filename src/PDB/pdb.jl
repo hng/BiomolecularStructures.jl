@@ -6,23 +6,23 @@
 module PDB
 export get_structure, get_chains, structure_to_matrix, export_to_pdb, get_remote_pdb
 
-using PyCall
+using DataStructures
 using Formatting
-@pyimport Bio.PDB as pdb
+using PdbTool
+using PdbTool.Chain
+using PdbTool.Pdb
 
 # get a structure from a PDB File
 function get_structure(filename::String)
-	# using QUIET to supress discontinous chains warning
-	pdbparser = pdb.PDBParser(QUIET = 1)
-
-	# parse the file
-	structure = pdbparser[:get_structure](filename, filename)
-	return structure
+	pdb = PdbTool.parsePdb(filename)
+	return pdb
 end
 
 # get chains from structure
-function get_chains(structure::PyObject)
-	chains = structure[:get_chains]()
+function get_chains(structure::Pdb)
+	# Sort chains by chain identifier
+	chains = SortedDict(structure.chain)
+
 
 	chainMatrices = Any[]
 
@@ -33,13 +33,13 @@ function get_chains(structure::PyObject)
 	return chainMatrices
 end
 
-# Read in a PDB file and return a matrix of C_Alpha atom coordinates
-function structure_to_matrix(structure::PyObject)
-	atoms = structure[:get_atoms]()
-	# Filter out C_Alpha atoms
-	atoms = filter(x -> x[:get_name]() == "CA", atoms) 
-	# Get the coordinates
-	atoms = map(x -> x[:get_coord](), atoms)
+# Read in a structure and return a matrix of C_Alpha atom coordinates
+function structure_to_matrix(structure::(String,Chain))
+
+	atoms = Any[]
+	for residue in structure[2].residue
+		push!(atoms, residue[2].atom["CA"].coordinates)
+	end
 
 	n = length(atoms)
 
