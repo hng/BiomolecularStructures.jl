@@ -3,6 +3,7 @@ LightXML
 FastaIO
 BioSeq
 PyPlot
+PyCall
 Formatting
 PdbTool
 DataStructures
