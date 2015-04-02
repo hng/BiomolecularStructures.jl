@@ -1,6 +1,6 @@
 # PDB Utilities
 
-The PDB module provides utility functions to deal with [PDB (Protein Data Bank)](https://www.wwpdb.org/documentation/file-format) files by thinly wrapping [BioPython's PDB Parser](http://biopython.org/wiki/Main_Page).
+The PDB module provides utility functions to deal with [PDB (Protein Data Bank)](https://www.wwpdb.org/documentation/file-format) files.
 
 ## Exported functions
 
@@ -8,7 +8,7 @@ The PDB module provides utility functions to deal with [PDB (Protein Data Bank)]
 ```julia
 get_structure(filename::String)
 ```
-Parses a PDB file and returns a structure PyObject.
+Parses a PDB file and returns a structure Pdb Object.
 
 *filename* Path/Filename of a PDB file.
 
@@ -17,7 +17,7 @@ Parses a PDB file and returns a structure PyObject.
 get_chains(structure::PyObject)
 ```
 
-Gets the chains of a protein structure from a BioPython PyObject and returns an Array of Array{Float64,2} matrices of C<sub>&alpha;</sub> atomic coordinates.
+Gets the chains of a protein structure from a PDB and returns an Array of Array{Float64,2} matrices of C<sub>&alpha;</sub> atomic coordinates.
 
 **structure** A protein structure.
 
@@ -26,7 +26,7 @@ Gets the chains of a protein structure from a BioPython PyObject and returns an 
 structure_to_matrix(structure::PyObject)
 ```
 
-Converts a BioPython structure to a Array{Float64,2} matrix of C<sub>&alpha;</sub> atomic coordinates.
+Converts a structure to a Array{Float64,2} matrix of C<sub>&alpha;</sub> atomic coordinates.
 
 **structure** A protein structure
 

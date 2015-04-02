@@ -1,9 +1,8 @@
-using PyCall
+using PdbTool.Pdb
 
 struc = get_structure("2HHB.pdb")
 
-# Extremely rudimentary test, basically do we get anything back from our PyCall?
-@test isa(struc,PyObject)
+@test typeof(struc) == Pdb
 
 chains = get_chains(struc)
 

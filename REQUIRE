@@ -2,6 +2,7 @@ Requests
 LightXML
 FastaIO
 BioSeq
-PyCall
 PyPlot
 Formatting
+PdbTool
+DataStructures
