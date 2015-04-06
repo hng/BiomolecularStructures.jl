@@ -1,25 +1,17 @@
 using BiomolecularStructures.WebBLAST
+using BiomolecularStructures.Kabsch
 using BiomolecularStructures.Mafft
 using Requests
 using BiomolecularStructures.PDB
 # 1. search for S_0 in PDB
 
-#seq = "MNQLQQLQNPGESPPVHPFVAPLSYLLGTWRGQGEGEYPTIPSFRYGEEIRFSHSGKPVIAY"
+# 2HHB - Human Deoxyhaemoglobin Alpha Chain
+seq = "VLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNAL
+SALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR"
 
-#=seq = "MKKQLKYCFF SLFVSLSSIL SSCGSTTFVL ANFESYISPL LLERVQEKHP LTFLTYPSNE
-KLINGFANNT YSVAVASTYA VSELIERDLL SPIDWSQFNL KKSSSSSDKV NNASDAKDLF
-IDSIKEISQQ TKDSKNNELL HWAVPYFLQN LVFVYRGEKI SELEQENVSW TDVIKAIVKH
-KDRFNDNRLV FIDDARTIFS LANIVNTNNN SADVNPKEDG IGYFTNVYES FQRLGLTKSN
-LDSIFVNSDS NIVINELASG RRQGGIVYNG DAVYAALGGD LRDELSEEQI PDGNNFHIVQ
-PKISPVALDL LVINKQQSNF QKEAHEIIFD LALDGADQTK EQLIKTDEEL GTDDEDFYLK
-GAMQNFSYVN YVSPLKVISD PSTGIVSSKK NNAEMKSKQM STDQMTSEKE FDYYTETLKA
-LLEKEDSAEL NENEKKLVET IKKAYTIEKD SSIRWNQLVE KPISPLQRSN LSLSWLDFKL
-HWW" =#
+chain = "A"
 
-seq = "QIKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNSFNVATLPAE
-KMKILELPFASGDLSMLVLLPDEVSDLERIEKTINFEKLTEWTNPNTMEKRRVKVYLPQMKIEEKYNLTS
-VLMALGMTDLFIPSANLTGISSAESLKISQAVHGAFMELSEDGIEMAGSTGVIEDIKHSPESEQFRADHP
-FLFLIKHNPTNTIVYFGRYWSP"
+reference_structure = get_chains(get_structure(get_remote_pdb("2HHB")))[chain]
 
 threshold = 0.005
 
@@ -48,14 +40,20 @@ end
 
 # 3. Get PDBs  
 
-structures = Any[]
+structures = (String => Any)[]
 
 for pdb in pdbs
-  push!(structures, get_structure(get_remote_pdb(pdb[1])))
+  structures[pdb[1]] = get_structure(get_remote_pdb(pdb[1]))
 end
 
 # 4. Do something with the PDBs (Superimpose, etc)
+
+rmsd = Any[]
+
 for struc in structures
-	m = structure_to_matrix(struc)
-	println(size(m))
+	m = get_chains(struc[2])[chain]
+	# Use only structures with same number of atoms
+	if size(m) == size(reference_structure)
+		println(string(struc[1], " ",kabsch_rmsd(reference_structure,m)))
+	end
 end
