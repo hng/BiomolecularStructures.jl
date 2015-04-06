@@ -35,7 +35,7 @@ end
 
 # 2. Run MAFFT on results
 if length(results) > 0
-	print_fasta(mafft_from_string(fastastring))
+	#print_fasta(mafft_from_string(fastastring))
 end
 
 # 3. Get PDBs  
@@ -47,13 +47,18 @@ for pdb in pdbs
 end
 
 # 4. Do something with the PDBs (Superimpose, etc)
-
-rmsd = Any[]
+# A sortable Array of tuples!
+rmsd = (Float64,String)[]
 
 for struc in structures
 	m = get_chains(struc[2])[chain]
 	# Use only structures with same number of atoms
 	if size(m) == size(reference_structure)
-		println(string(struc[1], " ",kabsch_rmsd(reference_structure,m)))
+		push!(rmsd, (kabsch_rmsd(reference_structure,m), struc[1]))
 	end
 end
+rmsd = sort!(rmsd)
+
+println(rmsd)
+
+# 5. Clustering
