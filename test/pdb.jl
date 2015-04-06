@@ -10,10 +10,10 @@ chains = get_chains(struc)
 @test length(chains) == 4
 
 # Are there enough c_alpha atoms? With enough coordinates?
-@test size(chains[1]) == (141,3)
-@test size(chains[2]) == (146,3)
-@test size(chains[3]) == (141,3)
-@test size(chains[4]) == (146,3)
+@test size(chains["A"]) == (141,3)
+@test size(chains["B"]) == (146,3)
+@test size(chains["C"]) == (141,3)
+@test size(chains["D"]) == (146,3)
 
 # PDB export test
 P = [31.132 16.439 58.160;

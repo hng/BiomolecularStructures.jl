@@ -40,11 +40,11 @@ c_2 = [ 51.86499786  -1.81249988  47.88249969]
 structure = get_structure("2HHB.pdb")
 chains = get_chains(structure)
 
-alpha_1 = chains[1]
-alpha_2 = chains[3]
+alpha_1 = chains["A"]
+alpha_2 = chains["C"]
 
-beta_1 = chains[2]
-beta_2 = chains[4]
+beta_1 = chains["B"]
+beta_2 = chains["D"]
 
 @test_approx_eq_eps kabsch_rmsd(alpha_1,alpha_2) 0.230038710566 1e-6
 

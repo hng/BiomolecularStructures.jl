@@ -15,6 +15,7 @@ using PdbTool.Pdb
 # get a structure from a PDB File
 function get_structure(filename::String)
 	pdb = PdbTool.parsePdb(filename)
+	pdb.fileName = filename
 	return pdb
 end
 
@@ -24,21 +25,29 @@ function get_chains(structure::Pdb)
 	chains = SortedDict(structure.chain)
 
 
-	chainMatrices = Any[]
+	#chainMatrices = Any[]
+
+	chainMatrices = (String => Array{Float64,2})[]
 
 	for c in chains
-		push!(chainMatrices,structure_to_matrix(c))
+		#push!(chainMatrices,structure_to_matrix(c))
+		chainMatrices[c[1]] = structure_to_matrix(c[2])
 	end
 
 	return chainMatrices
 end
 
 # Read in a structure and return a matrix of C_Alpha atom coordinates
-function structure_to_matrix(structure::(String,Chain))
+function structure_to_matrix(structure::Chain)
 
 	atoms = Any[]
-	for residue in structure[2].residue
-		push!(atoms, residue[2].atom["CA"].coordinates)
+	for residue in structure.residue
+		#println(residue[2].atom)
+		try
+			push!(atoms, residue[2].atom["CA"].coordinates)
+		catch
+			warn("No C_alpha atom in residue!")
+		end
 	end
 
 	n = length(atoms)
