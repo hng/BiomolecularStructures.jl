@@ -1,6 +1,7 @@
 using BiomolecularStructures.WebBLAST
 using BiomolecularStructures.Kabsch
 using BiomolecularStructures.Mafft
+using BiomolecularStructures.Cluster
 using Requests
 using BiomolecularStructures.PDB
 # 1. search for S_0 in PDB
@@ -50,11 +51,14 @@ end
 # A sortable Array of tuples!
 rmsd = (Float64,String)[]
 
+to_be_clustered = Any[]
+
 for struc in structures
 	m = get_chains(struc[2])[chain]
 	# Use only structures with same number of atoms
 	if size(m) == size(reference_structure)
 		push!(rmsd, (kabsch_rmsd(reference_structure,m), struc[1]))
+		push!(to_be_clustered, m)
 	end
 end
 rmsd = sort!(rmsd)
@@ -62,3 +66,5 @@ rmsd = sort!(rmsd)
 println(rmsd)
 
 # 5. Clustering
+
+cluster_structures(to_be_clustered)
