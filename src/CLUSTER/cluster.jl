@@ -3,7 +3,6 @@
 module Cluster
 using BiomolecularStructures.Kabsch
 using Clustering
-using MultivariateStats
 
 export cluster_structures
 
