@@ -10,6 +10,12 @@ using BiomolecularStructures.PDB
 seq = "VLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNAL
 SALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR"
 
+#seq = "MLEAQEEEEVGFPVRPQVPLRPMTYKAALDISHFLKEKGGLEGLIWSQRRQEILDLWIYHTQGYFPDWQNYTPGPGIRYP
+#LTFGWCFKLVPVEPEKVEEANEGENNSLLHPMSLHGMEDAEKEVLVWRFDSKLAFHHMARELHPEYYKD"
+
+# glucagon
+#seq = "HSQGTFTSDYSKYLDSRRAQDFVQWLMNT"
+
 chain = "A"
 
 reference_structure = get_chains(get_structure(get_remote_pdb("2HHB")))[chain]
@@ -54,12 +60,18 @@ rmsd = (Float64,String)[]
 to_be_clustered = Any[]
 
 for struc in structures
-	m = get_chains(struc[2])[chain]
-	# Use only structures with same number of atoms
-	if size(m) == size(reference_structure)
-		push!(rmsd, (kabsch_rmsd(reference_structure,m), struc[1]))
-		push!(to_be_clustered, m)
+	#println(get_chains(struc[2]))
+	try
+		m = get_chains(struc[2])[chain]
+		# Use only structures with same number of atoms
+		if size(m) == size(reference_structure)
+			push!(rmsd, (kabsch_rmsd(reference_structure,m), struc[1]))
+			push!(to_be_clustered, m)
+		end
+	catch
+		warn(string("Structure has no chain:", chain))
 	end
+	
 end
 rmsd = sort!(rmsd)
 

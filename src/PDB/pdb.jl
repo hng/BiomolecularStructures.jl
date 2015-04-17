@@ -71,7 +71,8 @@ function export_to_pdb(residueName::String,chainID::String,matrix::Array{Float64
 
 	atomExpr = FormatExpr("{: <6}{: >5} {: >4}{: <1}{: >3} {: <1}{: >4}{: <1}   {: >8}{: >8}{: >8}{: >6}{: >6}      {: <4}{: >2}{: <2}\n")
 
-	for i in 1:size(matrix)[1]
+	matrixSize = size(matrix)[1]
+	for i in 1:matrixSize
 		line = format(atomExpr, "ATOM", i, "CA", " ", residueName, chainID, "1", " ", matrix[i,:][1], matrix[i,:][2], matrix[i,:][3], 1.0, 0.0, "A1", "C", " ")
 		
 		push!(lines, line)
