@@ -1,4 +1,4 @@
-VERSION >= v"0.4.2"
+julia 0.4.2
 Requests
 LightXML
 FastaIO
