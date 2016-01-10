@@ -3,6 +3,7 @@ module WebBLAST
   using FastaIO
   using HttpCommon
   using Requests
+  import Requests: get, post, put, delete, options
   using LightXML
   using BioSeq
 
@@ -16,7 +17,7 @@ module WebBLAST
 
     
   # searches webblast for fasta and returns results as Hit types
-  function webblast(sequence::String, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
+  function webblast(sequence::AbstractString, threshold::Float64=0.005, provider::Symbol=:ncbi, cached=false)
       info("Searching for sequence: $(sequence)")
 
       # try to use cached version

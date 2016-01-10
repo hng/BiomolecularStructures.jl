@@ -11,7 +11,7 @@ using Formatting
 @pyimport Bio.PDB as pdb
 
 # get a structure from a PDB File
-function get_structure(filename::String)
+function get_structure(filename::AbstractString)
 	# using QUIET to supress discontinous chains warning
 	pdbparser = pdb.PDBParser(QUIET = 1)
 
@@ -57,8 +57,8 @@ function structure_to_matrix(structure::PyObject)
 end
 
 # Export a matrix of C_alpha atom coordinates to a PDB file
-function export_to_pdb(residueName::String,chainID::String,matrix::Array{Float64,2}, filename::String)
-	lines = String[]
+function export_to_pdb(residueName::AbstractString,chainID::AbstractString,matrix::Array{Float64,2}, filename::AbstractString)
+	lines = AbstractString[]
 
 	atomExpr = FormatExpr("{: <6}{: >5} {: >4}{: <1}{: >3} {: <1}{: >4}{: <1}   {: >8}{: >8}{: >8}{: >6}{: >6}      {: <4}{: >2}{: <2}\n")
 
@@ -76,7 +76,7 @@ function export_to_pdb(residueName::String,chainID::String,matrix::Array{Float64
 end
 
 # Get a PDB file by ID from rcsb.org
-function get_remote_pdb(id::String)
+function get_remote_pdb(id::AbstractString)
 	# create cache if not present
 	if !isdir(Pkg.dir("BiomolecularStructures", ".cache")) 
 		mkdir(Pkg.dir("BiomolecularStructures", ".cache"))
@@ -84,7 +84,7 @@ function get_remote_pdb(id::String)
 	filename = Pkg.dir("BiomolecularStructures", ".cache", id)
 	# check if PDB isn't already cached
 	if !isreadable(filename)
-		data = get(string("http://www.rcsb.org/pdb/files/", id, ".pdb"))
+		data = get("http://www.rcsb.org/pdb/files/" * id * ".pdb")
 		f = open(filename, "w")
 		write(f, data.data)
 	end	

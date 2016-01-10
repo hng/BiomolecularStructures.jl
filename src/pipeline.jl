@@ -28,7 +28,7 @@ results = webblast(seq, threshold, :ncbi, true)
 
 
 # PDB IDs and Chain IDs
-pdbs = (String,String)[]
+pdbs = (AbstractString,AbstractString)[]
 
 fastastring = ""
 for result in results
@@ -36,7 +36,7 @@ for result in results
 	
 	accession = split(result.accession, "_")
 
-	push!(pdbs, (convert(String,accession[1]), convert(String,accession[2])))
+	push!(pdbs, (convert(AbstractString,accession[1]), convert(AbstractString,accession[2])))
 
 	fastastring = string(fastastring, ">", fasta[1], "\n", fasta[2], "\n")
 end

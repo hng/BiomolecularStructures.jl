@@ -1,11 +1,29 @@
 # BLAST API base url
-base_url = "http://blast.ncbi.nlm.nih.gov/Blast.cgi"
+base_url = "http://www.ncbi.nlm.nih.gov/blast/Blast.cgi"
+
+function build_query_string(;args...)
+  query_string = ""
+  for (k, v) in args
+    if typeof(v) == AbstractString
+      v = encodeURI(v)
+    end
+    k = uppercase(string(k))
+    if query_string != ""
+      query_string = "$(query_string)&$(k)=$(v)"
+    else
+      query_string = "?$(k)=$(v)"
+    end
+  end
+  return query_string
+end
 
 # generic web api call
 function call_api(;args...)
+  query_args = Dict()
   query_string = ""
   for (k, v) in args
-    if typeof(v) == ASCIIString
+    query_args[k] = v
+    if typeof(v) == AbstractString
       v = encodeURI(v)
     end
     k = uppercase(string(k))
@@ -17,8 +35,10 @@ function call_api(;args...)
   end
 
   query_string = "$(base_url)$(query_string)"
-  
-  return get(query_string)
+ 
+  response = get(query_string)
+
+  return response
 
 end
 
@@ -30,7 +50,7 @@ function ncbi_blast_search_info(rid)
 
   while true
     sleep(5)
-    response = call_api(cmd="Get", format_object="SearchInfo", rid=rid).data
+    response = readall(call_api(cmd="Get", format_object="SearchInfo", rid=rid))
     # check status codes
     if ismatch(r"Status=WAITING", response)
 
@@ -65,7 +85,7 @@ end
 
 # gets the results of the search and 
 function ncbi_blast_get_results(rid, threshold)
- content = call_api(cmd="Get", rid=rid, format_type="XML").data
+ content = readall(call_api(cmd="Get", rid=rid, format_type="XML"))
 #  f = open(string(rid, ".xml"), "w")
 #  write(f, content)
 
@@ -81,7 +101,7 @@ results = Hit[]
 
 if hits != 0
   for hit in hits
-    hit_para = Dict{ASCIIString, Any}
+    hit_para = Dict{AbstractString, Any}
 
     hitdict = attributes_dict(hit)
 
@@ -132,10 +152,15 @@ if hits != 0
 
 # returns the RID of the query
 function ncbi_blast_put(query, database="pdb", program="blastp", hitlist_size=500)
-  response = call_api(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size)
+  #response = call_api(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size)
 
-  m = match(r"RID = (.*)\n", response.data)
-  rtoe = match(r"RTOE = (.*)\n", response.data)
+  response = post(base_url; data=Dict("CMD" => "Put", "QUERY" => query, "DATABASE" => database, "program" => program, "HITLIST_SZE" => hitlist_size))
+  #response = post(base_url, data=build_query_string(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size), headers=Dict("Content-Type" => "application/x-www-form-urlencoded"))
+  print(requestfor(response).headers)
+  response = readall(response)
+  #print(response)
+  m = match(r"RID = (.*)\n", response)
+  rtoe = match(r"RTOE = (.*)\n", response)
 
   return (m.captures[1],rtoe.captures[1])
 end

@@ -11,7 +11,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
     # These scripts are based on the basic example scripts from the MODELLER website.
     # Scripts are generated in the current working directory
     # name: The name of the script (minus the extension), e.g. "build_profile"
-    function gen_modeller_script(name::String)
+    function gen_modeller_script(name::AbstractString)
        file = Pkg.dir("BiomolecularStructures", "src/MODELLER/modeller-basic-example-julia", "$name.jl")
        if isfile(file)
           cp(file, "./$name.jl")
@@ -19,7 +19,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
        end 
     end
 
-    function build_profile(;seq_database_file::String = "", seq_database_format::String="PIR", sequence_file::String = "", sequence_format::String = "PIR", output_name::String = "build_profile", output_profile_format::String="TEXT", output_alignment_format::String="PIR")
+    function build_profile(;seq_database_file::AbstractString = "", seq_database_format::AbstractString="PIR", sequence_file::AbstractString = "", sequence_format::AbstractString = "PIR", output_name::AbstractString = "build_profile", output_profile_format::AbstractString="TEXT", output_alignment_format::AbstractString="PIR")
         seq_database_file_out = string(seq_database_file, ".bin")
 
         pyinitialize()
@@ -84,7 +84,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
         env[:dendrogram](matrix_file="family.mat", cluster_cut=-1.0)
     end
 
-    function model_single(alnf::String, known_structure::String, seq::String)
+    function model_single(alnf::AbstractString, known_structure::AbstractString, seq::AbstractString)
 
         @pyimport modeller
         @pyimport modeller.automodel as am
@@ -100,7 +100,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
         a[:make]()
     end
 
-    function evaluate_model(pdbfile::String, outputfile::String = "")
+    function evaluate_model(pdbfile::AbstractString, outputfile::AbstractString = "")
 
         # check for optional argument output and set it to the first part of the name of the PDB file
         if outputfile == ""
@@ -127,7 +127,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
                   normalize_profile=true, smoothing_window=15)
     end
 
-   function align2d(model_file::String, model_segment, model_codes::String, atom_files::String, sequence_file::String, sequence_codes::String, outputname::String)
+   function align2d(model_file::AbstractString, model_segment, model_codes::AbstractString, atom_files::AbstractString, sequence_file::AbstractString, sequence_codes::AbstractString, outputname::AbstractString)
        @pyimport modeller
 
        env = modeller.environ()
@@ -140,7 +140,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
        aln[:write](file=string(outputname, ".pap"), alignment_format="PAP")
     end
     
-    function plot_profiles(alignment_file::String, template_profile::String, template_sequence::String, model_profile::String, model_sequence::String, plot_file::String = "dope_profile.png")
+    function plot_profiles(alignment_file::AbstractString, template_profile::AbstractString, template_sequence::AbstractString, model_profile::AbstractString, model_sequence::AbstractString, plot_file::AbstractString = "dope_profile.png")
 
         @pyimport modeller
 

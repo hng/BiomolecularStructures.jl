@@ -22,7 +22,7 @@ P = [31.132 16.439 58.160;
 ]
 
 f = open("pdb_export_test.pdb")
-pdb_expected = convert(Array{String,1},readlines(f))
+pdb_expected = readlines(f)
 
 pdb_handler(r::Test.Success) = rm("pdb_exported_test.pdb")
 

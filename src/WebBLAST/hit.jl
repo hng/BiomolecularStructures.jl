@@ -13,7 +13,7 @@ type Hsp
 	alignLen::Int
 
 	qseq::Array{AminoAcid,1}
-	qseq_str::String
+	qseq_str::AbstractString
 
 	hseq::Array{AminoAcid,1}
 	midline::Array{AminoAcid,1}
@@ -24,9 +24,9 @@ end
 
 type Hit
 	hit_num::Int
-	id::String
-	def::String
-	accession::String
+	id::AbstractString
+	def::AbstractString
+	accession::AbstractString
 	len::Int
 	
 	hsps::Array{Hsp,1}

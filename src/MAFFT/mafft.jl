@@ -47,7 +47,7 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_
        fasta_in: path to FASTA file
        preconfiguration: optional commandline arguments for MAFFT (array of strings)
     =#
-    function mafft(fasta_in::String, preconfiguration=:default)
+    function mafft(fasta_in::AbstractString, preconfiguration=:default)
         try success(`mafft --version`)
         catch
             error("MAFFT is not installed.")
@@ -62,7 +62,7 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_
        fasta_in: FASTA string
        preconfiguration: optional commandline arguments for MAFFT (array of strings) 
     =#
-    function mafft_from_string(fasta_in::String, preconfiguration=:default)
+    function mafft_from_string(fasta_in::AbstractString, preconfiguration=:default)
         # write to tempfile because mafft can not read from stdin
         tempfile_path, tempfile_io = mktemp()
         write(tempfile_io, fasta_in)
@@ -83,7 +83,7 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_
     #= Group-to-group alignments with input as paths to FASTA files
        group1 and group2 have to be files with alignments
     =#
-    function mafft_profile(group1::String, group2::String)
+    function mafft_profile(group1::AbstractString, group2::AbstractString)
         try success(`mafft --version`)
         catch
             error("MAFFT is not installed.")
@@ -97,7 +97,7 @@ export mafft, mafft_from_string, mafft_from_fasta, mafft_profile, mafft_profile_
     #= Group-to-group alignments with input strings in FASTA format
        group1 and group2 have to be strings with alignments in FASTA format
     =#
-    function mafft_profile_from_string(group1::String, group2::String)
+    function mafft_profile_from_string(group1::AbstractString, group2::AbstractString)
         # write to tempfiles because mafft can not read from stdin
         tempfile1_path, tempfile1_io = mktemp()
         write(tempfile1_io, group1)
