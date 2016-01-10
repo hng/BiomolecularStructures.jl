@@ -155,10 +155,8 @@ function ncbi_blast_put(query, database="pdb", program="blastp", hitlist_size=50
   #response = call_api(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size)
 
   response = post(base_url; data=Dict("CMD" => "Put", "QUERY" => query, "DATABASE" => database, "program" => program, "HITLIST_SZE" => hitlist_size))
-  #response = post(base_url, data=build_query_string(cmd="Put", QUERY=query, DATABASE=database, program=program, HITLIST_SZE=hitlist_size), headers=Dict("Content-Type" => "application/x-www-form-urlencoded"))
-  print(requestfor(response).headers)
   response = readall(response)
-  #print(response)
+
   m = match(r"RID = (.*)\n", response)
   rtoe = match(r"RTOE = (.*)\n", response)
 
