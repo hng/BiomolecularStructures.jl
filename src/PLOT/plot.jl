@@ -18,7 +18,7 @@ function matrix_prep(A::Array{Float64,2})
 end
 
 # Plot a 3D scatterplot of two matrices
-function matrices_plot(P::Array{Float64,2},Q::Array{Float64,2})
+function matrices_plot(P::Array{Float64,2},Q::Array{Float64,2}, reads_line::Bool)
 	try 
 		pygui(true)
 		x::Array{Float64,1}, y::Array{Float64,1}, z::Array{Float64,1} = matrix_prep(P)
@@ -26,9 +26,12 @@ function matrices_plot(P::Array{Float64,2},Q::Array{Float64,2})
 		display(x_plot)
 		x,y,z = matrix_prep(Q)
 		y_plot = scatter3D(x, y, z, color="green")
+		
 		display(x_plot)
-		readline()
-
+		
+		if (reads_line)
+			readline()
+		end
 		return true
 	catch
 		warn("no GUI backend for matplotlib, skipping...")

@@ -18,4 +18,4 @@ Q = [51.30 -2.99 46.54;
      52.36 -1.20 48.03;
      52.71 -1.18 49.38]
 
-@test matrices_plot(P,Q) == true
+@test matrices_plot(P,Q,false) == true
