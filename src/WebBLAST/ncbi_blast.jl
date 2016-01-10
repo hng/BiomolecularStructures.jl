@@ -130,7 +130,7 @@ if hits != 0
         # construct Hsp from dict
         hsps = map(construct_hsp, hsps)
 
-        hit = Hit(int(hit_num_content), hit_id_content, hit_def_content, hit_accession_content, int(hit_len_content), hsps)
+        hit = Hit(parse(Int,hit_num_content), hit_id_content, hit_def_content, hit_accession_content, parse(Int,hit_len_content), hsps)
         
         # check if e-value of this hit is within threshold        
         if threshold > 0.0
@@ -193,17 +193,17 @@ end
 # but i can't get it to work.
 
 function construct_hsp(hsps)
-  hsp_num = int(hsps["Hsp_num"])
+  hsp_num = parse(Int,hsps["Hsp_num"])
   bitScore = float(hsps["Hsp_bit-score"])
   evalue = float(hsps["Hsp_evalue"])
-  queryFrom = int(hsps["Hsp_query-from"])
-  queryTo = int(hsps["Hsp_query-to"])
-  queryFrame = int(hsps["Hsp_query-frame"])
-  hitFrame = int(hsps["Hsp_hit-frame"])
-  identity = int(hsps["Hsp_identity"])
-  positive = int(hsps["Hsp_positive"])
-  gaps = int(hsps["Hsp_gaps"])
-  alignLen = int(hsps["Hsp_align-len"])
+  queryFrom = parse(hsps["Hsp_query-from"])
+  queryTo = parse(Int,hsps["Hsp_query-to"])
+  queryFrame = parse(Int,hsps["Hsp_query-frame"])
+  hitFrame = parse(Int,hsps["Hsp_hit-frame"])
+  identity = parse(Int,hsps["Hsp_identity"])
+  positive = parse(Int,hsps["Hsp_positive"])
+  gaps = parse(Int,hsps["Hsp_gaps"])
+  alignLen = parse(Int,hsps["Hsp_align-len"])
   qseq = aminoacid(hsps["Hsp_qseq"])
   qseq_str = string(hsps["Hsp_qseq"])
   hseq = aminoacid(hsps["Hsp_hseq"])
