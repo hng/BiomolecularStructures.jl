@@ -12,7 +12,6 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Plot - Rudimentary plotting of matrices of atomic coordinates
 * Mafft - Julia API for multisequence alignment with MAFFT
 * Modeller - Functions and scripts to use MODELLER with Julia
-* Cluster -
 
 ## Binary Dependencies
 
@@ -21,6 +20,16 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * [Modeller](https://salilab.org/modeller/)
 
 The build script should take care of both mafft and BioPython on Debian/Debian-derivatives. On other Linux distributions/OSs manual installation is required.
+
+## Changelog
+
+### [0.1.0]
+
+- julia v0.4 compatibility
+
+### [0.0.1]
+
+- initial release
 
 <hr />
 <small>A [Bioinformatics WS 2014/15](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml) course project by Simon Malischewski, Henning Schumann. Supervision by [Prof. Dr. Daniel Hoffmann](https://www.uni-due.de/zmb/members/hoffmann/overview.shtml).</small>
