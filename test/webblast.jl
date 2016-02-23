@@ -1,5 +1,4 @@
 include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "WebBLAST.jl")) 
-using Base.Test
 using WebBLAST
 using BioSeq
 

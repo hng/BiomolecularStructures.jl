@@ -7,7 +7,11 @@ Conda.add("biopython")
 ENV["PYTHON"]=""
 Pkg.build("PyCall")
 
-@linux_only begin
-	run(`sudo -A apt-get install mafft`)
-	run(`sudo -A apt-get install python-biopython`)
-end
+@BinDeps.setup
+
+deps = [
+	mafft = library_dependency("mafft")
+	cmake = library_dependency("cmake")
+]
+
+provides(AptGet, Dict{Any,Any}("mafft" => mafft, "cmake" => cmake))

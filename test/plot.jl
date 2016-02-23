@@ -1,5 +1,4 @@
 using BiomolecularStructures.MatrixPlot
-using Base.Test
 A = [1.0 1.0 1.0; 1.0 1.0 1.0; 1.0 1.0 1.0]
 
 x, y, z = matrix_prep(A)

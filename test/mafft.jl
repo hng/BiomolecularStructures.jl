@@ -1,5 +1,4 @@
 using BiomolecularStructures.Mafft
-using Base.Test
 using FastaIO
 using BioSeq
 

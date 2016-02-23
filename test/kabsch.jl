@@ -1,6 +1,5 @@
 include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
 include(Pkg.dir("BiomolecularStructures", "src/PDB", "pdb.jl")) 
-using Base.Test
 using Kabsch
 using PDB
 # julia uses MATLAB-style syntax for matrices
