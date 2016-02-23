@@ -19,7 +19,36 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * [MAFFT](http://mafft.cbrc.jp/alignment/software/)
 * [Modeller](https://salilab.org/modeller/)
 
-The build script should take care of both mafft and BioPython on Debian/Debian-derivatives. On other Linux distributions/OSs manual installation is required.
+The build script should take care of the BioPython dependency and mafft. Modeller needs to be installed manually.
+
+## Troubleshooting
+
+# WARNING: MbedTLS had build errors.
+
+Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
+ERROR: no certificate subject alternative name matches
+	requested host name `cache.julialang.org'.
+To connect to cache.julialang.org insecurely, use `--no-check-certificate'.
+===============================[ ERROR: MbedTLS ]===============================
+
+LoadError: failed process: Process(`wget -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`, ProcessExited(5)) [5]
+
+Download the file manually and then build the package:
+
+* wget --no-check-certificate -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz 
+* Pkg.build("BiomolecularStructures")
+
+Note: This a workaround, not a fix for MbedTLS
+
+## MAFFT test fails
+
+If mafft does not work (e.g. the mafft.jl test) and you get this output:
+
+correctly installed?
+mafft binaries have to be installed in $MAFFT_BINARIES
+or the /build/buildd/mafft-6.850/debian/mafft/usr/lib/mafft/lib/mafft directory.
+
+... you have a broken package. This is fixed in newer Ubuntu LTS releases.
 
 ## Changelog
 
