@@ -19,26 +19,49 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * [MAFFT](http://mafft.cbrc.jp/alignment/software/)
 * [Modeller](https://salilab.org/modeller/)
 
-The build script should take care of the BioPython dependency and mafft. Modeller needs to be installed manually.
+The build script should take care of the BioPython dependency. Install MAFFT with `sudo apt-get install mafft` (or equivalent for other package managers) Modeller needs to be installed manually.
 
-## Troubleshooting
+## Troubleshooting julia v0.5-dev
 
-# WARNING: MbedTLS had build errors.
+# Package fails to build
 
-Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
+`ERROR: Build process failed.`
+
+`INFO: Building HttpParser
+ERROR: Build process failed.`
+
+
+
+`Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
 ERROR: no certificate subject alternative name matches
 	requested host name `cache.julialang.org'.
 To connect to cache.julialang.org insecurely, use `--no-check-certificate'.
 ===============================[ ERROR: MbedTLS ]===============================
 
-LoadError: failed process: Process(`wget -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`, ProcessExited(5)) [5]
+LoadError: failed process: Process(`wget -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`, ProcessExited(5)) [5]`
 
-Download the file manually and then build the package:
+when building MbedTLS, download the file manually (change home directory) and then build the package:
 
 * wget --no-check-certificate -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz 
 * Pkg.build("BiomolecularStructures")
 
 Note: This a workaround, not a fix for MbedTLS
+
+`cmake command not found. installing cmake is required for building from source.
+===============================[ ERROR: MbedTLS ]===============================
+
+LoadError: failed process: Process(`./cmake_check.sh`, ProcessExited(1)) [1]
+while loading /home/vagrant/.julia/v0.5/MbedTLS/deps/build.jl, in expression starting on line 69
+
+================================================================================`
+
+Install cmake with `sudo apt-get install cmake`
+
+# Pkg.test("BiomolecularStructures") failing
+
+`ERROR: LoadError: LoadError: LoadError: LoadError: Failed to precompile PyPlot to /home/vagrant/.julia/lib/v0.5/PyPlot.ji`
+
+This seems to be an issue of how precompilation of dependencies is handled (see this issue: https://github.com/JuliaLang/julia/issues/14193) and does not happen reliably. Try running julia with --precompiled=yes or try precompiling the failing modules manually, e.g. `Base.compilecache("Colors")`, `Base.compilecache("HttpCommon") and run `Pkg.test("BiomolecularStructures") again`
 
 ## MAFFT test fails
 
