@@ -3,10 +3,6 @@ using Conda
 
 Conda.add("biopython")
 
-# matplotlib
-ENV["PYTHON"]=""
-Pkg.build("PyCall")
-
 @BinDeps.setup
 
 deps = [
