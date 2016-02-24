@@ -83,7 +83,7 @@ The mafft tests are disabled for v0.5 as i cannot get them to run reliably (test
 
 ## Changelog
 
-### [0.1.1]
+### [0.2.0]
 
 - julia v0.5 compatibility - note: unstable, using the package with v0.5 may require manual fixes, see troubleshooting
 
