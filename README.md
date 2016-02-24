@@ -27,31 +27,31 @@ The build script should take care of the BioPython dependency. Install MAFFT wit
 
 `ERROR: Build process failed.`
 
-`INFO: Building HttpParser
-ERROR: Build process failed.`
+```INFO: Building HttpParser
+ERROR: Build process failed.```
 
-`Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
+```Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
 ERROR: no certificate subject alternative name matches
 	requested host name `cache.julialang.org'.
 To connect to cache.julialang.org insecurely, use `--no-check-certificate'.
 ===============================[ ERROR: MbedTLS ]===============================
 
-LoadError: failed process: Process(`wget -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`, ProcessExited(5)) [5]`
+LoadError: failed process: Process(`wget -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`, ProcessExited(5)) [5]```
 
 when building MbedTLS, download the file manually (change home directory) and then build the package:
 
-* wget --no-check-certificate -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz 
-* Pkg.build("BiomolecularStructures")
+`wget --no-check-certificate -O /home/vagrant/.julia/v0.5/MbedTLS/deps/downloads/mbedtls-2.1.1-apache.tgz https://cache.julialang.org/https://tls.mbed.org/download/mbedtls-2.1.1-apache.tgz`
+`Pkg.build("BiomolecularStructures")`
 
 Note: This a workaround, not a fix for MbedTLS
 
-`cmake command not found. installing cmake is required for building from source.
+```cmake command not found. installing cmake is required for building from source.
 ===============================[ ERROR: MbedTLS ]===============================
 
 LoadError: failed process: Process(`./cmake_check.sh`, ProcessExited(1)) [1]
 while loading /home/vagrant/.julia/v0.5/MbedTLS/deps/build.jl, in expression starting on line 69
 
-================================================================================`
+================================================================================```
 
 Install cmake with `sudo apt-get install cmake`
 
