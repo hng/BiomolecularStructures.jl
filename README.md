@@ -23,14 +23,12 @@ The build script should take care of the BioPython dependency. Install MAFFT wit
 
 ## Troubleshooting julia v0.5-dev
 
-# Package fails to build
+### Package fails to build
 
 `ERROR: Build process failed.`
 
 `INFO: Building HttpParser
 ERROR: Build process failed.`
-
-
 
 `Connecting to cache.julialang.org (cache.julialang.org)|52.91.20.35|:443... connected.
 ERROR: no certificate subject alternative name matches
@@ -63,7 +61,7 @@ Install cmake with `sudo apt-get install cmake`
 
 This seems to be an issue of how precompilation of dependencies is handled (see this issue: https://github.com/JuliaLang/julia/issues/14193) and does not happen reliably. Try running julia with --precompiled=yes or try precompiling the failing modules manually, e.g. `Base.compilecache("Colors")`, `Base.compilecache("HttpCommon") and run `Pkg.test("BiomolecularStructures") again`
 
-## MAFFT test fails
+### MAFFT test fails under Ubuntu 12.04 LTS
 
 If mafft does not work (e.g. the mafft.jl test) and you get this output:
 
@@ -73,7 +71,15 @@ or the /build/buildd/mafft-6.850/debian/mafft/usr/lib/mafft/lib/mafft directory.
 
 ... you have a broken package. This is fixed in newer Ubuntu LTS releases.
 
+### Note about mafft tests
+
+The mafft tests are disabled for v0.5 as i cannot get them to run reliably (tests fail or pass depending on unknown conditions).
+
 ## Changelog
+
+### [0.1.1]
+
+- julia v0.5 compatibility - note: unstable, using the package with v0.5 may require manual fixes, see troubleshooting
 
 ### [0.1.0]
 
