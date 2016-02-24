@@ -61,7 +61,7 @@ while loading /home/vagrant/.julia/v0.5/MbedTLS/deps/build.jl, in expression sta
 
 Install cmake with `sudo apt-get install cmake`
 
-# Pkg.test("BiomolecularStructures") failing
+### Pkg.test("BiomolecularStructures") failing
 
 `ERROR: LoadError: LoadError: LoadError: LoadError: Failed to precompile PyPlot to /home/vagrant/.julia/lib/v0.5/PyPlot.ji`
 
