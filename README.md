@@ -13,6 +13,8 @@ The BiomolecularStructures package provides several Bioinformatics-related modul
 * Mafft - Julia API for multisequence alignment with MAFFT
 * Modeller - Functions and scripts to use MODELLER with Julia
 
+Documentation is available here: [BiomolecularStructures](https://biomolecularstructures.readthedocs.org/en/latest/)
+
 ## Binary Dependencies
 
 * [BioPython](http://biopython.org/wiki/Main_Page)
@@ -71,10 +73,11 @@ This seems to be an issue of how precompilation of dependencies is handled (see 
 
 If mafft does not work (e.g. the mafft.jl test) and you get this output:
 
+```
 correctly installed?
 mafft binaries have to be installed in $MAFFT_BINARIES
 or the /build/buildd/mafft-6.850/debian/mafft/usr/lib/mafft/lib/mafft directory.
-
+```
 ... you have a broken package. This is fixed in newer Ubuntu LTS releases.
 
 ### Note about mafft tests
