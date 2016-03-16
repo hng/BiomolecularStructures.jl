@@ -23,6 +23,10 @@ Documentation is available here: [BiomolecularStructures](https://biomolecularst
 
 The build script should take care of the BioPython dependency. Install MAFFT with `sudo apt-get install mafft` (or equivalent for other package managers) Modeller needs to be installed manually.
 
+As the available MAFFT version may be different from the one we have tested with and we can't guarantee reproducibly working tests, the tests are disabled by default. You can reenable them by uncommenting the corresponding line in `test/runtest.jl`:
+
+`include(Pkg.dir("BiomolecularStructures", "test", "mafft.jl"))`
+
 ## Troubleshooting julia v0.5-dev
 
 ### Package fails to build
