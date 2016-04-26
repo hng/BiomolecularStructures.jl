@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/hng/BiomolecularStructures.jl.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures.jl) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures.jl/badge.svg?branch=master)](https://coveralls.io/r/hng/BiomolecularStructures.jl?branch=master) [![Documentation Status](https://readthedocs.org/projects/biomolecularstructures/badge/?version=latest)](https://readthedocs.org/projects/biomolecularstructures/?badge=latest)
 
+## Bugs
+
+The Kabsch module apparently has a bug and it looks like the RMSD values it generates are incorrect. See [this issue](https://github.com/hng/BiomolecularStructures.jl/issues/19) for details.
+
 ## Modules
 
 The BiomolecularStructures package provides several Bioinformatics-related modules:
