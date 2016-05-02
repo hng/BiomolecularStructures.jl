@@ -4,7 +4,9 @@
 
 ## Bugs
 
-The Kabsch module apparently has a bug and it looks like the RMSD values it generates are incorrect. See [this issue](https://github.com/hng/BiomolecularStructures.jl/issues/19) for details.
+~~The Kabsch module apparently has a bug and it looks like the RMSD values it generates are incorrect. See [this issue](https://github.com/hng/BiomolecularStructures.jl/issues/19) for details.~~ 
+
+Fixed release forthcoming.
 
 ## Modules
 
