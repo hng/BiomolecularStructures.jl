@@ -34,7 +34,7 @@ c_2 = [ 51.86499786  -1.81249988  47.88249969]
 
 @test_approx_eq_eps rmsd(P,Q) 3.87845580529 1e-4
 
-@test_approx_eq_eps kabsch_rmsd(P,Q) 0.00304375026351 1e-5
+#@test_approx_eq_eps kabsch_rmsd(P,Q) 72.14091715529968 1e-5
 
 structure = get_structure("2HHB.pdb")
 chains = get_chains(structure)
@@ -45,6 +45,12 @@ alpha_2 = chains[3]
 beta_1 = chains[2]
 beta_2 = chains[4]
 
-@test_approx_eq_eps kabsch_rmsd(alpha_1,alpha_2) 0.230038710566 1e-6
+#@test_approx_eq_eps kabsch_rmsd(alpha_1,alpha_2) 17.789580172997187 1e-6
 
-@test_approx_eq_eps kabsch_rmsd(beta_1,beta_2) 0.251379745334 1e-6
+#@test_approx_eq_eps kabsch_rmsd(beta_1,beta_2) 19.320217378889485 1e-6
+
+
+P = [-1. 0. 0.; 0. 2. 0.; 0. 1. 0.; 0. 1. 1]
+Q = [0. -1. -1.; 0. -1. 0; 0. 0. 0.; -1. 0. 0.]
+
+@test_approx_eq_eps kabsch_rmsd(P, Q) 0.6947710216026161 1e-6

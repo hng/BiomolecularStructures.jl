@@ -43,16 +43,11 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 
 	# Input: Two sets of points: reference, coords as Nx3 Matrices (so)
 	# returns optimally rotated matrix 
-	function kabsch(reference::Array{Float64,2},coords::Array{Float64,2})
+	function kabsch(coords::Array{Float64,2}, reference::Array{Float64,2})
 
-		original_coords::Array{Float64,2} = coords
-
-		coords::Array{Float64,2}, reference::Array{Float64,2}, centroid_p::Array{Float64,2}, centroid_q::Array{Float64,2}  = translate_points(coords, reference)
-		co1::Array{Float64,2} = coords
-		ref::Array{Float64,2} = reference
-
+		centered_reference::Array{Float64,2}, centered_coords::Array{Float64,2}, centroid_p::Array{Float64,2}, centroid_q::Array{Float64,2}  = translate_points(reference, coords)
 		# Compute covariance matrix A
-		A::Array{Float64,2} = *(coords', reference)		
+		A::Array{Float64,2} = *(centered_reference', centered_coords)		
 
 		# Calculate Singular Value Decomposition (SVD) of A
 		u::Array{Float64,2}, d::Array{Float64,1}, vt::Array{Float64,2} = svd(A)
@@ -61,18 +56,8 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 		f::Int64 = sign(det(vt) * det(u))
 		m::Array{Int64,2} = [1 0 0; 0 1 0; 0 0 f]
 
-		# Calculate the optimal rotation matrix
-		rotation::Array{Float64,2} = *(m,*(vt, u'))
-
-		rotation = rotation'
-
-		# calculate the transformation
-		transformation::Array{Float64,2} = broadcast(-, centroid_q, *(centroid_p, rotation))
-
-		# calculate the optimally rotated matrix and then actually transform it
-		superimposed::Array{Float64,2} = broadcast(+, transformation, *(original_coords, rotation))
-
-		return superimposed
+		# Calculate the optimal rotation matrix _and_ superimpose it
+		return broadcast(+, *(centered_reference, u, m, vt'), centroid_q)
 
 	end
 
@@ -80,4 +65,5 @@ export calc_centroid, kabsch, rotate, rmsd, translate_points, kabsch_rmsd
 	function kabsch_rmsd(P::Array{Float64,2}, Q::Array{Float64,2})
 		return rmsd(P,kabsch(P,Q))
 	end
+
 end
