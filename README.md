@@ -2,12 +2,6 @@
 
 [![Build Status](https://travis-ci.org/hng/BiomolecularStructures.jl.svg?branch=master)](https://travis-ci.org/hng/BiomolecularStructures.jl) [![Coverage Status](https://coveralls.io/repos/hng/BiomolecularStructures.jl/badge.svg?branch=master)](https://coveralls.io/r/hng/BiomolecularStructures.jl?branch=master) [![Documentation Status](https://readthedocs.org/projects/biomolecularstructures/badge/?version=latest)](https://readthedocs.org/projects/biomolecularstructures/?badge=latest)
 
-## Bugs
-
-~~The Kabsch module apparently has a bug and it looks like the RMSD values it generates are incorrect. See [this issue](https://github.com/hng/BiomolecularStructures.jl/issues/19) for details.~~ 
-
-Fixed release forthcoming.
-
 ## Modules
 
 The BiomolecularStructures package provides several Bioinformatics-related modules:
@@ -95,6 +89,10 @@ or the /build/buildd/mafft-6.850/debian/mafft/usr/lib/mafft/lib/mafft directory.
 The mafft tests are disabled for v0.5 as i cannot get them to run reliably (tests fail or pass depending on unknown conditions).
 
 ## Changelog
+
+### [0.2.3]
+
+- fixes a bug in the Kabsch module (generated wrong RMSD values). See [#19](https://github.com/hng/BiomolecularStructures.jl/issues/19) for details.
 
 ### [0.2.0]
 
