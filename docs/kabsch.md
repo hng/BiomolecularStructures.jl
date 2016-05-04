@@ -88,8 +88,6 @@ The optimal rotation matrix U is calculated:
 
 ![Optimal rotation matrix U](assets/kabsch/optu.png)
 
-The last two steps are translating U so that the superimposed matrix will "fit" to the reference matrix and then performing the rotation and shifting it to the origin of the coordinate system.
-
 The function returns the superimposed matrix.
 
 ### kabsch_rmsd
