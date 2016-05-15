@@ -1,4 +1,4 @@
-include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "WebBLAST.jl")) 
+include(joinpath(dirname(@__FILE__),"..", "src/WebBLAST", "WebBLAST.jl")) 
 using WebBLAST
 using BioSeq
 

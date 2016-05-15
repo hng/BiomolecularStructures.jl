@@ -1,6 +1,6 @@
-include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
-include(Pkg.dir("BiomolecularStructures", "src/PDB", "pdb.jl")) 
-include(Pkg.dir("BiomolecularStructures", "src/PLOT", "plot.jl"))
+include(joinpath(dirname(@__FILE__), "..", "KABSCH", "kabsch.jl")) 
+include(joinpath(dirname(@__FILE__), "..", "PDB", "pdb.jl")) 
+include(joinpath(dirname(@__FILE__), "..", "PLOT", "plot.jl"))
 
 using Kabsch
 using PDB

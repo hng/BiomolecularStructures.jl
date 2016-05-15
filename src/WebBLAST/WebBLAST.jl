@@ -9,9 +9,9 @@ module WebBLAST
 
   # include types, web interfaces
   
-  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "hit.jl")) 
-  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ncbi_blast.jl")) 
-  include(Pkg.dir("BiomolecularStructures", "src/WebBLAST", "ebi_blast.jl")) 
+  include(joinpath(dirname(@__FILE__), "hit.jl")) 
+  include(joinpath(dirname(@__FILE__), "ncbi_blast.jl")) 
+  include(joinpath(dirname(@__FILE__), "ebi_blast.jl")) 
 
   export webblast
 
@@ -23,11 +23,11 @@ module WebBLAST
       # try to use cached version
       if cached
         # create cache if not present
-        if !isdir(Pkg.dir("BiomolecularStructures", ".cache")) 
-          mkdir(Pkg.dir("BiomolecularStructures", ".cache"))
+        if !isdir(joinpath(dirname(@__FILE__), "..", "..", ".cache")) 
+          mkdir(joinpath(dirname(@__FILE__), "..", "..", ".cache"))
         end
         # return the cached results
-        cached_result_filename = Pkg.dir("BiomolecularStructures", ".cache", base(16,hash(sequence)))
+        cached_result_filename = joinpath(dirname(@__FILE__), "..", "..", ".cache", base(16,hash(sequence)))
         if isreadable(cached_result_filename)
           f = open(cached_result_filename, "r")
           return deserialize(f)
