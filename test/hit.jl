@@ -1,4 +1,4 @@
-include(Pkg.dir("BiomolecularStructures", "src/WebBLAST/", "hit.jl"))	
+include(joinpath(dirname(@__FILE__),"..", "src/WebBLAST/", "hit.jl"))	
 using BioSeq
 
 # check_threshold tests

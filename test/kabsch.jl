@@ -1,5 +1,5 @@
-include(Pkg.dir("BiomolecularStructures", "src/KABSCH", "kabsch.jl")) 
-include(Pkg.dir("BiomolecularStructures", "src/PDB", "pdb.jl")) 
+include(joinpath(dirname(@__FILE__),"..", "src/KABSCH", "kabsch.jl")) 
+include(joinpath(dirname(@__FILE__),"..", "src/PDB", "pdb.jl")) 
 using Kabsch
 using PDB
 # julia uses MATLAB-style syntax for matrices

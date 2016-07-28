@@ -78,10 +78,10 @@ end
 # Get a PDB file by ID from rcsb.org
 function get_remote_pdb(id::AbstractString)
 	# create cache if not present
-	if !isdir(Pkg.dir("BiomolecularStructures", ".cache")) 
-		mkdir(Pkg.dir("BiomolecularStructures", ".cache"))
+	if !isdir(joinpath(dirname(@__FILE__), "..", "..", ".cache")) 
+		mkdir(joinpath(dirname(@__FILE__), "..", "..", ".cache"))
 	end
-	filename = Pkg.dir("BiomolecularStructures", ".cache", id)
+	filename = joinpath(dirname(@__FILE__), "..", "..", ".cache", id)
 	# check if PDB isn't already cached
 	if !isreadable(filename)
 		data = get("http://www.rcsb.org/pdb/files/" * id * ".pdb")

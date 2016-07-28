@@ -4,12 +4,12 @@ if VERSION >= v"0.5-"
 else
     using Base.Test
 end
-include(Pkg.dir("BiomolecularStructures", "test", "kabsch.jl"))
-include(Pkg.dir("BiomolecularStructures", "test", "plot.jl"))
-include(Pkg.dir("BiomolecularStructures", "test", "pdb.jl"))
-include(Pkg.dir("BiomolecularStructures", "test", "hit.jl"))
+include(joinpath(dirname(@__FILE__), "kabsch.jl"))
+include(joinpath(dirname(@__FILE__), "plot.jl"))
+include(joinpath(dirname(@__FILE__), "pdb.jl"))
+include(joinpath(dirname(@__FILE__), "hit.jl"))
 # mafft tests do not run reliably (especially with julia v0.5)
 if VERSION < v"0.5-"
-	#include(Pkg.dir("BiomolecularStructures", "test", "mafft.jl"))
+	#include(joinpath(dirname(@__FILE__), "mafft.jl"))
 end
-include(Pkg.dir("BiomolecularStructures", "test", "webblast.jl"))
+include(joinpath(dirname(@__FILE__), "webblast.jl"))

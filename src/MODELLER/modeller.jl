@@ -12,7 +12,7 @@ export  gen_modeller_script, build_profile, compare, model_single, evaluate_mode
     # Scripts are generated in the current working directory
     # name: The name of the script (minus the extension), e.g. "build_profile"
     function gen_modeller_script(name::AbstractString)
-       file = Pkg.dir("BiomolecularStructures", "src/MODELLER/modeller-basic-example-julia", "$name.jl")
+       file = joinpath(dirname(@__FILE__), "..", "MODELLER/modeller-basic-example-julia", "$name.jl")
        if isfile(file)
           cp(file, "./$name.jl")
           println("Generated $name.jl MODELLER script") 
