@@ -1,6 +1,7 @@
 language: julia
 julia:
-  - release
+  - 0.4
+  - 0.5
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq python-biopython

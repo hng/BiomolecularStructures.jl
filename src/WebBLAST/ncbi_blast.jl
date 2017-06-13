@@ -1,5 +1,5 @@
 # BLAST API base url
-base_url = "http://www.ncbi.nlm.nih.gov/blast/Blast.cgi"
+base_url = "https://blast.ncbi.nlm.nih.gov/Blast.cgi"
 
 function build_query_string(;args...)
   query_string = ""
